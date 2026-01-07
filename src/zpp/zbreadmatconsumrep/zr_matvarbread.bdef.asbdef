@@ -1,0 +1,87 @@
+managed implementation in class ZBP_R_MATVARBREAD unique;
+strict ( 2 );
+define behavior for ZR_MATVARBREAD alias ZrMatvarbread
+persistent table ZMATVARBREAD
+etag master LastChangedAt
+lock master
+authorization master( global )
+{
+  field ( mandatory : create )
+   CompCode,
+   PlantCode,
+   Productionorder,
+   Shift,
+   Materialdocument,
+   Actualconsumption,
+   ConfirmationGroup,
+   ConfirmationCount,
+   Bomcomponentcode,
+   Bomcomponentname,
+   Confirmationyieldquantity;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   CompCode,
+   PlantCode,
+   Productionorder,
+   Shift,
+   Materialdocument,
+   Actualconsumption,
+   ConfirmationGroup,
+   ConfirmationCount,
+   Bomcomponentcode,
+   Bomcomponentname,
+   Confirmationyieldquantity;
+
+
+  create;
+  update;
+  delete;
+
+
+  mapping for ZMATVARBREAD
+  {
+    CompCode = comp_code;
+    PlantCode = plant_code;
+    Bomcomponentcode = bomcomponentcode;
+    Bomcomponentname = bomcomponentname;
+    Productionorder = productionorder;
+    Actualconsumption = actualconsumption;
+    Shift = shift;
+    Confirmationyieldquantity = confirmationyieldquantity;
+    ConfirmationCount = confirmation_count;
+    ConfirmationGroup = confirmation_group;
+    Shiftgroup = shiftgroup;
+    Postingdate = postingdate;
+    Distlineno = distlineno;
+    Creationdate = creationdate;
+    Confirmationdate = confirmationdate;
+    Confirmationtime = confirmationtime;
+    WorkCenter = work_center;
+    Product = product;
+    Materialdocument = materialdocument;
+    Um = um;
+    Batch = batch;
+    Productdesc = productdesc;
+    Bomcomponentrequiredquantity = bomcomponentrequiredquantity;
+    Goodsmovementtype = goodsmovementtype;
+    Bomamtcurr = bomamtcurr;
+    Actualcost = actualcost;
+    Qtydiff = qtydiff;
+    Amtdiff = amtdiff;
+    Amtdiffactualrate = amtdiffactualrate;
+    Bomcomponentamt = bomcomponentamt;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+}

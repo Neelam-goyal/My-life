@@ -1,0 +1,105 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SchemeLines', 
+    typeNamePlural: 'SchemeLines', 
+    title: {
+      type: #STANDARD, 
+      label: 'Scheme Lines', 
+      value: 'Productcode'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Productcode', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZSchemeLines01TP with
+{
+  @UI.facet: [ {
+    id: 'idZSchemeLines', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'ZSchemeLines', 
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Company'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Company'
+  } ]
+  Bukrs;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Scheme code'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Scheme code'
+  } ]
+  Schemecode;
+  
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Product code'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Product code'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_Product_VH', element: 'Product' },
+                                        additionalBinding: [{ localElement: 'Productdesc',
+                                                              element: 'ProductDescription' }]
+                                    }]
+  Productcode;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Product desc'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Product desc'
+  } ]
+  Productdesc;
+  
+  @UI.lineItem: [ {
+    position: 45 , 
+    importance: #HIGH, 
+    label: 'Scheme Group code'
+  } ]
+  @UI.identification: [ {
+    position: 45 , 
+    label: 'Scheme Group code'
+  } ]
+  Schemegroupcode;
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

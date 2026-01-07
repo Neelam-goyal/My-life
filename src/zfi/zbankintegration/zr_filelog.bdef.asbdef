@@ -1,0 +1,42 @@
+managed implementation in class zbp_r_filelog unique;
+strict ( 2 );
+
+define behavior for zr_filelog //alias <alias_name>
+persistent table zfilelog
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+field ( readonly : update )
+  Versionnm ,
+  DownDate,
+  Filename;
+
+
+  mapping for zfilelog{
+
+  Filename = filename;
+  Versionnm = versionnm;
+  DownDate = down_date;
+  ExportFilename = export_filename;
+  ExportedBy = exported_by ;
+  ExportedTimestamp = exported_timestamp;
+  CreatedBy = created_by;
+    CreatedAt = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+
+  }
+}

@@ -1,0 +1,44 @@
+managed implementation in class ZBP_R_PBREASON unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_PBREASON alias ZrPbreason
+persistent table ZPBREASON
+draft table ZPBREASON_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Reasoncode;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Reasoncode;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZPBREASON
+  {
+    Reasoncode = reasoncode;
+    Reasondesc = reasondesc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

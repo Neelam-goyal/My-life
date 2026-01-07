@@ -1,0 +1,199 @@
+@Metadata.layer: #PARTNER
+
+@UI.headerInfo: {
+  typeName: 'Journal Entry',
+  typeNamePlural: 'Journal Entries',
+  title: {
+    value: 'AccountingDocument',
+    label: 'Journal Entry'
+  },
+  description: { type: #STANDARD, value: 'AccountingDocumentTypeName' }
+}
+
+@UI.presentationVariant:[{text: 'Journal Entries', sortOrder: [{ by: 'SRNO', direction: #ASC }], groupBy: [ 'GLAccount' ] }]
+
+annotate entity ZUI_GLAccountStatement with
+{
+
+  @EndUserText.label: 'SNo.'
+  @UI.lineItem: [{
+  position: 1,
+  label: 'SrNo.',
+  importance: #HIGH,
+  cssDefault.width: '4rem'
+   }]
+  SRNO;
+
+  @EndUserText.label: 'Company'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' } }]
+  @UI.textArrangement: #TEXT_LAST
+  CompanyCode;
+
+  @EndUserText.label: 'Company'
+  @UI.hidden: true
+  FiscalYear;
+
+  @Search.defaultSearchElement: true
+    //      @Search.fuzzinessThreshold: 0.9
+  @EndUserText.label: 'Voucher No.'
+  @EndUserText.quickInfo: 'Voucher No. used to track voucher'
+  @UI.lineItem: [{
+  position: 3,
+  label: 'Voucher No.',
+  importance: #HIGH,
+  cssDefault.width: '6rem'
+    }
+    ,
+    {
+    type: #FOR_ACTION,
+    dataAction: 'BOPF:Copy',
+    label: 'Copy'
+    }
+    ]
+  @UI.identification: [{ position: 10 }]
+  @Consumption.semanticObject: 'AccountingDocument'
+  @Consumption.semanticObjectMapping.additionalBinding: [{ localElement: 'AccountingDocument', element: 'AccountingDocument' },
+                        { localElement: 'CompanyCode', element: 'CompanyCode' },
+                        { localElement: 'FiscalYear', element: 'FiscalYear' }
+                        ]
+  AccountingDocument;
+
+  @EndUserText.label: 'Voucher Date'
+  @UI.lineItem: [{
+  position: 2,
+  label: 'Voucher Date' ,
+  importance: #HIGH,
+  //      qualifier: 'ValueList',
+  cssDefault.width: '6.5rem'}]
+  @EndUserText.quickInfo: 'Voucher Posting Date'
+  POSTINGDATE;
+
+  @EndUserText.label: 'Voucher Type'
+  @EndUserText.quickInfo: 'Voucher Type'
+  @UI.lineItem: [{
+  position: 4,
+  label: 'Voucher Type',
+  cssDefault.width: '9rem' }]
+  @UI.textArrangement: #TEXT_LAST
+  @Consumption.valueHelpDefinition: [  { entity:  { name: 'I_AccountingDocumentType', element: 'AccountingDocumentType' } }]
+  AccountingDocumentType;
+
+  @UI.hidden: true
+  AccountingDocumentTypeName;
+  @UI.hidden: true
+  CustomerName;
+  @UI.hidden: true
+  SupplierName;
+
+  @EndUserText.label: 'Narration/Remarks'
+  @EndUserText.quickInfo: 'Remarks related to Voucher'
+  @UI.lineItem: [{ position: 5, label: 'Narration/Remarks' }]
+  @UI.multiLineText: true
+  DOCUMENTITEMTEXT;
+
+  @EndUserText.label: 'Customer'
+  @UI: {
+    textArrangement: #TEXT_LAST
+  }
+  @EndUserText.quickInfo: 'Customer'
+  Customer;
+
+  @UI: {
+     textArrangement: #TEXT_LAST
+   }
+  @EndUserText.label: 'Supplier'
+  @EndUserText.quickInfo: 'Supplier'
+  Supplier;
+
+  @EndUserText.label: 'GL Account'
+  @EndUserText.quickInfo: 'GL Code'
+  @UI: {
+    textArrangement: #TEXT_LAST
+  }
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_GLAccountInCompanyCodeStdVH' , element: 'GLAccount' },
+                                       additionalBinding: [ { localElement: 'CompanyCode' , element: 'CompanyCode', usage: #FILTER } ]
+                                     }]
+  GLACCOUNT;
+
+  @EndUserText.label: 'GL Name'
+  @UI.hidden: true
+  GLACCOUNTNAME;
+
+  @EndUserText.label: 'Entry Date'
+  @EndUserText.quickInfo: 'Voucher Entry Date'
+  DOCUMENTDATE;
+
+  @EndUserText.label: 'Ref. Doc. Type'
+  @UI.lineItem: [{ position: 10, label: 'Ref. Doc. Type' }]
+  @Consumption.valueHelpDefinition: [  { entity:  { name: 'I_ReferenceDocumentType', element: 'ReferenceDocumentType' } }]
+  @EndUserText.quickInfo: 'Reference Document Type'
+  REFERENCEDOCUMENTTYPE;
+
+  @EndUserText.label: 'Ref. Doc. No.'
+  @UI.lineItem: [{ position: 11, label: 'Ref. Doc. No.' }]
+  @EndUserText.quickInfo: 'Original Ref. Document No.'
+
+  @Consumption.semanticObjectMapping.additionalBinding: [{ localElement: 'OriginalReferenceDocument', element: 'OriginalReferenceDocument' }]
+  ORIGINALREFERENCEDOCUMENT;
+
+  @EndUserText.label: 'IsReversal'
+  @UI.lineItem: [{ position: 12, label: 'IsReversal' }]
+  IsReversal;
+
+  @EndUserText.label: 'IsReversed'
+  @UI.lineItem: [{ position: 13, label: 'IsReversed' }]
+  IsReversed;
+
+  @EndUserText.label: 'ReversedReferenceDocument'
+  @UI.lineItem: [{ position: 14, label: 'ReversedReferenceDocument' }]
+  ReversedReferenceDocument;
+
+  @EndUserText.label: 'ReversalReferenceDocument'
+  @UI.lineItem: [{ position: 15, label: 'ReversalReferenceDocument' }]
+  ReversalReferenceDocument;
+
+  @EndUserText.label: 'Business Place'
+  @UI.lineItem: [{ position: 16, label: 'Business Place' }]
+  BusinessPlace;
+
+  @EndUserText.label: 'Currency'
+  @EndUserText.quickInfo: 'Transaction Currency'
+  @UI.hidden: true
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_Currency', element: 'Currency' } }]
+  COMPANYCODECURRENCY;
+
+  @EndUserText.label: 'Debit/Credit'
+  @EndUserText.quickInfo: 'Debit(S) / Credit(H)'
+  DEBITCREDITCODE;
+
+  @EndUserText.label: 'Transaction Amount'
+  AMOUNTINCOMPANYCODECURRENCY;
+
+  @UI.lineItem: [{ position: 7, label: 'Credit Amount', importance: #HIGH ,
+      cssDefault.width: '10rem'}]
+  @EndUserText.label: 'Credit Amount'
+  CREDITAMOUNTINCMPCDCRCY;
+
+  @UI.lineItem: [{ position: 6, label: 'Debit Amount', importance: #HIGH,
+      cssDefault.width: '10rem' }]
+  @EndUserText.label: 'Debit Amount'
+  DEBITAMOUNTINCMPCDCRCY;
+
+  @EndUserText.label: 'Closing Balance'
+  @UI.lineItem: [
+  { position: 8,
+    label: 'Closing Balance',
+    importance: #HIGH ,
+    cssDefault.width: '12rem'
+    }]
+  @EndUserText.quickInfo: 'Running Total Balance'
+  @UI.textArrangement: #TEXT_LAST
+  RUNNINGBALANCE;
+
+  @EndUserText.label: 'Sign'
+  @UI.lineItem: [{ position: 9, label: '.' }]
+  @EndUserText.quickInfo: 'Sign Debit/Credit'
+  Sign;
+
+
+}

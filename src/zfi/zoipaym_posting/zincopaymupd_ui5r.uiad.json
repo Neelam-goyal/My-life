@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Incoming Payment Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Incoming Payment Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zincopaymupd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_22E6E83A9500C0F6EF83C866DAE77848B8213A5B_TM",
+    "semanticObject": "ZINCOPAYMUPD",
+    "action": "Upload",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_22E6E83A9500C0F6EF83C866DAE77848B8213A5B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Incoming Payment Upload",
+        "subtitle": "ZIncoPaymUPD"
+      }
+    }
+  ]
+}

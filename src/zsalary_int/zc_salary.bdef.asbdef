@@ -1,0 +1,10 @@
+projection;
+strict ( 2 );
+define behavior for ZC_SALARY alias ZcSalary
+use etag
+
+{
+  use action delete;
+  use action validate;
+
+}

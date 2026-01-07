@@ -1,0 +1,52 @@
+managed implementation in class ZBP_R_BOOKTRANS unique;
+strict ( 2 );
+
+define behavior for ZR_BOOKTRANS_001 alias ZrBooktrans001
+persistent table ZBOOK_TRANS
+etag master Locallastchangedat
+lock master
+authorization master( global )
+{
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Changedby,
+   Changedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Bankrecoid,
+   VoucherNo;
+
+
+  create;
+  update;
+  delete;
+
+
+  mapping for ZBOOK_TRANS
+  {
+    Bankrecoid = bankrecoid;
+    VoucherNo = voucher_no;
+    Partycode = partycode;
+    Partyname = partyname;
+    Paymenttype = paymenttype;
+    Fiscalyear = fiscalyear;
+    Dates = dates;
+    AssignmentRef = assignment_ref;
+    Amount = amount;
+    ClearedDate = cleared_date;
+    ClearedVoucherno = cleared_voucherno;
+    GlAccount = gl_account;
+    ClearDoc1 = clear_doc1;
+    ClearDoc2 = clear_doc2;
+    ClearingRequest = clearing_request;
+    Createdby = createdby;
+    Createdat = createdat;
+    Changedby = changedby;
+    Changedat = changedat;
+    Locallastchangedat = locallastchangedat;
+  }
+
+}

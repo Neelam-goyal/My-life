@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZRAPC_TABLE_PLANT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZRAPC_TABLE_PLANT'
+  }
+}
+define service ZRAPUI_TABLE_PLANT_O4 provider contracts odata_v4_ui {
+  expose ZRAPC_TABLE_PLANT;
+}

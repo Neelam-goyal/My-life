@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Binding for Gate Pass'
+define service ZUI_GATEPASS {
+  expose ZC_GATEPASSHEADER as GatePass;
+  expose ZC_GATEPASSLINE   as GatePassLine;
+  expose ZI_BILLDOCUMENTVH as BillingDocumentStdVH;
+}

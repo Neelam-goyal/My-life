@@ -1,0 +1,183 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+  typeName: 'FB60 RCM GST PURCHASE REPORT',
+  typeNamePlural: 'FB60 RCM GST PURCHASE REPORT',
+  title: {
+    value: 'mrn_no',
+    label: 'FB60 RCM GST PURCHASE REPORT'
+  },
+  description: { type: #STANDARD, value: 'AccountingDocumentTypeName' }
+}
+
+@UI.presentationVariant:[{text: 'FB60 RCM GST PURCHASE REPORT', sortOrder: [{ by: 'mrn_date', direction: #ASC }] }]
+
+annotate view ZUI_PurGSTRCMFB60 with
+{
+  @UI.identification: [ { position: 20 , label: 'MRN Number' } ]
+  @UI.lineItem: [{
+  position: 20,
+  label: 'MRN Number',
+  importance: #HIGH,
+  cssDefault.width: '6rem'
+    }
+    ,
+    {
+    type: #FOR_ACTION,
+    dataAction: 'BOPF:Copy',
+    label: 'Copy'
+    }
+    ]
+  @EndUserText.label    : 'MRN Number'
+  @EndUserText.quickInfo: 'Voucher No. used to track voucher'
+  @Consumption.semanticObject: 'AccountingDocument'
+  @Consumption.semanticObjectMapping.additionalBinding: [{ localElement: 'mrn_no', element: 'AccountingDocument' },
+                        { localElement: 'company_code', element: 'CompanyCode' },
+                        { localElement: 'fiscalyear', element: 'FiscalYear' }
+                        ]
+  mrn_no;
+  @UI.identification: [ { position: 71 , label: 'Company Code' } ]
+  @UI.lineItem   : [{ position:81, label:'Company Code' }]
+  @EndUserText.label    : 'Company Code'
+  @Consumption.valueHelpDefinition : [{ entity : { name : 'I_CompanyCodeStdVH' , element : 'CompanyCode' } }]
+  company_code;
+  @UI.facet      : [ {
+      id          : 'idgstpurchasereport',
+      purpose     : #STANDARD,
+      type        : #IDENTIFICATION_REFERENCE,
+      label       : 'FB60 GST Purchase Record',
+      position    : 10
+    } ]
+  @UI.identification: [ { position: 10 , label: 'Document TYPE' } ]
+  @UI.lineItem   : [{ position:30, label:'Document Type' }]
+  @EndUserText.label    : 'Document Type'
+  @Consumption.valueHelpDefinition : [{ entity : { name : 'I_AccountingDocumentType' , element : 'AccountingDocumentType' } }]
+  doc_type;
+  @UI.identification: [ { position: 30 , label: 'HSN/SAC Code' } ]
+  @UI.lineItem   : [{ position:50, label:'HSN/SAC Code' }]
+  @EndUserText.label    : 'HSN/SAC Code'
+  hsn_code;
+  @UI.identification: [ { position: 40 , label: 'Bill Number' } ]
+  @UI.lineItem   : [{ position:60, label:'Bill Number' }]
+  @EndUserText.label    : 'Bill Number'
+  bill_no;
+  @UI.identification: [ { position: 50 , label: 'Supplier Code' } ]
+  @UI.lineItem   : [{ position:61, label:'Supplier Code' }]
+  @EndUserText.label    : 'Supplier Code'
+  supplier_code;
+  @UI.identification: [ { position: 60 , label: 'MRN Date' } ]
+  @UI.lineItem   : [{ position:70, label:'MRN Date' }]
+  @EndUserText.label    : 'MRN Date'
+  mrn_date;
+  
+  @UI.identification: [ { position: 70 , label: 'Bill Date' } ]
+  @UI.lineItem   : [{ position:80, label:'Bill Date' }]
+  @EndUserText.label    : 'Bill Date'
+  bill_date;
+  
+  @UI.identification: [ { position: 72 , label: 'Plant Code' } ]
+  @UI.lineItem   : [{ position:82, label:'Plant Code' }]
+  @EndUserText.label    : 'Plant Code'
+  @Consumption.valueHelpDefinition : [{ entity : { name : 'ZPlantValueHelp' , element : 'plant_code' } }]
+  plant_code;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 80 , label: 'Pass Tag' } ]
+  @UI.lineItem   : [{ position:90, label:'Pass Tag' }]
+  @EndUserText.label    : 'Pass Tag'
+  pass_tag;
+  @UI.identification: [ { position: 90 , label: 'Location' } ]
+  @UI.lineItem   : [{ position:100, label:'Location' }]
+  @EndUserText.label    : 'Location'
+  location;
+  @UI.identification: [ { position: 100 , label: 'Product Name' } ]
+  @UI.lineItem   : [{ position:120, label:'Product Name' }]
+  @EndUserText.label    : 'Product Name'
+  productname;
+  @UI.identification: [ { position: 110 , label: 'Supplier Name' } ]
+  @UI.lineItem   : [{ position:130, label:'Supplier Name' }]
+  @EndUserText.label    : 'Supplier Name'
+  suppliername;
+  @UI.identification: [ { position: 120 , label: 'Supplier GST Number' } ]
+  @UI.lineItem   : [{ position:140, label:'Supplier GST Number' }]
+  @EndUserText.label    : 'Supplier GST Number'
+  suppliergstno;
+  @UI.identification: [ { position: 130 , label: 'Local Centre' } ]
+  @UI.lineItem   : [{ position:150, label:'Local Centre' }]
+  @EndUserText.label    : 'Local Centre'
+  localcentre;
+  @UI.identification: [ { position: 140 , label: 'Supplier State' } ]
+  @UI.lineItem   : [{ position:160, label:'Supplier State' }]
+  @EndUserText.label    : 'Supplier State'
+  supplierstate;
+  @UI.identification: [ { position: 150 , label: 'Purposting Code' } ]
+  @UI.lineItem   : [{ position:170, label:'Purposting Code' }]
+  @EndUserText.label    : 'Purposting Code'
+  purpostingcode;
+  @UI.identification: [ { position: 160 , label: 'Purposting Head' } ]
+  @UI.lineItem   : [{ position:180, label:'Purposting Head' }]
+  @EndUserText.label    : 'Purposting Head'
+  purpostinghead;
+  @UI.identification: [ { position: 170 , label: 'Tax Code' } ]
+  @UI.lineItem   : [{ position:190, label:'Tax Code' }]
+  @EndUserText.label    : 'Tax Code'
+  taxcode;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 180 , label: 'GST Rate' } ]
+  @UI.lineItem   : [{ position:200, label:'GST Rate' }]
+  @EndUserText.label    : 'GST Rate'
+  gstrate;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 210 , label: 'Quantity' } ]
+  @UI.lineItem   : [{ position:210, label:'Quantity' }]
+  @EndUserText.label    : 'Quantity'
+  qty;
+  @UI.identification: [ { position: 220 , label: 'UOM' } ]
+  @UI.lineItem   : [{ position:220, label:'UOM' }]
+  @EndUserText.label    : 'UOM'
+  uom;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 230 , label: 'RATE' } ]
+  @UI.lineItem   : [{ position:230, label:'Rate' }]
+  @EndUserText.label    : 'Rate'
+  rate;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 240 , label: 'Amount' } ]
+  @UI.lineItem   : [{ position:240, label:'Amount' }]
+  @EndUserText.label    : 'Amount'
+  amount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 250 , label: 'IGST Amount' } ]
+  @UI.lineItem   : [{ position:250, label:'IGST Amount' }]
+  @EndUserText.label    : 'IGST Amount'
+  igstamount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 260 , label: 'CGST Amount' } ]
+  @UI.lineItem   : [{ position:260, label:'CGST Amount' }]
+  @EndUserText.label    : 'CGST Amount'
+  cgstamount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 270 , label: 'SGST Amount' } ]
+  @UI.lineItem   : [{ position:270, label:'SGST Amount' }]
+  @EndUserText.label    : 'SGST Amount'
+  sgstamount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 280 , label: 'RIGST Amount' } ]
+  @UI.lineItem   : [{ position:280, label:'RIGST Amount' }]
+  @EndUserText.label    : 'RIGST Amount'
+  rigstamount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 290 , label: 'RCGST Amount' } ]
+  @UI.lineItem   : [{ position:290, label:'RCGST Amount' }]
+  @EndUserText.label    : 'RCGST Amount'
+  rcgstamount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 300 , label: 'RSGST Amount' } ]
+  @UI.lineItem   : [{ position:300, label:'RSGST Amount' }]
+  @EndUserText.label    : 'RSGST Amount'
+  rsgstamount;
+  @Consumption.filter.hidden: true
+  @UI.identification: [ { position: 310 , label: 'GST Cess' } ]
+  @UI.lineItem   : [{ position:310, label:'GST Cess' }]
+  @EndUserText.label    : 'GST Cess'
+  gstcess;
+}

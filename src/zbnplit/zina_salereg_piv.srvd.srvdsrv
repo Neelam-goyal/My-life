@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_SALEREG_PIV_QRY_V2'
+}
+define service ZINA_SALEREG_PIV provider contracts ina {
+  expose ZC_SALEREG_PIV_QRY_V2;
+}

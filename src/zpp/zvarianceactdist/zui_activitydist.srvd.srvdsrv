@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition for Activity Distribution'
+define service ZUI_ActivityDist {
+  expose ZC_ZACTIVITYDIST01TP as ZACTIVITYDIST;
+  expose ZC_zactdistlinesTP   as zactdistlines;
+}

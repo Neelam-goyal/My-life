@@ -1,0 +1,57 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ANALYTICAL QUERY BURGER PRODUCTION ORDER V2",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ANALYTICAL QUERY BURGER PRODUCTION ORDER V2"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_BURGERPROD_QRYV2_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_BURGERPROD_QRYV2_AD_TM",
+    "semanticObject": "ZCBURGERPRODQRYV2",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_BURGERPROD_QRYV2"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_BURGERPROD_QRYV2_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BURGER PRODUCTION V2 (BCP)",
+        "keywords": "NB002",
+        "icon": "sap-icon://line-charts",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_BURGERPROD_QRYV2"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'service def'
+define service Zsrv_def_po {
+  expose zcds_po;
+}

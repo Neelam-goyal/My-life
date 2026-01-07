@@ -1,0 +1,110 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Product'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plant'
+annotate entity ZC_CURRENTSTOCK
+    with 
+{
+
+ @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  @EndUserText.label: 'Plant'
+  Plant;
+  
+@UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  @UI.selectionField: [{ position: 20 }]
+  @EndUserText.label: 'Product'
+  Product;
+  
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+//  @UI.selectionField: [ { position: 10  } ]
+  @EndUserText.label: 'Inserted Date'
+  InsertedDate;
+
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  @EndUserText.label: 'Opening Stock'
+  OpeningStock;
+  
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50 } ]
+  @EndUserText.label: 'Production Stock'
+  ProductionStock;
+  
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  @EndUserText.label: 'Sales Stock'
+  PostedStock;
+  
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70 } ]
+  @EndUserText.label: 'Purchase Stock'
+  PurchaseStock;
+  
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80 } ]
+  @EndUserText.label: 'Sales Return Stock'
+  PostedReturnStock;
+  
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90 } ]
+  @EndUserText.label: 'Unposted Sales Return Stock'
+  UnpostedUnsoldStock;
+  
+  @UI.identification: [ { position: 100 } ]
+  @UI.lineItem: [ { position: 100 } ]
+  @EndUserText.label: 'Unposted Sales Stock'
+  UnpostedInvStock;
+  
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110 } ]
+  @EndUserText.label: 'Adjustment Stock'
+  AdjustmentStock;
+  
+  @UI.identification: [ { position: 120 } ]
+  @UI.lineItem: [ { position: 120 } ]
+  @EndUserText.label: 'Calculated Stock'
+  CalculateStock;
+  
+  @UI.identification: [ { position: 130 } ]
+  @UI.lineItem: [ { position: 130 } ]
+  @EndUserText.label: 'Book Stock'
+  MatlWrhsStkQtyInMatlBaseUnit;
+  
+  
+  @UI.hidden: true
+  InsertedTime;
+  
+
+  @UI.identification: [ { position: 140 } ]
+  @UI.lineItem: [ { position: 140 } ]
+  @EndUserText.label: 'Unposted Upto'
+  UnpostedUpto;
+
+  
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150 } ]
+  @EndUserText.label: 'Product Name'
+  ProductName;
+
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160 } ]
+  @EndUserText.label: 'Product Type'
+  ProductType;
+  
+  @UI.identification: [ { position: 170 } ]
+  @UI.lineItem: [ { position: 170 } ]
+  @EndUserText.label: 'Plant Name'
+  PlantName;
+  
+  @UI.hidden: true
+  MaterialBaseUnit;
+
+
+
+
+}

@@ -1,0 +1,135 @@
+managed;
+strict ( 2 );
+define behavior for ZR_purchaseinvTP alias purchaseinv
+implementation in class ZBP_R_purchaseinvTP unique
+persistent table zpurchinvproc
+etag master Creationdatetime
+lock master
+authorization master ( global )
+{
+  field ( readonly )
+  Creationdatetime;
+
+  field ( readonly : update )
+  Companycode,
+  Fiscalyearvalue,
+  Supplierinvoice;
+
+
+//  create;
+  update;
+  delete;
+
+  mapping for zpurchinvproc
+    {
+      Companycode                   = COMPANYCODE;
+      Fiscalyearvalue               = FISCALYEARVALUE;
+      Supplierinvoice               = SUPPLIERINVOICE;
+      Supplierinvoicewthnfiscalyear = SUPPLIERINVOICEWTHNFISCALYEAR;
+      Creationdatetime              = CREATIONDATETIME;
+      AddressID                     = AddressID;
+    }
+
+  association _purchaseline;
+}
+
+define behavior for ZR_purchaselineTP alias purchaseline
+implementation in class ZBP_R_purchaselineTP unique
+persistent table zpurchinvlines
+etag dependent by _purchaseinv
+lock dependent by _purchaseinv
+authorization dependent by _purchaseinv
+
+{
+  field ( readonly )
+  Companycode,
+  Fiscalyearvalue,
+  Supplierinvoice;
+
+  field ( readonly : update )
+  Supplierinvoiceitem;
+
+
+  update;
+  delete;
+
+  mapping for zpurchinvlines
+    {
+      Companycode                    = COMPANYCODE;
+      Fiscalyearvalue                = FISCALYEARVALUE;
+      Supplierinvoice                = SUPPLIERINVOICE;
+      Supplierinvoiceitem            = SUPPLIERINVOICEITEM;
+      Postingdate                    = POSTINGDATE;
+      Plantname                      = PLANTNAME;
+      Plantgst                       = PLANTGST;
+      Plant                        = PLANT;
+      Product                        = PRODUCT;
+      Productname                    = PRODUCTNAME;
+      Purchaseorder                  = PURCHASEORDER;
+      Purchaseorderitem              = PURCHASEORDERITEM;
+      Baseunit                       = BASEUNIT;
+      Profitcenter                   = PROFITCENTER;
+      Purchaseordertype              = PURCHASEORDERTYPE;
+      Purchaseorderdate              = PURCHASEORDERDATE;
+      Purchasingorganization         = PURCHASINGORGANIZATION;
+      Purchasinggroup                = PURCHASINGGROUP;
+      Mrnquantityinbaseunit          = MRNQUANTITYINBASEUNIT;
+      Mrnpostingdate                 = MRNPOSTINGDATE;
+      Hsncode                        = HSNCODE;
+      Taxcodename                    = TAXCODENAME;
+      Originalreferencedocument      = ORIGINALREFERENCEDOCUMENT;
+      Igst                           = IGST;
+      Sgst                           = SGST;
+      Cgst                           = CGST;
+      Rateigst                       = RATEIGST;
+      Ratecgst                       = RATECGST;
+      Ratesgst                       = RATESGST;
+      Isreversed                     = ISREVERSED;
+      Basicrate                      = BASICRATE;
+      Poqty                          = POQTY;
+      Pouom                          = POUOM;
+      Netamount                      = NETAMOUNT;
+      Taxamount                      = TAXAMOUNT;
+      Roundoff                       = ROUNDOFF;
+      Discount                       = DISCOUNT;
+      Totalamount                    = TOTALAMOUNT;
+      Othercharges                   =  OTHERCHARGES;
+      Packaging                      = PACKAGING;
+//      Ocean_freight                  = OCEAN_FREIGHT;
+//      For_land                       = FOR_LAND;
+//      Custom_duty                    = CUSTOM_DUTY;
+//      Social_welfare                 = SOCIAL_WELFARE;
+//      Comm_charges                   = COMM_CHARGES;
+//      Inland                         = INLAND;
+//      Cha_charges                    = CHA_CHARGES;
+//      Demmurage_charges              = DEMMURAGE_CHARGE;
+//      Local_freight                  = LOCAL_FREIGHT;
+//      Pack_charges                   = PACK_CHARGES;
+//      Load_charges                   = LOAD_CHARGES;
+//      Unload_charges                 = UNLOAD_CHARGES;
+      Supp_gst                       = SUPP_GST;
+      Grnno                          = GRNNO;
+      SupplierCodeName               = SUPPLIERCODENAME;
+      DeliveryCost                   = DELIVERYCOST;
+      InvoicingPartyCodeName         = INVOICINGPARTYCODENAME;
+      OceanFreightCharges            = OCEANFREIGHTCHARGES;
+      ForLandCharges                 = FORLANDCHARGES;
+      CustomDutyCharges              = CUSTOMDUTYCHARGES;
+      SocialWelfareCharges           = SOCIALWELFARECHARGES;
+      CommissionCharges              = COMMISSIONCHARGES;
+      InlandCharges                  = INLANDCHARGES;
+      CarrierHandCharges             = CARRIERHANDCHARGES;
+      DemmurageCharges               = DEMMURAGECHARGES;
+      LocalFreightCharges            = LOCALFREIGHTCHARGES;
+      PackagingCharges               = PACKAGINGCHARGES;
+//      OtherChargesImp                = OTHERCHARGESIMP;
+      LoadingCharges                 = LOADINGCHARGES;
+      UnloadingCharges               = UNLOADINGCHARGES;
+      SupplierCode                   = SUPPLIERCODE;
+      PlantCode                      = PLANTCODE;
+      SupplierBillNo                 = SUPPLIERBILLNO;
+
+    }
+
+  association _purchaseinv;
+}

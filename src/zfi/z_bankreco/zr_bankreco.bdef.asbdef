@@ -1,0 +1,157 @@
+managed implementation in class ZBP_R_BANKRECO unique;
+strict;
+
+define behavior for ZR_BANKRECO alias ZrBankreco
+persistent table ZBANK_RECO
+etag master Locallastchangedat
+early numbering
+lock master
+authorization master( global )
+{
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Changedby,
+   Changedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Bankrecoid;
+
+
+
+  create;
+  update;
+  delete;
+
+  action validateData;
+  action utrBasedReco;
+  action deleteRecords;
+
+  mapping for ZBANK_RECO
+  {
+    Bankrecoid = bankrecoid;
+    Bank = bank;
+    Company = company;
+    Statementdate = statementdate;
+    Status = status;
+    FiscalYear = fiscalyear;
+    BankName  = bankname;
+    Createdby = createdby;
+    Createdat = createdat;
+    Changedby = changedby;
+    Changedat = changedat;
+    Locallastchangedat = locallastchangedat;
+  }
+
+  association _Booktrans {
+    create;
+  }
+  association _StatementTrans {
+    create;
+  }
+
+}
+
+
+
+define behavior for ZR_BOOKTRANS alias ZrBooktrans
+persistent table zbook_trans
+etag master ChangedAt
+lock dependent by _bankreco
+authorization dependent by _bankreco
+
+{
+
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   Changedat,
+   Changedby,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bankrecoid,
+   VoucherNo;
+
+
+  update;
+  delete;
+
+
+  mapping for zbook_trans
+  {
+    Bankrecoid = bankrecoid;
+    VoucherNo = voucher_no;
+    Partycode = partycode;
+    Partyname = partyname;
+    Paymenttype = paymenttype;
+    Fiscalyear = fiscalyear;
+    Dates = dates;
+    Amount = amount;
+    AssignmentRef = assignment_ref;
+    GlAccount = gl_account;
+    ClearedDate = cleared_date;
+    ClearedVoucherno = cleared_voucherno;
+    ClearDoc1 = clear_doc1;
+    ClearDoc2 = clear_doc2;
+    CreatedBy = createdby;
+    CreatedAt = createdat;
+    Changedat = changedat;
+    Changedby = changedby;
+    LocalLastChangedAt = locallastchangedat;
+  }
+
+  association _bankreco;
+}
+
+
+
+define behavior for ZR_STATEMENTTRANS alias ZrStatementtrans
+persistent table zstatement_trans
+etag master ChangedAt
+lock dependent by _bankreco
+authorization dependent by _BankReco
+
+{
+
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   Changedat,
+   Changedby,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bankrecoid,
+   Statementid,
+   VoucherNo;
+
+
+  update;
+  delete;
+
+
+  mapping for zstatement_trans
+  {
+    Bankrecoid = bankrecoid;
+    VoucherNo = voucher_no;
+    Dates = dates;
+    Statementid = statementid;
+    Utr = utr;
+    Paymenttype = paymenttype;
+    Description = description;
+    Amount = amount;
+    ClearedVoucherno = cleared_voucherno;
+    CreatedBy = createdby;
+    CreatedAt = createdat;
+    Changedat = changedat;
+    Changedby = changedby;
+    LocalLastChangedAt = locallastchangedat;
+  }
+
+  association _bankreco;
+}

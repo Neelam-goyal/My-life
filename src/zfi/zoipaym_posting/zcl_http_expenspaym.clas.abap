@@ -1,0 +1,154 @@
+
+CLASS zcl_http_expenspaym DEFINITION
+  PUBLIC
+  create public .
+
+public section.
+
+  interfaces IF_HTTP_SERVICE_EXTENSION .
+
+
+     CLASS-METHODS getCID RETURNING VALUE(cid) TYPE abp_behv_cid.
+   CLASS-METHODS saveData
+    IMPORTING
+      VALUE(request)  TYPE REF TO if_web_http_request
+    RETURNING
+      VALUE(message)  TYPE STRING .
+
+
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZCL_HTTP_EXPENSPAYM IMPLEMENTATION.
+
+
+      METHOD getCID.
+        TRY.
+            cid = to_upper( cl_uuid_factory=>create_system_uuid( )->create_uuid_x16( ) ).
+          CATCH cx_uuid_error.
+            ASSERT 1 = 0.
+        ENDTRY.
+      ENDMETHOD.
+
+
+  method IF_HTTP_SERVICE_EXTENSION~HANDLE_REQUEST.
+
+        CASE request->get_method(  ).
+          WHEN CONV string( if_web_http_client=>post ).
+           response->set_text( saveData( request ) ).
+
+        ENDCASE.
+
+
+      ENDMETHOD.
+
+
+      METHOD saveData.
+
+        DATA: lv_oipaym TYPE TABLE OF zr_oipayments,
+              wa_oipaym TYPE zr_oipayments.
+
+        TYPES: BEGIN OF ty_json_structure,
+                 companycode         TYPE c LENGTH 4,
+                 documentdate  TYPE c LENGTH 10,
+                 postingdate  TYPE c LENGTH 10,
+                 currencycode        TYPE c LENGTH 3,
+                 bpartner            TYPE c LENGTH 10,
+                 glamount            TYPE p LENGTH 16 DECIMALS 2,
+                 businessplace       TYPE c LENGTH 10,
+                 sectioncode         TYPE c LENGTH 10,
+                 gltext              TYPE c LENGTH 100,
+*                 taxcode             TYPE c LENGTH 2,
+                 referenceid         TYPE c LENGTH 16,
+                 glaccount           TYPE c LENGTH 10,
+                 profitcenter        TYPE c LENGTH 10,
+                 assignmentreference TYPE c LENGTH 18,
+                 specialglcode       TYPE c LENGTH 1,
+                 costcenter          TYPE c LENGTH 10,
+               END OF ty_json_structure.
+
+        DATA tt_json_structure TYPE TABLE OF ty_json_structure WITH EMPTY KEY.
+
+        TRY.
+
+            xco_cp_json=>data->from_string( request->get_text( ) )->write_to( REF #( tt_json_structure ) ).
+
+            LOOP AT tt_json_structure INTO DATA(wa).
+              DATA(count) = CONV string( sy-tabix ).
+              DATA(cid) = getcid( ).
+              DATA(curTime) = cl_abap_context_info=>get_system_time( ).
+              MODIFY ENTITIES OF zr_oipayments
+             ENTITY ZrOipayments
+             CREATE FIELDS (
+                  Companycode
+                  Documentdate
+                  Postingdate
+                  Bpartner
+                  LineNum
+                  Currencycode
+                  Glamount
+                  Type
+                  Businessplace
+                  Sectioncode
+                  Gltext
+*                  TaxCode
+                  ReferenceID
+                  Glaccount
+                  Profitcenter
+                  Createdtime
+                  AccountingDocumenttype
+                  Assignmentreference
+                  SpecialGlCode
+                  Costcenter
+                   )
+             WITH VALUE #( (
+                  %cid = cid
+                  Companycode = wa-Companycode
+                  Documentdate = wa-Documentdate
+                  Postingdate = wa-Postingdate
+                  Bpartner =  |{ wa-Bpartner ALPHA = IN }|
+                  LineNum = |{ count ALPHA = IN }|
+                  Currencycode = wa-Currencycode
+                  Glamount = wa-Glamount
+                  Type = 'EXP'
+                  Businessplace = wa-Businessplace
+                  Sectioncode = wa-Sectioncode
+                  Gltext = wa-Gltext
+*                  TaxCode = wa-taxcode
+                  ReferenceID = wa-referenceid
+                  Glaccount = wa-Glaccount
+                  Profitcenter = wa-Profitcenter
+                  Createdtime = curTime
+                  AccountingDocumenttype = 'KR'
+                  Assignmentreference = wa-Assignmentreference
+                  SpecialGlCode = wa-SpecialGlCode
+                  Costcenter = wa-costcenter
+                  ) )
+              REPORTED DATA(ls_po_reported)
+              FAILED   DATA(ls_po_failed)
+              MAPPED   DATA(ls_po_mapped).
+
+              COMMIT ENTITIES BEGIN
+                 RESPONSE OF zr_oipayments
+                 FAILED DATA(ls_save_failed)
+                 REPORTED DATA(ls_save_reported).
+
+              IF ls_po_failed IS NOT INITIAL OR ls_save_failed IS NOT INITIAL.
+                message = 'Failed to save data'.
+              ELSE.
+                message = 'Data saved successfully'.
+              ENDIF.
+
+              COMMIT ENTITIES END.
+            ENDLOOP.
+
+          CATCH cx_root INTO DATA(lx_root).
+            message = |General Error: { lx_root->get_text( ) }|.
+        ENDTRY.
+
+
+      ENDMETHOD.
+ENDCLASS.

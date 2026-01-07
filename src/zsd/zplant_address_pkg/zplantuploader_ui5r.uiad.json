@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Plant Data Uploader",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Plant Data Uploader"
+  },
+  "ui5AppDetails": {
+    "appId": "zplantdata"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7B58CFAC19D6CC9809B4A864F6530F9B74390DA1_TM",
+    "semanticObject": "zplantuploader",
+    "action": "Diplay",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7B58CFAC19D6CC9809B4A864F6530F9B74390DA1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Plant Data Uploader",
+        "subtitle": "zplantuploader"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Pick List",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Pick List"
+  },
+  "ui5AppDetails": {
+    "appId": "zpicklist"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E1671C7055A0FBFB16E6042A74F5215768375FD8_TM",
+    "semanticObject": "zpicklist",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E1671C7055A0FBFB16E6042A74F5215768375FD8_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Pick List",
+        "subtitle": "zpicklist"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'SERVICE BINDING FOR TDS REPORT'
+define service ZSRV_TDS_REPORT {
+  expose zcds_tds_report;
+}

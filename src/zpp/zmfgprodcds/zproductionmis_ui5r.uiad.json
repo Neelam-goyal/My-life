@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "PRODUCTION MIS"
+  },
+  "ui5AppDetails": {
+    "appId": "zproductionmis"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B1801F45B63641705637EBEB9352A4E6ED84114D_TM",
+    "semanticObject": "z_production_mis",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B1801F45B63641705637EBEB9352A4E6ED84114D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "PRODUCTION MIS",
+        "subtitle": "ZPRODMIS"
+      }
+    }
+  ]
+}

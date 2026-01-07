@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Variance Material Declaration excel upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Variance Material Declaration excel upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zmaterialdeclexcelv1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5D7CE508D9152F6D68FF52563568E032CBEF3402_TM",
+    "semanticObject": "zmaterialdeclexcelv1",
+    "action": "upload",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5D7CE508D9152F6D68FF52563568E032CBEF3402_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Variance Material Declaration excel upload",
+        "subtitle": "zmaterialdeclexcelv1"
+      }
+    }
+  ]
+}

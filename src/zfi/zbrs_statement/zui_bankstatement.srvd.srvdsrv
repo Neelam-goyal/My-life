@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition for Bank Statement'
+define service ZUI_BANKSTATEMENT {
+  expose ZC_BANKSTMT      as BankStatement;
+  expose ZC_BANKSTMTLINES as BankStatementLines;
+  expose ZBANK_VH         as HouseBank;
+}

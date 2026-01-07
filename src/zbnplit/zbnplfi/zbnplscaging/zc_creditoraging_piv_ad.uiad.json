@@ -1,0 +1,58 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Creditor Aging Analytical Query",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Creditor Aging Analytical Query"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_CREDITORAGING_PIV_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_CREDITORAGING_PIV_AD_TM",
+    "semanticObject": "ZCREDITORAGING",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_CREDITORAGING_PIV_QRY"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_CREDITORAGING_PIV_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Creditor Aging (BCP)",
+        "information": "Supplier Aging or Creditor Aging",
+        "keywords": "Supplier Aging",
+        "icon": "sap-icon://kpi-corporate-performance",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_CREDITORAGING_PIV_QRY"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

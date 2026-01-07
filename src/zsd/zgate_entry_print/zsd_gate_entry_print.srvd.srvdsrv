@@ -1,0 +1,4 @@
+@EndUserText.label: 'Sd Of ZGATE_ENTRY_PRINT'
+define service ZSD_GATE_ENTRY_PRINT {
+  expose ZCDS_GATE_ENTRY_PRINT;
+}

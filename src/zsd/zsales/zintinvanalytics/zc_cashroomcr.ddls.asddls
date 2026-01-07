@@ -1,0 +1,57 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Projection Entity for ZR_CASHROOMCR'
+@Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
+define view entity ZC_CASHROOMCR as projection on ZR_CASHROOMCR
+{
+    key Ccmpcode,
+    key Plant,
+    key Cfyear,
+    key Cgpno,
+    key Cno,
+    Type,
+    Cdate,
+    Caid,
+    Ctype,
+    Cnoseries,
+    Csalesmancode,
+    Croutecd,
+    Camt,
+    Camtf,
+    Cremarks,
+    Cdeltag,
+    Cusercode,
+    Cfeddt,
+    Cupddt,
+    Cpasstag,
+    Cvutno,
+    Cvutdate,
+    C1000,
+    C500,
+    C100,
+    Glposted,
+    C50,
+    C20,
+    C10,
+    C5,
+    C2,
+    C1,
+    Ccoins,
+    Cdnote,
+    Ccounting,
+    Cpasstime,
+    Cgpdate,
+    Cspoilamt,
+    Cshortcash,
+    C200,
+    Cempcode,
+    ErrorLog,
+    Remarks,
+    ReferenceDoc,
+    Highlight,
+    CreatedBy,
+    LastChangedBy,
+    /* Associations */
+    _Group :  redirected to parent ZC_INVGROUPED
+//    _CashLines :  redirected to composition child ZC_CUSTCONTROLSHT
+}

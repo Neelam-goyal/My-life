@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service def for Activity Declaration'
+define service ZUI_ACTIVITYDECL_O4 {
+  expose ZC_ACTIVITYDECL as ActivityDeclaration;
+}

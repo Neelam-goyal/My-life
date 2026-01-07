@@ -1,0 +1,47 @@
+managed implementation in class ZBP_R_MVTMAPPER unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MVTMAPPER alias ZrMvtmapper
+persistent table ZMVTMAPPER
+draft table ZMVTMAPPER_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Movementtype;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Movementtype;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMVTMAPPER
+  {
+    Movementtype = movementtype;
+    Multiplier = multiplier;
+    DebitCreditIndicator = debitcreditindicator;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

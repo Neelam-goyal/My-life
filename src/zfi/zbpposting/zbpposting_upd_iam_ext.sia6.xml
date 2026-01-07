@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZBPPOSTING_UPD_IAM_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>IAM for BP Posting Uploader</DESCRIPTION>
+     <RESPONSIBLE>CB9980000014</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>NXS</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZBPPOSTING</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZBPPOSTING_UPD_IAM_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZBPPOSTING_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZHTTP_BPDATASAVE</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZBPPOSTING_UPD_IAM_EXT</APP_ID>
+      <SRVC_NAME>492ACDF07D42F9531949C897D0C0C2</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>HTTP Service for Saving BP Posting Data</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZUI_BPPOSTING                      0001</REL_NAME>
+      <REL_TYPE>IWSV</REL_TYPE>
+      <APP_ID>ZBPPOSTING_UPD_IAM_EXT</APP_ID>
+      <SRVC_NAME>3321D2378126CCA0D651ED5AE6ED55</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZBPPOSTING_UI5R</UIAD_SRC>
+      <TEXT>Service Binding For ZUI_BPPPOSTING</TEXT>
+      <TYPE_TEXT>OData V2</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

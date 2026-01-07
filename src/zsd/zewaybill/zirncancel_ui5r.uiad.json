@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "IRN Cancel",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "IRN Cancel"
+  },
+  "ui5AppDetails": {
+    "appId": "zirncancel"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_CD49C86BDAC6874CA0E43D9523B38024E2A31A2A_TM",
+    "semanticObject": "ZIRNCANCEL",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_CD49C86BDAC6874CA0E43D9523B38024E2A31A2A_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "IRN Cancel",
+        "subtitle": "ZIRNCNL"
+      }
+    }
+  ]
+}

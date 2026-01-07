@@ -1,0 +1,4 @@
+@EndUserText.label: 'Inventory Aging - Batch wise'
+define service ZSD_InventBatchAging {
+  expose ZInventBatchAging;
+}

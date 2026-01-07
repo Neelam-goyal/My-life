@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_GLLINEITEMANALYSIS'
+}
+define service ZINA_GLLINEITEMANALYSIS provider contracts ina {
+  expose ZC_GLLINEITEMANALYSIS;
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'test service definition'
+define service Zsd_test_new {
+  expose zdd_cust_vh;
+  expose ZCDS_PRAC;
+}

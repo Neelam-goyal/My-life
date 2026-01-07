@@ -1,0 +1,167 @@
+managed implementation in class zbp_r_tblboxexphdr unique;
+strict;
+
+define behavior for ZR_TBLBOXEXPHDR alias ExpenseHeader
+persistent table ztbldboxexphdr
+lock master
+etag master LastChangedAt
+authorization master ( global )
+//etag master <field_name>
+{
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  create ( authorization : global );
+  update;
+  delete;
+
+  association _Details { create; }
+  static action fetchExpensesFromApi parameter ZDBOXPARAM result [0..*] $self;
+  static action syncPaymentStatus result [0..*] $self;
+  static action clearTableData result [0..*] $self;
+
+  mapping for ztbldboxexphdr
+    {
+      AppliedExpenseId      = applied_expense_id;
+      ReimbCode             = reimb_code;
+      EmployeeNo            = employee_no;
+      EmployeeName          = employee_name;
+      Designation           = designation;
+      Department            = department;
+      CostCenter            = cost_center;
+      ClaimedBy             = claimed_by;
+      CompanyName           = company_name;
+      GroupCompanyCode      = group_company_code;
+      ClaimTitle            = claim_title;
+      AppliedDate           = applied_date;
+      Responder             = responder;
+      ApprovedOrRejectedOn  = approved_or_rejected_on;
+      ResponderComnt        = responder_comment;
+      PendingWith           = pending_with;
+      AdvanceID             = advance_id;
+      AdvanceName           = advance_name;
+      AdvanceAmount         = advance_amount;
+      AdvanceAmtDefCurr     = advance_amt_def_curr;
+      AdvanceType           = advance_type;
+      AdvanceProcessedOn    = advance_processed_on;
+      ProjectNameWithCode   = project_name_with_code;
+      ProjectName           = project_name;
+      ProjectCode           = project_code;
+      ActedBy               = acted_by;
+      AdvancePaymentStatus  = advance_payment_status;
+      TripUniqueID          = trip_unique_id;
+      TripID                = trip_id;
+      TripName              = trip_name;
+      TripDescription       = trip_description;
+      TripStartDate         = trip_start_date;
+      TripEndDate           = trip_end_date;
+      SettlementAmount      = settlement_amount;
+      SettlementAmtBaseCurr = settlement_amt_base_curr;
+      SettlementAmtDefCurr  = settlement_amt_def_curr;
+      SettlementType        = settlement_type;
+      SettledBy             = settled_by;
+      SettledOn             = settled_on;
+      PaidDate              = paid_date;
+      PaidBy                = paid_by;
+      SapCompanycode        = sap_companycode;
+      SapAccountingdocument = sap_accountingdocument;
+      SapFiscalyear         = sap_fiscalyear;
+      Status                = status;
+      PaymentStatus         = payment_status;
+      TransactionID         = transaction_id;
+      PaymentComments       = payment_comments;
+      OverallComments       = overall_comments;
+      ItemTotal             = item_total;
+      ClaimedItemTotal      = claimed_item_total;
+      ProcessedItemTotal    = processed_item_total;
+      TotalClaimedAmount    = total_claimed_amount;
+      TotalProcessedAmount  = total_processed_amount;
+      CreatedBy             = created_by;
+      CreatedAt             = created_at;
+      LocalLastChangedBy    = local_last_changed_by;
+      LocalLastChangedAt    = local_last_changed_at;
+      LastChangedAt         = last_changed_at;
+    }
+}
+
+define behavior for ZR_TBLBOXEXPDTL alias ExpenseDetail
+persistent table ztbldboxexpdtl
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+
+  update;
+  delete;
+
+  // --- Both keys are now readonly ---
+  field ( readonly ) AppliedExpenseId;
+
+  association _Header;
+  mapping for ztbldboxexpdtl
+    {
+      AppliedExpenseId          = applied_expense_id;
+      ItemSeq                   = item_seq;
+      Description               = description;
+      ItemCode                  = item_code;
+      Type                      = type;
+      Ledger                    = ledger;
+      ExpenseCategory           = expense_category;
+      ProjectCode               = project_code;
+      InvoiceNumber             = invoice_number;
+      DateOfExpense             = date_of_expense;
+      ConversionFactor          = conversion_factor;
+      Currency                  = currency;
+      ClaimedAmount             = claimed_amount;
+      ApprovedAmount            = approved_amount;
+      ProcessedAmount           = processed_amount;
+      UnitQty                   = unit_qty;
+      IsExceeded                = is_exceeded;
+      IsExceededText            = is_exceeded_text;
+      TravelId                  = travel_id;
+      TripUniqueId              = trip_unique_id;
+      TripId                    = trip_id;
+      TravelDetails             = travel_details;
+      TravelProjectCode         = travel_project_code;
+      TravelTypeTagged          = travel_type_tagged;
+      ClaimedAmtBaseCurrTxt     = claimed_amt_base_curr_txt;
+      ClaimedAmtDefCurrTxt      = claimed_amt_def_curr_txt;
+      ClaimedAmtConvFactorTxt   = claimed_amt_conv_factor_txt;
+      ApprovedAmtBaseCurrTxt    = approved_amt_base_curr_txt;
+      ApprovedAmtDefCurrTxt     = approved_amt_def_curr_txt;
+      ApprovedAmtConvFactorTxt  = approved_amt_conv_factor_txt;
+      ProcessedAmtBaseCurrTxt   = processed_amt_base_curr_txt;
+      ProcessedAmtDefCurrTxt    = processed_amt_def_curr_txt;
+      ProcessedAmtConvFactorTxt = processed_amt_conv_factor_txt;
+      IsBillable                = is_billable;
+      StartDate                 = start_date;
+      EndDate                   = end_date;
+      Location                  = location;
+      VehicleType               = vehicle_type;
+      FromLocation              = from_location;
+      ToLocation                = to_location;
+      DistanceTxt               = distance_txt;
+      AdminComments             = admin_comments;
+      NoOfParticipants          = no_of_participants;
+      ParticipantWiseSplitStr   = participant_wise_split_str;
+      CoPaymentPercent          = co_payment_percent;
+      CoPaymentAmount           = co_payment_amount;
+      DependentName             = dependent_name;
+      BudgetApplied             = budget_applied;
+      TaxGroup                  = tax_group;
+      CustomFieldsStr           = custom_fields_str;
+      ItemCostCentersStr        = item_cost_centers_str;
+      AttachmentsStr            = attachments_str;
+      Status                    = status;
+      Merchant                  = merchant;
+      CreatedBy                 = created_by;
+      CreatedAt                 = created_at;
+      LocalLastChangedBy        = local_last_changed_by;
+      LocalLastChangedAt        = local_last_changed_at;
+      LastChangedAt             = last_changed_at;
+    }
+}

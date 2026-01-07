@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Loan Master",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Loan Master"
+  },
+  "ui5AppDetails": {
+    "appId": "zloanmaster"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8CB8D22849586E65BA415073736B3AEBB5CA4387_TM",
+    "semanticObject": "ZLoanMaster",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8CB8D22849586E65BA415073736B3AEBB5CA4387_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Loan Master",
+        "subtitle": "ZLoanMaster"
+      }
+    }
+  ]
+}

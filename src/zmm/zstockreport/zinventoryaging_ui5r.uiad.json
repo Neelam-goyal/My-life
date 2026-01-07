@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Inventory Aging",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Inventory Aging"
+  },
+  "ui5AppDetails": {
+    "appId": "zinventoryaging"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A29D5246CC25DFE59FA6459B2C2DFEEFC3BA3D25_TM",
+    "semanticObject": "ZInventoryAging",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A29D5246CC25DFE59FA6459B2C2DFEEFC3BA3D25_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Inventory Aging",
+        "subtitle": "ZInventoryAging"
+      }
+    }
+  ]
+}

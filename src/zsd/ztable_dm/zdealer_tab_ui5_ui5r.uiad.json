@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Dealer Table",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Dealer Table"
+  },
+  "ui5AppDetails": {
+    "appId": "zdealertable"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5F9C733A23811425D8ADB97FBE986AE3D837849E_TM",
+    "semanticObject": "zdealer_tab_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5F9C733A23811425D8ADB97FBE986AE3D837849E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Dealer Table",
+        "subtitle": "ZDEALER_TABLE"
+      }
+    }
+  ]
+}

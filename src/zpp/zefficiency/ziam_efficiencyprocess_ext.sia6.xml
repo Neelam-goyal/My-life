@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZIAM_EFFICIENCYPROCESS_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>iam app for effieciencyprocess</DESCRIPTION>
+     <RESPONSIBLE>CB9980000014</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>NXS</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZEFFICIENCY</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZIAM_EFFICIENCYPROCESS_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZEFFICIENCY_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZHHTP_SAVECAUSEDETAIL</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZIAM_EFFICIENCYPROCESS_EXT</APP_ID>
+      <SRVC_NAME>AC6CADCA142B1F5D09605FDFD76347</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>class for saving a data of cause details</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZHTTP_GENERATEDATE</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZIAM_EFFICIENCYPROCESS_EXT</APP_ID>
+      <SRVC_NAME>ECD1E5B047A010DF1F18D7755D67A4</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>http class for generating data</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZHTTP_PRODUCTDATA</REL_NAME>
+      <REL_TYPE>HTTP</REL_TYPE>
+      <APP_ID>ZIAM_EFFICIENCYPROCESS_EXT</APP_ID>
+      <SRVC_NAME>1E5CAE035E57241826B4174D4F2343</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>http class for product data</TEXT>
+      <TYPE_TEXT>HTTP Service</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZSRB_EFFICIENCY                    0001</REL_NAME>
+      <REL_TYPE>IWSV</REL_TYPE>
+      <APP_ID>ZIAM_EFFICIENCYPROCESS_EXT</APP_ID>
+      <SRVC_NAME>31F48D7EF6631CCFD66018C4D37681</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZEFFICIENCY_UI5R</UIAD_SRC>
+      <TEXT>Service Binding for Efficiency Report</TEXT>
+      <TYPE_TEXT>OData V2</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,82 @@
+managed;
+strict ( 2 );
+define behavior for ZR_ZScheme02TP alias ZScheme
+implementation in class ZBP_R_ZScheme02TP unique
+persistent table ZSCHEME
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Schemecode;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for ZSCHEME
+  {
+    Bukrs = BUKRS;
+    Schemecode = SCHEMECODE;
+    Validfrom = VALIDFROM;
+    Validto = VALIDTO;
+    Customergroup = CUSTOMERGROUP;
+    Schemeqty = SCHEMEQTY;
+    Freeqty = FREEQTY;
+    Minimumqty = MINIMUMQTY;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _ZSchemeLines { create; }
+}
+
+define behavior for ZR_ZSchemeLines01TP alias ZSchemeLines
+implementation in class ZBP_R_ZSchemeLines01TP unique
+persistent table ZSCHEMELINES
+etag master LastChangedAt
+lock dependent by _ZScheme
+authorization dependent by _ZScheme
+
+{
+  field ( readonly )
+   Bukrs,
+   Schemecode,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Schemegroupcode,
+   Productcode;
+
+
+  update;
+  delete;
+
+  mapping for ZSCHEMELINES
+  {
+    Bukrs = BUKRS;
+    Schemecode = SCHEMECODE;
+    Schemegroupcode = SCHEMEGROUPCODE;
+    Productcode = PRODUCTCODE;
+    Productdesc = PRODUCTDESC;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _ZScheme;
+}

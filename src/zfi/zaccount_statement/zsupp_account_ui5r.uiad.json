@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Supplier Account Statement",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Supplier Account Statement"
+  },
+  "ui5AppDetails": {
+    "appId": "zsupacountstatement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_AD189F541AE83BBE688CE94E51BAD22D7BED3F67_TM",
+    "semanticObject": "supaccount",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_AD189F541AE83BBE688CE94E51BAD22D7BED3F67_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Supplier Account Statement",
+        "subtitle": "zsupaccount"
+      }
+    }
+  ]
+}

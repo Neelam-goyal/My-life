@@ -1,0 +1,240 @@
+
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Orderdate'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Orderdate'
+@UI.lineItem: [{criticality: 'Highlight'}] 
+annotate entity ZC_INVGROUPED
+    with 
+{
+
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'Data Collection', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  }, 
+  {
+    id: 'InvoiceLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Invoices', 
+    hidden: #(IsSales) ,
+    position: 30 , 
+    targetElement: '_InvoiceHeaders'
+  } ,
+  {
+    id: 'UnsoldLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Unsold', 
+     hidden: #(IsUnsold) ,
+    position: 40 , 
+    targetElement: '_UnsoldHeaders'
+  },
+  {
+    id: 'ExpenseLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Expenses', 
+     hidden: #(IsExpense) ,
+    position: 50 , 
+    targetElement: '_CtrlHeaders'
+  },
+  {
+    id: 'CratesLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Crates', 
+     hidden: #(IsCrates) ,
+    position: 60 , 
+    targetElement: '_CratesHeaders'
+  },
+  {
+    id: 'ScrapLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Scraps', 
+     hidden: #(IsScrap) ,
+    position: 70 , 
+    targetElement: '_ScrapHeaders'
+  },
+  {
+    id: 'CRNLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Credit Notes', 
+     hidden: #(IsCrn) ,
+    position: 80 , 
+    targetElement: '_CRNHeaders'
+  }
+  ,
+  {
+    id: 'ReceiptLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Receipts', 
+     hidden: #(IsReceipt) ,
+    position: 90 , 
+    targetElement: '_ReceiptHeaders'
+  }
+   ]
+    
+  @UI.identification: [
+  {
+    position: 10 
+  } ]
+  @UI.lineItem: [
+  {
+    position: 10 , 
+      label: 'Calculate',
+      type: #FOR_ACTION,
+      requiresContext: false,   
+      dataAction: 'calculate',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },
+  
+   {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @EndUserText.label: 'Order Date'
+   Orderdate;
+      
+   @EndUserText.label: 'Type'
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+   @UI.selectionField: [ {
+    position: 20 
+  } ]
+    @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_TYPEVH', element: 'Description' } }]
+   Type;
+  
+      @UI.identification: [ {
+    position: 25 
+  } ]
+  @UI.lineItem: [ {
+    position: 25 
+  } ]
+  @EndUserText.label: 'No. of Orders'
+   Nooforder;
+   
+    @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @EndUserText.label: 'Order Amount'
+   Orderamount;
+   
+    @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @EndUserText.label: 'Processed'
+   Processed;
+   
+    @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+   @EndUserText.label: 'SO Created'   
+   Socreated;
+   
+   @UI.identification: [ {
+    position: 60 ,
+    label: 'Data Validated'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Data Validated'
+  } ]
+      @EndUserText.label: 'Data Validated'
+   Datavalidated;
+   
+    @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+      @EndUserText.label: 'SO Amount'
+   Soamount;
+    @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+      @EndUserText.label: 'Delivery Created'
+   Outboundcreated;
+    @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+      @EndUserText.label: 'Order Billed'
+   Orderbilled;
+    @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+      @EndUserText.label: 'Billed Amount'
+   Billedamount;
+   
+     @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+      @EndUserText.label: 'PO To Created'
+   Potobecreated;
+   
+   
+    @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+      @EndUserText.label: 'PO Created'
+   Pocreated;
+   
+    @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+      @EndUserText.label: 'MIGO Created'
+   Migocreated;
+   
+  @EndUserText.label: 'Error Flag'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Error Flag'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Error Flag'
+  } ]
+  Highlight;
+    
+}

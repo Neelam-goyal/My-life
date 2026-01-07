@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_GATEPASS_QRY'
+}
+define service ZINA_CUBE_GATEPASS provider contracts ina {
+  expose ZC_GATEPASS_QRY;
+}

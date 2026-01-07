@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Bank GL",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bank GL"
+  },
+  "ui5AppDetails": {
+    "appId": "zbank"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_21BDD8820B942BD105279A228D0EC10BD3727438_TM",
+    "semanticObject": "zbank_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_21BDD8820B942BD105279A228D0EC10BD3727438_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bank GL",
+        "subtitle": "z_bank"
+      }
+    }
+  ]
+}

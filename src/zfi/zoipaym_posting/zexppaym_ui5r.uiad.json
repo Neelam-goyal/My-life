@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Expense payment uploader",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Expense Payments Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zexppaymupd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7D4E0A5C8084FCC0BC53155553D1B15E3CC2268C_TM",
+    "semanticObject": "ZEXPPAYM",
+    "action": "UPD",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7D4E0A5C8084FCC0BC53155553D1B15E3CC2268C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Expense Payments Upload",
+        "subtitle": "ZExpPaymUpd"
+      }
+    }
+  ]
+}

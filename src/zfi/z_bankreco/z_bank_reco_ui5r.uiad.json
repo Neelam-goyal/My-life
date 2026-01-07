@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BANK RECONSILATION"
+  },
+  "ui5AppDetails": {
+    "appId": "zbankrecoapp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_73C364691C9BD6A0434F059CB365586DE4DA03E9_TM",
+    "semanticObject": "z_bank_reco",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_73C364691C9BD6A0434F059CB365586DE4DA03E9_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BANK RECONSILATION",
+        "subtitle": "ZBANK_RECO"
+      }
+    }
+  ]
+}

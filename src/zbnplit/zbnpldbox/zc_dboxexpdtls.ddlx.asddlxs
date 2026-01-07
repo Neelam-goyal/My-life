@@ -1,0 +1,50 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Expense Item',
+  typeNamePlural: 'Expense Items',
+  title: {
+    type: #STANDARD,
+    value: 'Description'
+  }
+}
+annotate view ZC_DBoxExpDtls with
+{
+  @UI.lineItem: [ { position: 10, importance: #HIGH, label: 'Item Description' } ]
+  @UI.identification: [ { position: 10, label: 'Item Description' } ]
+  Description;
+
+  @UI.lineItem: [ { position: 20, importance: #HIGH, label: 'Category' } ]
+  @UI.identification: [ { position: 20, label: 'Category' } ]
+  ExpenseCategory;
+
+  @UI.lineItem: [ { position: 30, importance: #HIGH, label: 'Date of Expense' } ]
+  @UI.identification: [ { position: 30, label: 'Date of Expense' } ]
+  DateOfExpense;
+
+  @UI.lineItem: [ { position: 40, importance: #HIGH, label: 'Claimed Amount' } ]
+  @UI.identification: [ { position: 40, label: 'Claimed Amount' } ]
+  ClaimedAmount;
+
+  @UI.lineItem: [ { position: 50, importance: #MEDIUM, label: 'Approved Amount' } ]
+  @UI.identification: [ { position: 50, label: 'Approved Amount' } ]
+  ApprovedAmount;
+  
+  @UI.lineItem: [ { position: 60, importance: #MEDIUM, label: 'Processed Amount' } ]
+  @UI.identification: [ { position: 60, label: 'Processed Amount' } ]
+  ProcessedAmount;
+
+  @UI.lineItem: [ { position: 70, importance: #MEDIUM, label: 'Currency' } ]
+  @UI.identification: [ { position: 70, label: 'Currency' } ]
+  Currency;
+
+  @UI.lineItem: [ { position: 80, importance: #HIGH, label: 'Status' } ]
+  @UI.identification: [ { position: 80, label: 'Status' } ]
+  Status;
+  
+  // Hide key fields from the UI table as they are not user-friendly
+  @UI.hidden: true
+  AppliedExpenseId;
+  
+  @UI.hidden: true
+  ItemSeq;
+}

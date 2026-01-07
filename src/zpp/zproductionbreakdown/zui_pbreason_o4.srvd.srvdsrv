@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_PBREASON'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_PBREASON'
+  }
+}
+define service ZUI_PBREASON_O4 provider contracts odata_v4_ui {
+  expose ZC_PBREASON;
+}

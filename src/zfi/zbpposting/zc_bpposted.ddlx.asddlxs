@@ -1,0 +1,272 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Companycode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Companycode'
+
+annotate entity ZC_BPPOSTED
+    with 
+{
+
+  /* ============================
+     FACET
+     ============================ */
+  @UI.facet: [{
+      label: 'General Information',
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      position: 10,
+      type: #IDENTIFICATION_REFERENCE
+  }]
+  @UI.identification: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  Companycode;
+
+  /* ============================
+     DOCUMENT DATE
+     ============================ */
+  @EndUserText.label: 'Document Date'
+  @UI.identification: [{ position: 20 }]
+  @UI.lineItem: [{ position: 20 }]
+  @UI.selectionField: [{ position: 20 }]
+  Documentdate;
+
+  /* ============================
+     CREATED TIME
+     ============================ */
+  @UI.identification: [{ position: 30 }]
+  @UI.lineItem: [{ position: 30 }]
+  Createdtime;
+
+  /* ============================
+     LINE NUMBER
+     ============================ */
+  @EndUserText.label: 'Line Number'
+  @UI.identification: [{ position: 40 }]
+  @UI.lineItem: [{ position: 40 }]
+  LineNum;
+
+  /* ============================
+     POSTING DATE
+     ============================ */
+  @EndUserText.label: 'Posting Date'
+  @UI.identification: [{ position: 50 }]
+  @UI.lineItem: [{ position: 50 }]
+  Postingdate;
+
+  /* ============================
+     VOUCHER TYPE
+     ============================ */
+  @EndUserText.label: 'Voucher Type'
+  @UI.identification: [{ position: 60 }]
+  @UI.lineItem: [{ position: 60 }]
+  Vouchertype;
+
+  /* ============================
+     TYPE 1
+     ============================ */
+  @EndUserText.label: 'Type'
+  @UI.identification: [{ position: 70 }]
+  @UI.lineItem: [{ position: 70 }]
+  Type1;
+
+  /* ============================
+     BUSINESS PARTNER 1
+     ============================ */
+  @UI.identification: [{ position: 80 }]
+  @UI.lineItem: [{ position: 80 }]
+  @Consumption.valueHelpDefinition: [{
+      entity: { name: 'I_BusinessPartnerVH', element: 'BusinessPartner' }
+  }]
+  Businesspartner1;
+
+  /* ============================
+     SPECIAL GL CODE 1
+     ============================ */
+  @EndUserText.label: 'Special Gl Code'
+  @UI.identification: [{ position: 90 }]
+  @UI.lineItem: [{ position: 90 }]
+  SpecialGlCode1;
+
+  /* ============================
+     AMOUNT 1
+     ============================ */
+  @UI.identification: [{ position: 100 }]
+  @UI.lineItem: [{ position: 100 }]
+  Amount1;
+
+  /* ============================
+     AMOUNT TYPE 1
+     ============================ */
+  @EndUserText.label: 'Amount Type'
+  @UI.identification: [{ position: 110 }]
+  @UI.lineItem: [{ position: 110 }]
+  AmtType1;
+
+  /* ============================
+     BUSINESS PLACE 1
+     ============================ */
+  @UI.identification: [{ position: 120 }]
+  @UI.lineItem: [{ position: 120 }]
+  BusinessPlace1;
+
+  /* ============================
+     PROFIT CENTER 1
+     ============================ */
+  @UI.identification: [{ position: 130 }]
+  @UI.lineItem: [{ position: 130 }]
+  @Consumption.valueHelpDefinition: [{
+      entity: { name: 'I_ProfitCenterStdVH', element: 'ProfitCenter' }
+  }]
+  ProfitCenter1;
+
+  /* ============================
+     TEXT 1
+     ============================ */
+  @UI.identification: [{ position: 140 }]
+  @UI.lineItem: [{ position: 140 }]
+  ItemText1;
+
+  /* ============================
+     ASSIGNMENT 1
+     ============================ */
+  @UI.identification: [{ position: 150 }]
+  @UI.lineItem: [{ position: 150 }]
+  Assignment1;
+
+  /* ============================
+     TYPE 2
+     ============================ */
+  @EndUserText.label: 'Type'
+  @UI.identification: [{ position: 160 }]
+  @UI.lineItem: [{ position: 160 }]
+  Type2;
+
+  /* ============================
+     BUSINESS PARTNER 2
+     ============================ */
+  @UI.identification: [{ position: 170 }]
+  @UI.lineItem: [{ position: 170 }]
+  @Consumption.valueHelpDefinition: [{
+      entity: { name: 'I_BusinessPartnerVH', element: 'BusinessPartner' }
+  }]
+  Businesspartner2;
+
+  /* ============================
+     SPECIAL GL CODE 2
+     ============================ */
+  @EndUserText.label: 'Special Gl Code'
+  @UI.identification: [{ position: 180 }]
+  @UI.lineItem: [{ position: 180 }]
+  SpecialGlCode2;
+
+  /* ============================
+     AMOUNT 2
+     ============================ */
+  @UI.identification: [{ position: 190 }]
+  @UI.lineItem: [{ position: 190 }]
+  Amount2;
+
+  /* ============================
+     AMOUNT TYPE 2
+     ============================ */
+  @EndUserText.label: 'Amount Type'
+  @UI.identification: [{ position: 200 }]
+  @UI.lineItem: [{ position: 200 }]
+  AmtType2;
+
+  /* ============================
+     BUSINESS PLACE 2
+     ============================ */
+  @UI.identification: [{ position: 210 }]
+  @UI.lineItem: [{ position: 210 }]
+  BusinessPlace2;
+
+  /* ============================
+     PROFIT CENTER 2
+     ============================ */
+  @UI.identification: [{ position: 220 }]
+  @UI.lineItem: [{ position: 220 }]
+  @Consumption.valueHelpDefinition: [{
+      entity: { name: 'I_ProfitCenterStdVH', element: 'ProfitCenter' }
+  }]
+  ProfitCenter2;
+
+  /* ============================
+     TEXT 2
+     ============================ */
+  @UI.identification: [{ position: 230 }]
+  @UI.lineItem: [{ position: 230 }]
+  ItemText2;
+
+  /* ============================
+     ASSIGNMENT 2
+     ============================ */
+  @UI.identification: [{ position: 240 }]
+  @UI.lineItem: [{ position: 240 }]
+  Assignment2;
+
+  /* ============================
+     APPROVED BY
+     ============================ */
+  @EndUserText.label: 'Approved By'
+  @UI.identification: [{ position: 250 }]
+  @UI.lineItem: [{ position: 250 }]
+  ApprovedBy;
+
+  /* ============================
+     APPROVED AT
+     ============================ */
+  @EndUserText.label: 'Approved At'
+  @UI.identification: [{ position: 260 }]
+  @UI.lineItem: [{ position: 260 }]
+  ApprovedAt;
+
+  /* ============================
+     ERROR LOG
+     ============================ */
+  @EndUserText.label: 'Error'
+  @UI.identification: [{ position: 270 }]
+  @UI.lineItem: [{ position: 270 }]
+  ErrorLog;
+
+  /* ============================
+     CREATED BY
+     ============================ */
+  @UI.identification: [{ position: 290 }]
+  @UI.lineItem: [{ position: 290 }]
+  CreatedBy;
+
+  /* ============================
+     CREATED AT
+     ============================ */
+  @UI.identification: [{ position: 300 }]
+  @UI.lineItem: [{ position: 300 }]
+  CreatedAt;
+
+  /* ============================
+     TECHNICAL HIDDEN FIELDS
+     ============================ */
+  @UI.hidden: true
+  Isdeleted;
+  
+  @UI.hidden: true
+  Validate1;
+  
+  @UI.hidden: true
+  Validate2;
+
+  @UI.hidden: true
+  Isposted;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+}

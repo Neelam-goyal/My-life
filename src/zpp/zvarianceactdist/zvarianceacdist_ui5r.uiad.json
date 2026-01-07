@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Activity Variance Distribution",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Activity Variance Distribution"
+  },
+  "ui5AppDetails": {
+    "appId": "zvaractdist"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F13CBCEBD0727F0DAE1F44915B0A812D5DB6E2B8_TM",
+    "semanticObject": "ZVARIANCEACTDIST",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F13CBCEBD0727F0DAE1F44915B0A812D5DB6E2B8_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Activity Variance Distribution",
+        "subtitle": "ZVARIANCEACTDIST"
+      }
+    }
+  ]
+}

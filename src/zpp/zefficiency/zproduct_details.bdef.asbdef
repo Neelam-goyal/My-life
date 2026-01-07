@@ -1,0 +1,14 @@
+managed implementation in class zbp_product_details unique;
+strict ( 2 );
+
+define behavior for zproduct_details //alias <alias_name>
+persistent table zprod_details
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) WorkCenter, PostingDate, ShiftDescription, Plant , TotalQty_ZWST, ManufacturingOrder;
+}

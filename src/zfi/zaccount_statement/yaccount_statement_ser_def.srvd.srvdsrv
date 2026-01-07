@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service Def For Account Statement'
+define service YACCOUNT_STATEMENT_SER_DEF {
+  expose ZCUSTOMER_DETAILS  as Customer;
+  expose ZSUPPLIER_DETAILS  as Supplier;
+  expose I_CompanyCodeStdVH as I_CompanyCodeVH;
+  expose zi_cutomervh       as I_CustomerVH;
+  expose zi_suppliervh      as I_SupplierVH;
+}

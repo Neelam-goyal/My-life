@@ -1,0 +1,6 @@
+@EndUserText.label: 'Salary API'
+define service ZAPI_SALARY {
+  expose ZC_SALARY       as Salary;
+  expose ZC_SALARYPOSTED as SalaryPosted;
+  expose ZC_SALARYSDEL   as SalaryDel;
+}

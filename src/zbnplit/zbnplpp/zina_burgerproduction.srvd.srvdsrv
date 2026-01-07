@@ -1,0 +1,7 @@
+@EndUserText: {
+  label: 'Service Def. for ZC_BURGERPRODUCTION_QRY'
+}
+define service ZINA_BURGERPRODUCTION
+  provider contracts ina {
+  expose ZC_BURGERPRODUCTION_QRY;
+}

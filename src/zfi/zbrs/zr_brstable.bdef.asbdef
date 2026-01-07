@@ -1,0 +1,56 @@
+managed implementation in class ZBP_R_BRSTABLE unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_BRSTABLE alias ZrBrstable
+persistent table ZBRSTABLE
+draft table ZBRSTABLE_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   AccId,
+   MainGl,
+   OutGl,
+   InGl;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   AccId,
+   MainGl,
+   OutGl,
+   InGl;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZBRSTABLE
+  {
+    AccId = acc_id;
+    MainGl = main_gl;
+    OutGl = out_gl;
+    InGl = in_gl;
+    Accountcode = accountcode;
+    CompCode = comp_code;
+    HouseBank = house_bank;
+    ProfitCenter  = profitcenter;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

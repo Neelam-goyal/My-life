@@ -1,0 +1,392 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Supplierinvoice'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Supplierinvoiceitem'
+annotate view ZC_POSTJOURNAL000 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [{
+    position: 10 , 
+      label: 'Generate Data',
+      type: #FOR_ACTION,
+      dataAction: 'generateData',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },
+  {
+    position: 20 , 
+      label: 'Post',
+      type: #FOR_ACTION,
+      dataAction: 'post',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },
+   {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_CompanyCodeStdVH', element:'CompanyCode' }}]
+  Companycode;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Fiscalyear;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Supplierinvoice;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  Supplierinvoiceitem;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  Postingdate;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_PlantStdVH', element:'Plant' },
+   additionalBinding: [{ localElement: 'PlantName',element: 'PlantName' }]
+   }]
+  Plant;
+  
+  @EndUserText.label: 'Plantname'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Plantname'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Plantname'
+  } ]
+  Plantname;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity:{ name: 'ZR_PRODUCTVH', element:'Product' },
+   additionalBinding: [{ localElement: 'Productname',element: 'ProductDescription' },
+   { localElement: 'Companycode',element: 'CompCode',usage: #FILTER_AND_RESULT },
+   { localElement: 'Plant',element: 'Plant',usage: #FILTER_AND_RESULT }]
+   }]
+  Material;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  Productname;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  Purchaseorder;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  Purchaseorderitem;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  VendorInvoiceNo;
+  
+  @EndUserText.label: 'VendorInvoiceDate'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'VendorInvoiceDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'VendorInvoiceDate'
+  } ]
+  VendorInvoiceDate;
+  
+  @EndUserText.label: 'VendorType'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'VendorType'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'VendorType'
+  } ]
+  VendorType;
+  
+  @EndUserText.label: 'Baseunit'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Baseunit'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Baseunit'
+  } ]
+  Baseunit;
+  
+  @EndUserText.label: 'Profit Center'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Profit Center'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Profit Center'
+  } ]
+  Profitcenter;
+  
+  @EndUserText.label: 'Purchase Order Type'
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Purchase Order Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 , 
+    label: 'Purchase Order Type'
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_PurchasingDocumentTypeText', element:'PurchasingDocumentType' }   }]
+  Purchaseordertype;
+  
+  @UI.identification: [ {
+    position: 180 
+  } ]
+  @UI.lineItem: [ {
+    position: 180 
+  } ]
+  Purchaseorderdate;
+  
+  @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_PurchasingOrganization', element:'PurchasingOrganization' },
+   additionalBinding: [{ localElement: 'Companycode', element: 'CompanyCode', usage:#FILTER }] 
+   }]
+  Purchasingorganization;
+  
+  @UI.identification: [ {
+    position: 200
+  } ]
+  @UI.lineItem: [ {
+    position: 200 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_PurchasingGroup', element:'PurchasingGroup' }}]  
+  Purchasinggroup;
+  
+  @EndUserText.label: 'Hsn Code'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Hsn Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'Hsn Code'
+  } ]
+  Hsncode;
+  
+  @EndUserText.label: 'Tax Code Name'
+  @UI.identification: [ {
+    position: 220 , 
+    label: 'Tax Code Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 220 , 
+    label: 'Tax Code Name'
+  } ]
+  Taxcodename;
+  
+  @EndUserText.label: 'Percent'
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'Percent'
+  } ]
+  @UI.lineItem: [ {
+    position: 230 , 
+    label: 'Percent'
+  } ]
+  Percent;
+  
+  @EndUserText.label: 'Igst'
+  @UI.identification: [ {
+    position: 240 , 
+    label: 'Igst'
+  } ]
+  @UI.lineItem: [ {
+    position: 240 , 
+    label: 'Igst'
+  } ]
+  Igst;
+  
+  @EndUserText.label: 'Sgst'
+  @UI.identification: [ {
+    position: 250 , 
+    label: 'Sgst'
+  } ]
+  @UI.lineItem: [ {
+    position: 250 , 
+    label: 'Sgst'
+  } ]
+  Sgst;
+  
+  @EndUserText.label: 'Cgst'
+  @UI.identification: [ {
+    position: 260 , 
+    label: 'Cgst'
+  } ]
+  @UI.lineItem: [ {
+    position: 260 , 
+    label: 'Cgst'
+  } ]
+  Cgst;
+  
+  @EndUserText.label: 'Rateigst'
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'Rateigst'
+  } ]
+  @UI.lineItem: [ {
+    position: 270 , 
+    label: 'Rateigst'
+  } ]
+  Rateigst;
+  
+  @EndUserText.label: 'Ratecgst'
+  @UI.identification: [ {
+    position: 280 , 
+    label: 'Ratecgst'
+  } ]
+  @UI.lineItem: [ {
+    position: 280 , 
+    label: 'Ratecgst'
+  } ]
+  Ratecgst;
+  
+  @EndUserText.label: 'Ratesgst'
+  @UI.identification: [ {
+    position: 290 , 
+    label: 'Ratesgst'
+  } ]
+  @UI.lineItem: [ {
+    position: 290 , 
+    label: 'Ratesgst'
+  } ]
+  Ratesgst;
+  
+  @EndUserText.label: 'Isreversed'
+  @UI.identification: [ {
+    position: 300 , 
+    label: 'Isreversed'
+  } ]
+  @UI.lineItem: [ {
+    position: 300 , 
+    label: 'Isreversed'
+  } ]
+  Isreversed;
+  
+  @EndUserText.label: 'Netamount'
+  @UI.identification: [ {
+    position: 310 , 
+    label: 'Netamount'
+  } ]
+  @UI.lineItem: [ {
+    position: 310 , 
+    label: 'Netamount'
+  } ]
+  Netamount;
+  
+  @EndUserText.label: 'Taxamount'
+  @UI.identification: [ {
+    position: 320 , 
+    label: 'Taxamount'
+  } ]
+  @UI.lineItem: [ {
+    position: 320 , 
+    label: 'Taxamount'
+  } ]
+  Taxamount;
+  
+  @EndUserText.label: 'Roundoff'
+  @UI.identification: [ {
+    position: 330 , 
+    label: 'Roundoff'
+  } ]
+  @UI.lineItem: [ {
+    position: 330 , 
+    label: 'Roundoff'
+  } ]
+  Roundoff;
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+ @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

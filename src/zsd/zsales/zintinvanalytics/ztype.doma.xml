@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZTYPE</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000011</LENG>
+    <OUTPUTLEN>000011</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Type For Inv Grouped</DDTEXT>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>SALES</DOMVALUE_L>
+     <DDTEXT>Sales</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>UNSOLD</DOMVALUE_L>
+     <DDTEXT>Unsold</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>EXPENSES</DOMVALUE_L>
+     <DDTEXT>Expenses</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>RECEIPTS</DOMVALUE_L>
+     <DDTEXT>Receipts</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>CRATES</DOMVALUE_L>
+     <DDTEXT>Crates</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>SCRAPS</DOMVALUE_L>
+     <DDTEXT>Scraps</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZTYPE</DOMNAME>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>CREDIT NOT</DOMVALUE_L>
+     <DDTEXT>Credit Notes</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

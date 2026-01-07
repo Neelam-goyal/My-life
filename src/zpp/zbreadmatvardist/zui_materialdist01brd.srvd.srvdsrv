@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service definition for bread material dist'
+define service ZUI_MATERIALDIST01BRD {
+  expose ZC_materialdist01TPBRD as materialdist;
+  expose ZC_matdistlinesTPBRD   as matdistlines;
+}

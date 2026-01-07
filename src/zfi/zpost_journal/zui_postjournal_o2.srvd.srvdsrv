@@ -1,0 +1,4 @@
+@EndUserText.label: 'Post Journal API V2 Service Definition'
+define service ZUI_POSTJOURNAL_O2 {
+  expose ZC_POSTJOURNAL000 as PostJournal;
+}

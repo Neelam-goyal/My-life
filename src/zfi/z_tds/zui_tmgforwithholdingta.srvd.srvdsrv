@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_TmgForWithHoldingTa_S'
+define service ZUI_TMGFORWITHHOLDINGTA {
+  expose ZI_TMGFORWITHHOLDINGTA_S as TmgForWithHoldinAll;
+  expose ZI_TMGFORWITHHOLDINGTA as TmgForWithHoldingTa;
+}

@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_PlantTable_S'
+define service ZUI_PLANTTABLE {
+  expose ZI_PLANTTABLE_S as PlantTableAll;
+  expose ZI_PLANTTABLE as PlantTable;
+}

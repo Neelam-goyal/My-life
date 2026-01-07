@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition'
+define service ZSRV_MaterialVariance_02 {
+  expose ZCDS_MaterialVariance_02;
+}

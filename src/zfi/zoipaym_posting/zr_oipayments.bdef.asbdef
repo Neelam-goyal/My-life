@@ -1,0 +1,71 @@
+managed implementation in class ZBP_R_OIPAYMENTS unique;
+strict( 2 );
+define behavior for ZR_OIPAYMENTS alias ZrOipayments
+persistent table ZOIPAYMENTS
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Companycode,
+   Documentdate,
+   Createdtime,
+   SpecialGlCode,
+   LineNum,
+   Bpartner;
+
+
+  create;
+  update;
+
+
+  action falsedelete;
+  action approveData;
+
+  mapping for ZOIPAYMENTS
+  {
+    Companycode = companycode;
+    Documentdate = documentdate;
+    Bpartner = bpartner;
+    Createdtime = createdtime;
+    Postingdate = postingdate;
+    SpecialGlCode = special_gl_code;
+    LineNum = line_no;
+    Glamount = glamount;
+    Type = type;
+    Accountingdocument = accountingdocument;
+    AccountingDocumenttype = documenttype;
+    Assignmentreference = assignmentreference;
+    Businessplace = businessplace;
+    Sectioncode = sectioncode;
+    Gltext = gltext;
+    Glaccount = glaccount;
+    Housebank = housebank;
+    Accountid = accountid;
+    Profitcenter = profitcenter;
+    Costcenter = costcenter;
+    ErrorLog = error_log;
+    TaxCode = taxcode;
+    Wbselement = wbselement;
+    ReferenceID =  referenceid;
+    Currencycode = currencycode;
+    ApprovedAt = approved_at;
+    ApprovedBy = approved_by;
+    Isdeleted = isdeleted;
+    Isposted = isposted;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

@@ -1,0 +1,181 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'CompCode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'CompCode'
+annotate view ZC_CUSTCONTROLSHT with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  
+  @EndUserText.label: 'GateEntryNo'
+@UI.identification: [ {
+  position: 10 , 
+  label: 'GateEntryNo'
+} ]
+@UI.lineItem: [ {
+  position: 10 , 
+  label: 'GateEntryNo'
+} ]
+GateEntryNo;
+
+@EndUserText.label: 'CompCode'
+@UI.identification: [ {
+  position: 20 , 
+  label: 'CompCode'
+} ]
+@UI.lineItem: [ {
+  position: 20 , 
+  label: 'CompCode'
+} ]
+CompCode;
+
+@EndUserText.label: 'Plant'
+@UI.identification: [ {
+  position: 30 , 
+  label: 'Plant'
+} ]
+@UI.lineItem: [ {
+  position: 30 , 
+  label: 'Plant'
+} ]
+Plant;
+
+@EndUserText.label: 'Imfyear'
+@UI.identification: [ {
+  position: 40 , 
+  label: 'Imfyear'
+} ]
+@UI.lineItem: [ {
+  position: 40 , 
+  label: 'Imfyear'
+} ]
+Imfyear;
+
+@EndUserText.label: 'Dealer'
+@UI.identification: [ {
+  position: 50 , 
+  label: 'Dealer'
+} ]
+@UI.lineItem: [ {
+  position: 50 , 
+  label: 'Dealer'
+} ]
+Dealer;
+
+@EndUserText.label: 'Vehiclenum'
+@UI.identification: [ {
+  position: 60 , 
+  label: 'Vehiclenum'
+} ]
+@UI.lineItem: [ {
+  position: 60 , 
+  label: 'Vehiclenum'
+} ]
+Vehiclenum;
+
+@EndUserText.label: 'Gpdate'
+@UI.identification: [ {
+  position: 70 , 
+  label: 'Gpdate'
+} ]
+@UI.lineItem: [ {
+  position: 70 , 
+  label: 'Gpdate'
+} ]
+Gpdate;
+
+@EndUserText.label: 'Controlsheet'
+@UI.identification: [ {
+  position: 80 , 
+  label: 'Controlsheet'
+} ]
+@UI.lineItem: [ {
+  position: 80 , 
+  label: 'Controlsheet'
+} ]
+Controlsheet;
+
+@EndUserText.label: 'CostCenter'
+@UI.identification: [ {
+  position: 90 , 
+  label: 'CostCenter'
+} ]
+@UI.lineItem: [ {
+  position: 90 , 
+  label: 'CostCenter'
+} ]
+CostCenter;
+
+@EndUserText.label: 'DealerWiseCash'
+@UI.identification: [ {
+  position: 100 , 
+  label: 'DealerWiseCash'
+} ]
+@UI.lineItem: [ {
+  position: 100 , 
+  label: 'DealerWiseCash'
+} ]
+DealerWiseCash;
+
+@EndUserText.label: 'SalesPerson'
+@UI.identification: [ {
+  position: 110 , 
+  label: 'SalesPerson'
+} ]
+@UI.lineItem: [ {
+  position: 110 , 
+  label: 'SalesPerson'
+} ]
+SalesPerson;
+
+@EndUserText.label: 'AmtDeposited'
+@UI.identification: [ {
+  position: 120 , 
+  label: 'AmtDeposited'
+} ]
+@UI.lineItem: [ {
+  position: 120 , 
+  label: 'AmtDeposited'
+} ]
+AmtDeposited;
+
+@EndUserText.label: 'PostedInd'
+@UI.identification: [ {
+  position: 130 , 
+  label: 'PostedInd'
+} ]
+@UI.lineItem: [ {
+  position: 130 , 
+  label: 'PostedInd'
+} ]
+PostedInd;
+
+@EndUserText.label: 'CreatedBy'
+@UI.identification: [ {
+  position: 140 , 
+  label: 'CreatedBy'
+} ]
+@UI.lineItem: [ {
+  position: 140 , 
+  label: 'CreatedBy'
+} ]
+CreatedBy;
+
+@EndUserText.label: 'LastChangedBy'
+@UI.identification: [ {
+  position: 150 , 
+  label: 'LastChangedBy'
+} ]
+@UI.lineItem: [ {
+  position: 150 , 
+  label: 'LastChangedBy'
+} ]
+LastChangedBy;
+  
+}

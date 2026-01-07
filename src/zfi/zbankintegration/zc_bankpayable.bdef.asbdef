@@ -1,0 +1,10 @@
+projection ;
+strict ( 2 );
+
+define behavior for ZC_BANKPAYABLE alias ZcBankpayable
+use etag
+
+{
+  use action falsedelete2;
+
+}

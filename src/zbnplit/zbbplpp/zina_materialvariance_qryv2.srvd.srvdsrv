@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_MATERIALVARIANCE_QRYV2'
+}
+define service ZINA_MATERIALVARIANCE_QRYV2 provider contracts ina {
+  expose ZC_MATERIALVARIANCE_QRYV2;
+}

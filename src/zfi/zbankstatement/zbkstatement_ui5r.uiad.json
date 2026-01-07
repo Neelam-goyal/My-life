@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "BANK STATEMENT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BANK STATEMENT"
+  },
+  "ui5AppDetails": {
+    "appId": "zbankstatement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_137DC0D6FC9D09BB035818F224547FF79A428D43_TM",
+    "semanticObject": "BANKSTATEMENT",
+    "action": "LIST",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_137DC0D6FC9D09BB035818F224547FF79A428D43_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BANK STATEMENT",
+        "subtitle": "BKSTATEMENT"
+      }
+    }
+  ]
+}

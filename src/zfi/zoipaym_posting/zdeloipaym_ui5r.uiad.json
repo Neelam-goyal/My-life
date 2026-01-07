@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Deleted OI Payments",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Deleted OI Payments"
+  },
+  "ui5AppDetails": {
+    "appId": "zdeloipaym"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8174EA88AC183A73C2CD6E1F7E5E752561F5FE94_TM",
+    "semanticObject": "zdeloipaym",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8174EA88AC183A73C2CD6E1F7E5E752561F5FE94_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Deleted OI Payments",
+        "subtitle": "ZDelOIPaym"
+      }
+    }
+  ]
+}

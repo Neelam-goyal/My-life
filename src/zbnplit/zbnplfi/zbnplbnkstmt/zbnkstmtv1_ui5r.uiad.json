@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Bank Statement (BCP)",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bank Statement (BCP)"
+  },
+  "ui5AppDetails": {
+    "appId": "zbnkstmtv1.zbnkstmt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D1E46681CA20DE328F85F79F382A2C83F2606F2B_TM",
+    "semanticObject": "zbcp_bnkstmt",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D1E46681CA20DE328F85F79F382A2C83F2606F2B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bank Statement (BCP)"
+      }
+    }
+  ]
+}

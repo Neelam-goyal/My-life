@@ -1,0 +1,65 @@
+managed implementation in class ZBP_R_PRODBREAKDOWN unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_PRODBREAKDOWN alias ZrProdbreakdown
+persistent table ZPRODBREAKDOWN
+draft table ZPRODBREAKDOWN_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   CompCode,
+   Prodordcode,
+   Brkdndate,
+   Brkdnstarttime;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   CompCode,
+   Prodordcode,
+   Brkdndate,
+   Brkdnstarttime;
+
+  /* NEW ––> */
+  validation Valid_breadownpercentage on save { field Breakdownpercentage; }
+
+  create;
+  update;
+  delete;
+
+
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZPRODBREAKDOWN
+  {
+    CompCode = comp_code;
+    Prodordcode = prodordcode;
+    Brkdndate = brkdndate;
+    Brkdnstarttime = brkdnstarttime;
+    Brkdnendtime = brkdnendtime;
+    Shift = shift;
+    Reasoncode = reasoncode;
+    Reasondesc = reasondesc;
+    SubReasoncode = subreasoncode;
+    SubReasondesc = subreasondesc;
+    Remarks = remarks;
+    Operatorname = operatorname;
+    Breakdownpercentage = breakdownpercentage;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

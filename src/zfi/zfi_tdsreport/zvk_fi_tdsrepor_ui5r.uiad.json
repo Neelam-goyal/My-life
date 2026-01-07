@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "TDS Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "TDS Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zvkfitdsrp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3926DA5D654FAADBD77A8145CC5F165FD59FDF57_TM",
+    "semanticObject": "zvk_fi_tdsr",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3926DA5D654FAADBD77A8145CC5F165FD59FDF57_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "TDS Report",
+        "subtitle": "ztds"
+      }
+    }
+  ]
+}

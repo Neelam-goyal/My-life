@@ -1,0 +1,87 @@
+managed;
+strict ( 2 );
+//with draft;
+define behavior for zr_usersetup //alias <alias_name>
+implementation in class zbp_r_usersetup unique
+persistent table zdt_usersetup
+//draft table zdt_usersetup_d
+etag master LocalLastChangedAt
+lock master //total etag LocalLastChangedAt
+authorization master ( instance )
+
+{
+  create;
+  update;
+  delete;
+  field ( readonly )
+  Username,
+  LastChangedAt,
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  field ( readonly : update ) Userid;
+
+  determination FillUsername on save { field Userid; }
+
+  //  draft action Activate optimized;
+  //  draft action Discard;
+  //  draft action Edit;
+  //  draft action Resume;
+  //  draft determine action Prepare;
+
+  mapping for zdt_usersetup
+    {
+      Userid             = userid;
+      Username           = username;
+      Pastdays           = pastdays;
+      Futuredays         = futuredays;
+      Remarks            = remarks;
+      LastChangedAt      = last_changed_at;
+      LocalCreatedAt     = local_created_at;
+      LocalCreatedBy     = local_created_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LocalLastChangedBy = local_last_changed_by;
+    }
+
+  association _zusersetupitems { create; }
+}
+
+define behavior for zr_usersetup_items //alias <alias_name>
+implementation in class zbp_r_usersetup unique
+persistent table zdt_user_item
+//draft table zdt_user_item_d
+lock dependent by _usersetup
+authorization dependent by _usersetup
+etag master LocalLastChangedAt
+{
+  update;
+  delete;
+  field ( readonly )
+  Userid,
+  Username,
+  LastChangedAt,
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  field ( readonly : update ) Plant;
+
+  mapping for zdt_user_item
+    {
+      Userid             = userid;
+      Username           = username;
+      Plant              = plant;
+      Remarks            = remarks;
+      Tcode              = tcode;
+      LastChangedAt      = last_changed_at;
+      LocalCreatedAt     = local_created_at;
+      LocalCreatedBy     = local_created_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LocalLastChangedBy = local_last_changed_by;
+    }
+
+  association _usersetup;
+}

@@ -1,0 +1,349 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Companycode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Companycode'
+annotate view ZC_BPPOSTING with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Companycode;
+  
+  @EndUserText.label: 'Document Date'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Document Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Document Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Documentdate;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  Createdtime;
+  
+  @EndUserText.label: 'Line Number'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Line Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Line Number'
+  } ]
+  LineNum;
+  
+  @EndUserText.label: 'Posting Date'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Posting Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Posting Date'
+  } ]
+  Postingdate;
+  
+  @EndUserText.label: 'Voucher Type'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Voucher Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Voucher Type'
+  } ]
+  Vouchertype;
+  
+  @EndUserText.label: 'Type'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Type'
+  } ]
+  Type1;
+  
+    @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  Businesspartner1;
+  
+    @EndUserText.label: 'Special Gl Code'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Special Gl Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Special Gl Code'
+  } ]
+  SpecialGlCode1;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  Amount1;
+  
+  @EndUserText.label: 'Amount Type'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Amount Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Amount Type'
+  } ]
+  AmtType1;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  BusinessPlace1;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  ProfitCenter1;
+  
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  ItemText1;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  Assignment1;
+  
+  
+  @UI.identification: [ {
+    position: 151,
+    label: 'Is Validated' 
+  } ]
+  @UI.lineItem: [ {
+    position: 151,
+    label: 'Is Validated'
+  } ]
+  Validate1;
+  
+  
+  @EndUserText.label: 'Type'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Type'
+  } ]
+  Type2;
+  
+
+  
+  @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  Businesspartner2;
+  
+
+  
+  @EndUserText.label: 'Special Gl Code'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Special Gl Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Special Gl Code'
+  } ]
+  SpecialGlCode2;
+  
+
+  
+  @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  Amount2;
+  
+
+  
+  @EndUserText.label: 'Amount Type'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Amount Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'Amount Type'
+  } ]
+  AmtType2;
+  
+
+  
+  @UI.identification: [ {
+    position: 210 
+  } ]
+  @UI.lineItem: [ {
+    position: 210 
+  } ]
+  BusinessPlace2;
+  
+
+  
+  @UI.identification: [ {
+    position: 220 
+  } ]
+  @UI.lineItem: [ {
+    position: 220 
+  } ]
+  ProfitCenter2;
+
+  
+  @UI.identification: [ {
+    position: 230 
+  } ]
+  @UI.lineItem: [ {
+    position: 230 
+  } ]
+  ItemText2;
+  
+
+  
+  @UI.identification: [ {
+    position: 240 
+  } ]
+  @UI.lineItem: [ {
+    position: 240 
+  } ]
+  Assignment2;
+  
+  @UI.identification: [ {
+    position: 241,
+    label: 'Is Validated' 
+  } ]
+  @UI.lineItem: [ {
+    position: 241,
+    label: 'Is Validated'
+  } ]
+  Validate2;
+  
+  
+  @EndUserText.label: 'Approved By'
+  @UI.identification: [ {
+    position: 250 , 
+    label: 'Approved By'
+  } ]
+  @UI.lineItem: [ {
+    position: 250 , 
+    label: 'Approved By'
+  } ]
+  ApprovedBy;
+  
+  @EndUserText.label: 'Approved At'
+  @UI.identification: [ {
+    position: 260 , 
+    label: 'Approved At'
+  } ]
+  @UI.lineItem: [ {
+    position: 260 , 
+    label: 'Approved At'
+  } ]
+  ApprovedAt;
+  
+  @EndUserText.label: 'Error'
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'Error'
+  } ]
+  @UI.lineItem: [ {
+    position: 270 , 
+    label: 'Error'
+  } ]
+  ErrorLog;
+  
+  @UI.hidden: true
+  Isdeleted;
+  
+  @UI.hidden: true
+  Isposted;
+  
+  @UI.identification: [ {
+    position: 290 
+  } ]
+  @UI.lineItem: [ {
+    position: 290 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 300 
+  } ]
+  @UI.lineItem: [ {
+    position: 300 
+  } ]
+  CreatedAt;
+  
+
+  @UI.hidden: true
+  LastChangedBy;
+  
+
+  @UI.hidden: true
+  LastChangedAt;
+  
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+}

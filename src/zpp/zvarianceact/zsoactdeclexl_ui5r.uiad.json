@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Variance Activity Declaration Excel Import",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Variance Activity Declaration Excel Import"
+  },
+  "ui5AppDetails": {
+    "appId": "zactivedeclexcelv1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8B0328936CB82EF56715B9CA18FC7309A7115EE2_TM",
+    "semanticObject": "ZSOACTDECLEXL",
+    "action": "UPLOAD",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8B0328936CB82EF56715B9CA18FC7309A7115EE2_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Variance Activity Declaration Excel Import",
+        "subtitle": "ZSOACTDECLEXL"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Advance Payment Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Advance Payment Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zadvpaymupd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DA327FE69CEF182D62E89C4A11B2C3A4C3C75F36_TM",
+    "semanticObject": "ZADVPAYMUPD",
+    "action": "Upload",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DA327FE69CEF182D62E89C4A11B2C3A4C3C75F36_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Advance Payment Upload",
+        "subtitle": "ZAdvPaymUpd"
+      }
+    }
+  ]
+}

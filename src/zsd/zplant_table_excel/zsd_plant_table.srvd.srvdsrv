@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition For Plant Table Excel'
+define service Zsd_plant_table {
+  expose zdd_plant_tableexcel;
+}

@@ -1,0 +1,23 @@
+CLASS ztest1 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+
+    INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZTEST1 IMPLEMENTATION.
+
+
+  METHOD if_oo_adt_classrun~main.
+
+      DELETE FROM zpurchinvlines WHERE supplierinvoice IS NOT INITIAL.
+      DELETE FROM zpurchinvproc WHERE supplierinvoice IS NOT INITIAL.
+  ENDMETHOD.
+ENDCLASS.

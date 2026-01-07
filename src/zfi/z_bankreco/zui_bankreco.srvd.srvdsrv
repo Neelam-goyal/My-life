@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service Definition for Bank reco App'
+define service ZUI_BANKRECO {
+  expose ZC_BANKRECO        as BankReco;
+  expose ZC_BOOKTRANS       as BookTransactions;
+  expose ZC_STATEMENTTRANS  as StatementTransactions;
+  expose ZBANK_VH           as HouseBankVH;
+  expose I_CompanyCodeStdVH as CompanyCodeVH;
+  expose ZBANKRECOID_VH     as BANKRECOIDVH;
+}

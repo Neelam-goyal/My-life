@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_EMPSELGLQUERY'
+}
+define service ZINA_EMPSELGLQUERY provider contracts ina {
+  expose ZC_EMPSELGLQUERY;
+}

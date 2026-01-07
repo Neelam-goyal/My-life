@@ -1,0 +1,4 @@
+@EndUserText.label: 'Gate Purchase Register Report Service'
+define service Zsrv_gate_register_rep {
+  expose ZCE_GATE_REGISTER;
+}

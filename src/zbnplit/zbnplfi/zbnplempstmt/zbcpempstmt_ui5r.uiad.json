@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Accounts Statement for Employee",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Employee A/c Statement (BCP)"
+  },
+  "ui5AppDetails": {
+    "appId": "zbnplempstmt.zbcpempstmt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_21632979F8B3AA136DF94D8BB54CAAD575AE2190_TM",
+    "semanticObject": "ZBCPEMPSTMT",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_21632979F8B3AA136DF94D8BB54CAAD575AE2190_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Employee A/c Statement (BCP)"
+      }
+    }
+  ]
+}

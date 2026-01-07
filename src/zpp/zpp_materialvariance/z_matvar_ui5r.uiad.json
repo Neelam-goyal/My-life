@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "MATERIAL VARIANCE",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "MATERIAL VARIANCE"
+  },
+  "ui5AppDetails": {
+    "appId": "zmatvariance"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F3DFAC2C39EF016BD12C17864730EA34DD65E3AD_TM",
+    "semanticObject": "ZMAT_VAR",
+    "action": "LIST",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F3DFAC2C39EF016BD12C17864730EA34DD65E3AD_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "MATERIAL VARIANCE",
+        "subtitle": "ZMATVAR"
+      }
+    }
+  ]
+}

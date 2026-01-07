@@ -1,0 +1,4 @@
+@EndUserText.label: 'SERVICE DEFINITION GSTR SALES REP'
+define service ZSVC_GSTR_SALES_REP {
+  expose ZCE_GSTR_SALES_REP;
+}

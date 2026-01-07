@@ -1,0 +1,35 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain Plant Table",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_PLANTTABLE_O4",
+    "serviceName": "ZUI_PLANTTABLE_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "PlantTableAll",
+    "name": "Plant Table",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "PlantTableAll",
+        "variantManagement": "control",
+        "showTransportSelectionStrip": true
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "PlantTable",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 2
+      }
+    ]
+  }
+}

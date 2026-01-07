@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BP Posted Entries"
+  },
+  "ui5AppDetails": {
+    "appId": "bpposted.zbpposted"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BE5E18569DB743265D9DC2BE50A9835B46A43DEA_TM",
+    "semanticObject": "ZBPPOSTEDJV",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BE5E18569DB743265D9DC2BE50A9835B46A43DEA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BP Posted Entries",
+        "subtitle": "ZBPJV"
+      }
+    }
+  ]
+}

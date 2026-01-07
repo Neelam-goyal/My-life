@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ZUOM",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZUOM"
+  },
+  "ui5AppDetails": {
+    "appId": "zuom"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7E1B70A02B4703EC64576AFA7A53E886036720A3_TM",
+    "semanticObject": "zuom",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7E1B70A02B4703EC64576AFA7A53E886036720A3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZUOM",
+        "subtitle": "zum"
+      }
+    }
+  ]
+}

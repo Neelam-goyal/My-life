@@ -1,0 +1,12 @@
+projection implementation in class ZBP_C_BOOKTRANS unique;
+strict ( 2 );
+
+define behavior for ZC_BOOKTRANS_001 alias ZcBooktrans001
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+
+}

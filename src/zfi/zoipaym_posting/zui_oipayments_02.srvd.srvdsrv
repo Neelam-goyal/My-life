@@ -1,0 +1,6 @@
+@EndUserText.label: 'OI Payments API V2 Service Definition'
+define service ZUI_OIPAYMENTS_02 {
+  expose ZC_OIPAYMENTS        as OIPAYMENTS;
+  expose ZC_OIPAYMENTSPOSTED  as OIPAYMENTSPOSTED;
+  expose ZC_OIPAYMENTSDELETED as OIPAYMENTSDELETED;
+}

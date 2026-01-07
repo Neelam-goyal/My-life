@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Maintain Gate Pass",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Maintain Gate Pass"
+  },
+  "ui5AppDetails": {
+    "appId": "zgatepass2"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_1EDA6B86264B684CF42B3FE155FD6724A4957B99_TM",
+    "semanticObject": "ZGATEPASS2",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_1EDA6B86264B684CF42B3FE155FD6724A4957B99_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain Gate Pass",
+        "subtitle": "ZGatePass"
+      }
+    }
+  ]
+}

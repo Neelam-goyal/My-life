@@ -1,0 +1,58 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Burger Production Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Burger Production Report"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZAPP_BURGERPRODUCTION_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZAPP_BURGERPRODUCTION_AD_TM",
+    "semanticObject": "ZAPP_BurgerProdReport",
+    "action": "AnalyticQuery",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_BURGERPRODUCTION_QRY",
+        "required": true
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView",
+        "required": true
+      }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "ZAPP_BURGERPRODUCTION_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Production Report - Bread (BCP)",
+        "subtitle": "Production Report - Bread Pivot Report",
+        "icon": "sap-icon://line-charts",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_BURGERPRODUCTION_QRY"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

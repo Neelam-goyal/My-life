@@ -1,0 +1,508 @@
+
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Cmno'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Cmno'
+@UI.lineItem: [{criticality: 'Highlight'}] 
+annotate view ZC_CRATESDATA000 with
+{
+  @EndUserText.label: 'Cmno'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Cmno'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Cmno'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Cmno;
+  
+  @EndUserText.label: 'CompCode'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'CompCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'CompCode'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  CompCode;
+  
+  @EndUserText.label: 'Plant'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Plant;
+  
+  @EndUserText.label: 'Cmfyear'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Cmfyear'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Cmfyear'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Cmfyear;
+  
+  @EndUserText.label: 'Cmtype'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Cmtype'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Cmtype'
+  } ]
+  Cmtype;
+  
+  @EndUserText.label: 'Cmaid'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Cmaid'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Cmaid'
+  } ]
+  Cmaid;
+  
+  @EndUserText.label: 'Cmnoseries'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Cmnoseries'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Cmnoseries'
+  } ]
+  Cmnoseries;
+  
+  @EndUserText.label: 'Cmdate'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Cmdate'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Cmdate'
+  } ]
+  Cmdate;
+  
+  @EndUserText.label: 'Cmsalesmancode'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Cmsalesmancode'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Cmsalesmancode'
+  } ]
+  Cmsalesmancode;
+  
+  @EndUserText.label: 'Cmsalesmancodeorg'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Cmsalesmancodeorg'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Cmsalesmancodeorg'
+  } ]
+  Cmsalesmancodeorg;
+  
+  @EndUserText.label: 'Cmcrates1'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Cmcrates1'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Cmcrates1'
+  } ]
+  Cmcrates1;
+  
+  @EndUserText.label: 'Cmcrates2'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Cmcrates2'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Cmcrates2'
+  } ]
+  Cmcrates2;
+  
+  @EndUserText.label: 'Cmremarks'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Cmremarks'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Cmremarks'
+  } ]
+  Cmremarks;
+  
+  @EndUserText.label: 'Cmdeltag'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Cmdeltag'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Cmdeltag'
+  } ]
+  Cmdeltag;
+  
+  @EndUserText.label: 'Cmusercode'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Cmusercode'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Cmusercode'
+  } ]
+  Cmusercode;
+  
+  @EndUserText.label: 'Cmfeddt'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Cmfeddt'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Cmfeddt'
+  } ]
+  Cmfeddt;
+  
+  @EndUserText.label: 'Cmupddt'
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Cmupddt'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 , 
+    label: 'Cmupddt'
+  } ]
+  Cmupddt;
+  
+  @EndUserText.label: 'Cmcrates11'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Cmcrates11'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Cmcrates11'
+  } ]
+  Cmcrates11;
+  
+  @EndUserText.label: 'Cmcrates21'
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Cmcrates21'
+  } ]
+  @UI.lineItem: [ {
+    position: 190 , 
+    label: 'Cmcrates21'
+  } ]
+  Cmcrates21;
+  
+  @EndUserText.label: 'Cmrefno'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Cmrefno'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'Cmrefno'
+  } ]
+  Cmrefno;
+  
+  @EndUserText.label: 'Cmroutecd'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Cmroutecd'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'Cmroutecd'
+  } ]
+  Cmroutecd;
+  
+  @EndUserText.label: 'Cmcrates3'
+  @UI.identification: [ {
+    position: 220 , 
+    label: 'Cmcrates3'
+  } ]
+  @UI.lineItem: [ {
+    position: 220 , 
+    label: 'Cmcrates3'
+  } ]
+  Cmcrates3;
+  
+  @EndUserText.label: 'Cmcrates4'
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'Cmcrates4'
+  } ]
+  @UI.lineItem: [ {
+    position: 230 , 
+    label: 'Cmcrates4'
+  } ]
+  Cmcrates4;
+  
+  @EndUserText.label: 'Cmddealercode'
+  @UI.identification: [ {
+    position: 240 , 
+    label: 'Cmddealercode'
+  } ]
+  @UI.lineItem: [ {
+    position: 240 , 
+    label: 'Cmddealercode'
+  } ]
+  Cmddealercode;
+  
+  @EndUserText.label: 'Cmgpno'
+  
+  @UI.lineItem: [ {
+    position: 250 , 
+    label: 'Cmgpno'
+  } ]
+  Cmgpno;
+  
+  @EndUserText.label: 'Cmgpdate'
+  @UI.identification: [ {
+    position: 260 , 
+    label: 'Cmgpdate'
+  } ]
+  @UI.lineItem: [ {
+    position: 260 , 
+    label: 'Cmgpdate'
+  } ]
+  Cmgpdate;
+  
+  @EndUserText.label: 'Cmseries'
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'Cmseries'
+  } ]
+  @UI.lineItem: [ {
+    position: 270 , 
+    label: 'Cmseries'
+  } ]
+  Cmseries;
+  
+  @EndUserText.label: 'Cmcrates1d'
+  @UI.identification: [ {
+    position: 280 , 
+    label: 'Cmcrates1d'
+  } ]
+  @UI.lineItem: [ {
+    position: 280 , 
+    label: 'Cmcrates1d'
+  } ]
+  Cmcrates1d;
+  
+  @EndUserText.label: 'Cmcrates2d'
+  @UI.identification: [ {
+    position: 290 , 
+    label: 'Cmcrates2d'
+  } ]
+  @UI.lineItem: [ {
+    position: 290 , 
+    label: 'Cmcrates2d'
+  } ]
+  Cmcrates2d;
+  
+  @EndUserText.label: 'Cmcrates3d'
+  @UI.identification: [ {
+    position: 300 , 
+    label: 'Cmcrates3d'
+  } ]
+  @UI.lineItem: [ {
+    position: 300 , 
+    label: 'Cmcrates3d'
+  } ]
+  Cmcrates3d;
+  
+  @EndUserText.label: 'Cmcrates4d'
+  @UI.identification: [ {
+    position: 310 , 
+    label: 'Cmcrates4d'
+  } ]
+  @UI.lineItem: [ {
+    position: 310 , 
+    label: 'Cmcrates4d'
+  } ]
+  Cmcrates4d;
+  
+  @EndUserText.label: 'Cmupuser'
+  @UI.identification: [ {
+    position: 320 , 
+    label: 'Cmupuser'
+  } ]
+  @UI.lineItem: [ {
+    position: 320 , 
+    label: 'Cmupuser'
+  } ]
+  Cmupuser;
+  
+  @EndUserText.label: 'Cmcratesrate1'
+  @UI.identification: [ {
+    position: 330 , 
+    label: 'Cmcratesrate1'
+  } ]
+  @UI.lineItem: [ {
+    position: 330 , 
+    label: 'Cmcratesrate1'
+  } ]
+  Cmcratesrate1;
+  
+  @EndUserText.label: 'Cmcratesrate2'
+  @UI.identification: [ {
+    position: 340 , 
+    label: 'Cmcratesrate2'
+  } ]
+  @UI.lineItem: [ {
+    position: 340 , 
+    label: 'Cmcratesrate2'
+  } ]
+  Cmcratesrate2;
+  
+  @EndUserText.label: 'Cmcratesrate3'
+  @UI.identification: [ {
+    position: 350 , 
+    label: 'Cmcratesrate3'
+  } ]
+  @UI.lineItem: [ {
+    position: 350 , 
+    label: 'Cmcratesrate3'
+  } ]
+  Cmcratesrate3;
+  
+  @EndUserText.label: 'Cmcratesrate4'
+  @UI.identification: [ {
+    position: 360 , 
+    label: 'Cmcratesrate4'
+  } ]
+  @UI.lineItem: [ {
+    position: 360 , 
+    label: 'Cmcratesrate4'
+  } ]
+  Cmcratesrate4;
+  
+  @EndUserText.label: 'Cmsecuritytype'
+  @UI.identification: [ {
+    position: 370 , 
+    label: 'Cmsecuritytype'
+  } ]
+  @UI.lineItem: [ {
+    position: 370 , 
+    label: 'Cmsecuritytype'
+  } ]
+  Cmsecuritytype;
+  
+  @EndUserText.label: 'Cmcmptype'
+  @UI.identification: [ {
+    position: 380 , 
+    label: 'Cmcmptype'
+  } ]
+  @UI.lineItem: [ {
+    position: 380 , 
+    label: 'Cmcmptype'
+  } ]
+  Cmcmptype;
+  
+  @EndUserText.label: 'ErrorLog'
+  @UI.identification: [ {
+    position: 390 , 
+    label: 'ErrorLog'
+  } ]
+  @UI.lineItem: [ {
+    position: 390 , 
+    label: 'ErrorLog'
+  } ]
+  ErrorLog;
+  
+  @EndUserText.label: 'Remarks'
+  @UI.identification: [ {
+    position: 400 , 
+    label: 'Remarks'
+  } ]
+  @UI.lineItem: [ {
+    position: 400 , 
+    label: 'Remarks'
+  } ]
+  Remarks;
+  
+  
+  @EndUserText.label: 'ReferenceDoc'
+  @UI.identification: [ {
+    position: 420 , 
+    label: 'ReferenceDoc'
+  } ]
+  @UI.lineItem: [ {
+    position: 420 , 
+    label: 'ReferenceDoc'
+  } ]
+  ReferenceDoc;
+  
+  @EndUserText.label: 'Error Flag'
+@UI.identification: [ {
+  position: 430 , 
+  label: 'Error Flag'
+} ]
+@UI.lineItem: [ {
+  position: 430 , 
+  label: 'Error Flag'
+} ]
+Highlight;
+  
+  @EndUserText.label: 'Movementposted'
+  @UI.identification: [ {
+    position: 440 , 
+    label: 'Movementposted'
+  } ]
+  @UI.lineItem: [ {
+    position: 440 , 
+    label: 'Movementposted'
+  } ]
+  Movementposted;
+  
+  @UI.identification: [ {
+    position: 450 
+  } ]
+  @UI.lineItem: [ {
+    position: 450 
+  } ]
+  CreatedBy;
+ 
+}

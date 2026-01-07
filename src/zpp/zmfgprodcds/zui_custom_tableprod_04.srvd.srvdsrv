@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for z_dd_customProdRpt'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'z_dd_customProdRpt'
+  }
+}
+define service ZUI_CUSTOM_TABLEPROD_04
+  provider contracts odata_v4_ui {
+  expose z_dd_customProdRpt;
+}

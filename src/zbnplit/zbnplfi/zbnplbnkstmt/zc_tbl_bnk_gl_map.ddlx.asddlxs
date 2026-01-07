@@ -1,0 +1,104 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Chartofaccounts'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Chartofaccounts'
+annotate view ZC_TBL_BNK_GL_MAP with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Chartofaccounts;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Glaccount;
+  
+  @EndUserText.label: 'Bank A/c Internal Id'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Bank A/c Internal Id'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Bank A/c Internal Id'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Bankaccountinternalid;
+  
+  @EndUserText.label: 'Is Active'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Is Active'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Is Active'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Isactive;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  LastChangedAt;
+}

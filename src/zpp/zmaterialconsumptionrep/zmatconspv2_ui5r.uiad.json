@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "zmcrep",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "zmcrep"
+  },
+  "ui5AppDetails": {
+    "appId": "zmatconsump"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_666DC652BB5D05C34ACDF3644B7B0E6FAC53AF10_TM",
+    "semanticObject": "zmaterialrep_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_666DC652BB5D05C34ACDF3644B7B0E6FAC53AF10_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "zmcrep",
+        "subtitle": "material consumption report new"
+      }
+    }
+  ]
+}

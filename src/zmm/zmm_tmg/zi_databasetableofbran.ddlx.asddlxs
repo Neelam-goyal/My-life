@@ -1,0 +1,39 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'DatabaseTableOfBran', 
+    typeNamePlural: 'DatabaseTableOfBrans', 
+    title: {
+      type: #STANDARD, 
+      label: 'Database Table of BrandCategory TMG', 
+      value: 'BrandCode'
+    }
+  }
+}
+annotate view ZI_DatabaseTableOfBran with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_DatabaseTableOfBran', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Database Table of BrandCategory TMG', 
+    position: 1 
+  } ]
+  BrandCode;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'BrandDesc'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'BrandDesc'
+  } ]
+  BrandDesc;
+}

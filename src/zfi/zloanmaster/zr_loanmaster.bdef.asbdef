@@ -1,0 +1,63 @@
+managed implementation in class ZBP_R_LOANMASTER unique;
+strict ( 2 ) ;
+define behavior for ZR_LOANMASTER alias ZrLoanmaster
+persistent table ZLOANMASTER
+early numbering
+etag master LastChangedAt
+lock master
+authorization master( global, instance )
+
+{
+
+  field ( readonly )
+   LoanNo,
+   TotalAmount,
+//   BalanceAmount,
+//   BankName,
+//   EmployeeName,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+  CompCode;
+
+  update;
+  delete;
+   action Approve;
+  determination changeValues on modify { field LoanAmount; }
+
+  create ( precheck );
+
+
+  mapping for ZLOANMASTER
+  {
+    CompCode = comp_code;
+    LoanNo = loan_no;
+    LoanDate = loan_date;
+    EmployeeId = employee_id;
+    EmployeeName = employee_name;
+    Department = department;
+    LoanType = loan_type;
+    LoanAmount = loan_amount;
+    EMICount = emi_count;
+    EMIAmount = emi_amount;
+    Approved = approved;
+    ApprovedBy = approved_by;
+    DeductedFrom = deducted_from;
+    InterestAmount = interest_amount;
+    TotalAmount = total_amount;
+    BalanceAmount = balance_amount;
+    PaymentMode = payment_mode;
+    BankCode = bank_code;
+    BankName = bank_name;
+    Narration = narration;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

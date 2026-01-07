@@ -1,0 +1,39 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Statecodemaster', 
+    typeNamePlural: 'Statecodemasters', 
+    title: {
+      type: #STANDARD, 
+      label: 'StateCodeMaster', 
+      value: 'Statecode'
+    }
+  }
+}
+annotate view ZI_Statecodemaster with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_Statecodemaster', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'StateCodeMaster', 
+    position: 1 
+  } ]
+  Statecode;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Statecodenum'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'Statecodenum'
+  } ]
+  Statecodenum;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ValueHelp Dgtaxinvoice'
+define service ZSD_Dgtaxinvoice {
+  expose ZC_DGINVOICE;
+  expose ZC_DGCOMPANYCODE;
+  expose zdd_taxinvoice;
+}

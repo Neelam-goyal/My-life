@@ -1,0 +1,10 @@
+@EndUserText.label: 'Unposed API Data'
+define service ZAPI_UNPOSTEDDATA {
+  expose ZC_INVMST_UNPOSTED     as Sales;
+  expose ZC_UNSOLD_UNPOSTED     as Unsold;
+  expose ZC_SCRAPS_UNPOSTED     as Scraps;
+  expose ZC_RECIEPT_UNPOSTED    as Receipts;
+  expose ZC_CREDITNOTE_UNPOSTED as CreditNotes;
+  expose ZC_CRATES_UNPOSTED     as Crates;
+  expose ZC_CTRLSHEET_UNPOSTED  as ControlSheet;
+}

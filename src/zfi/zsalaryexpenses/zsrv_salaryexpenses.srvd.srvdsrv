@@ -1,0 +1,4 @@
+@EndUserText.label: 'service binding for salary expenses'
+define service Zsrv_salaryexpenses {
+  expose ZCDS_SALESEXPENSES;
+}

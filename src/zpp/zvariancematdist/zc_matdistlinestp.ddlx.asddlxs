@@ -1,0 +1,227 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'zmatdistlines',
+    typeNamePlural: 'zmatdistliness',
+    title: {
+      type: #STANDARD,
+      label: 'zmatdistlines',
+      value: 'Distlineno'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Distlineno',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_matdistlinesTP with
+{
+  @UI.hidden: true
+  @UI.facet: [ {
+    id: 'idzmatdistlines',
+    purpose: #STANDARD,
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'zmatdistlines',
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Bukrs'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Bukrs'
+  } ]
+  Bukrs;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Plantcode'
+  } ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Plantcode'
+  } ]
+  Plantcode;
+
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Declaredate'
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Declaredate'
+  } ]
+  Declaredate;
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Shiftnumber'
+  } ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Shiftnumber'
+  } ]
+  Shiftnumber;
+
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Distlineno'
+  } ]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Distlineno'
+  } ]
+  Distlineno;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Productionorder'
+  } ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Productionorder'
+  } ]
+  Productionorder;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Productionorderline'
+  } ]
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Productionorderline'
+  } ]
+  Productionorderline;
+
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'Storagelocation'
+  } ]
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Storagelocation'
+  } ]
+  Storagelocation;
+
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Productcode'
+  } ]
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Productcode'
+  } ]
+  Productcode;
+
+  @UI.lineItem: [ {
+    position: 100 ,
+    label: 'Batchno'
+  } ]
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Batchno'
+  } ]
+  Batchno;
+
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Productdesc'
+  } ]
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Productdesc'
+  } ]
+  Productdesc;
+
+  @UI.lineItem: [ {
+    position: 120 ,
+    label: 'Consumedqty'
+  } ]
+  @UI.identification: [ {
+    position: 120 ,
+    label: 'Consumedqty'
+  } ]
+  Consumedqty;
+
+  @UI.lineItem: [ {
+    position: 130 ,
+    label: 'Varianceqty'
+  } ]
+  @UI.identification: [ {
+    position: 130 ,
+    label: 'Varianceqty'
+  } ]
+  Varianceqty;
+
+  @UI.lineItem: [ {
+    position: 140 ,
+    label: 'Varianceposted'
+  } ]
+  @UI.identification: [ {
+    position: 140 ,
+    label: 'Varianceposted'
+  } ]
+  Varianceposted;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 150 ,
+    label: 'Order confirmation group'
+  } ]
+  @UI.identification: [ {
+    position: 150 ,
+    label: 'Order confirmation group'
+  } ]
+  Orderconfirmationgroup;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 160 ,
+    label: 'Order sequence'
+  } ]
+  @UI.identification: [ {
+    position: 160 ,
+    label: 'Order sequence'
+  } ]
+  Ordersequence;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 170 ,
+    label: 'Entry uom'
+  } ]
+  @UI.identification: [ {
+    position: 170 ,
+    label: 'Entry uom'
+  } ]
+  Entryuom;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 180 ,
+    label: 'Shift Group'
+  } ]
+  @UI.identification: [ {
+    position: 180 ,
+    label: 'Shift Group'
+  } ]
+  Shiftgroup;
+
+  @UI.lineItem: [ {
+    position: 190 ,
+    label: 'Variance Post Date'
+  } ]
+  @UI.identification: [ {
+    position: 190 ,
+    label: 'Variance Post Date'
+  } ]
+  Variancepostlinedate;
+
+}

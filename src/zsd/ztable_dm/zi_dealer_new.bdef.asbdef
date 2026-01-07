@@ -1,0 +1,42 @@
+managed implementation in class zbp_i_dealer_new unique;
+strict ( 2 );
+//with draft;
+define behavior for ZI_DEALER_NEW alias Dealer
+persistent table zdealer_tab_new1
+//draft table zdealer_tb_d_new
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+ field ( mandatory : create )
+   BusinessPartner,Dealerbctag,CompanyCode;
+
+   field ( readonly : update )
+    BusinessPartner,Dealerbctag,CompanyCode;
+
+ field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  mapping for zdealer_tab_new1
+  {
+    BusinessPartner = businesspartner;
+    Dealerbctag = dealerbctag;
+    CompanyCode = comp_code;
+    DealerDeviceId = dealer_device_id;
+    Dlradvpymttag = dlradvpymttag;
+    Dealerift = dealerift;
+    Dealerstation = dealerstation;
+    Creditdays = creditdays;
+    Dealersmdtag = dealersmdtag;
+    Sshqcode = sshqcode;
+    MinBalance = min_bal;
+    MinBalanceDate = min_bal_date;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

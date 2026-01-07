@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service defination for supplier invoice'
+define service Zsrv_supplierInvoice {
+  expose zcds_supplierInvoice;
+  expose I_CompanyCodeStdVH   as I_CompanyCodeVH;
+}

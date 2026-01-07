@@ -1,0 +1,7 @@
+projection implementation in class ZBP_C_MATVARBREAD unique;
+strict ( 2 );
+
+define behavior for ZC_MATVARBREAD alias ZcMatvarbread
+use etag
+{
+}

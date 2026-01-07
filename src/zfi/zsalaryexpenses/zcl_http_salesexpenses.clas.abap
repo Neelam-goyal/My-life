@@ -1,0 +1,78 @@
+class ZCL_HTTP_SALESEXPENSES definition
+  public
+  create public .
+
+public section.
+
+  interfaces IF_HTTP_SERVICE_EXTENSION .
+
+  class-data it_salaryexpenses type table of zsalaryexpenses.
+
+   TYPES: BEGIN OF ty_json,
+             to_salaryexpense LIKE it_salaryexpenses,
+             END OF ty_json.
+
+    DATA: lv_json TYPE ty_json.
+protected section.
+private section.
+ENDCLASS.
+
+
+
+CLASS ZCL_HTTP_SALESEXPENSES IMPLEMENTATION.
+
+
+  METHOD if_http_service_extension~handle_request.
+
+*    DATA(req) = request->get_form_fields( ).
+*    DATA(lv_body) = request->get_text( ).
+*
+*    CASE request->get_method( ).
+*      WHEN CONV string( if_web_http_client=>post ).
+*
+*        IF lv_body IS NOT INITIAL.
+*
+*          TRY.
+*              CALL METHOD /ui2/cl_json=>deserialize
+*                EXPORTING
+*                  json = lv_body
+*                CHANGING
+*                  data = lv_json.
+*
+*              DATA(it_final_exenses) = lv_json-to_salaryexpense.
+*
+*              IF it_final_exenses IS NOT INITIAL.
+*                LOOP AT it_final_exenses  ASSIGNING FIELD-SYMBOL(<fs_expense>).
+**                  <fs_expense>-created_at       = cl_abap_context_info=>get_system_time( ).
+*                  <fs_expense>-created_by       = cl_abap_context_info=>get_user_alias( ).
+*                  <fs_expense>-last_changed_by  = cl_abap_context_info=>get_user_ALIAS( ).
+**                  <fs_expense>-last_changed_at  = cl_abap_context_info=>get_system_time( ).
+**                MODIFY ZSALARYEXPENSES FROM TABLE @it_final_exenses.
+*                ENDLOOP.
+*
+*                IF sy-subrc = 0.
+*                  response->set_text( 'Data saved successfully' ).
+*                ELSE.
+*                  response->set_status( 500 ).
+*                  response->set_text( 'Error: Failed to save data in the database' ).
+*                ENDIF.
+*
+*              ELSE.
+*                response->set_status( 400 ).
+*                response->set_text( 'Error: No data found in request body' ).
+*              ENDIF.
+*
+*            CATCH cx_root INTO DATA(lx_root).
+*              response->set_status( 500 ).
+*              response->set_text( 'Error: Failed to process JSON request - ' && lx_root->get_text( ) ).
+*          ENDTRY.
+*
+*        ELSE.
+*          response->set_status( 400 ).
+*          response->set_text( 'Error: Request body is empty' ).
+*        ENDIF.
+*
+*        ENDCASE.
+
+      ENDMETHOD.
+ENDCLASS.

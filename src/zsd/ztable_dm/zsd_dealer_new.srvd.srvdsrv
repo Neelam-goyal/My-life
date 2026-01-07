@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Dealer NEW'
+define service ZSD_DEALER_NEW {
+  expose ZC_DEALER_NEW;
+}

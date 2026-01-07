@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "HSN Summary B2B",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "HSN Summary B2B"
+  },
+  "ui5AppDetails": {
+    "appId": "zhnsumb2b"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B2C128DFDBDC550E21ED9C53137D94651FE19677_TM",
+    "semanticObject": "zso_hsnsum_b2b",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B2C128DFDBDC550E21ED9C53137D94651FE19677_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "HSN Summary B2B",
+        "subtitle": "ZHSN_B2B"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Job template for cash sheet",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZAPJC_CASHSHEET"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_DESCR",
+        "value": ""
+      }
+    ]
+  }
+}

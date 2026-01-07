@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSRV_FIVOUCHER_rpt'
+define service ZSRV_FIVOUCHER {
+  expose zcds_Voucher;
+}

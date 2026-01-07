@@ -1,0 +1,12 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_MATERIALDECL alias Materialdeclaration
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+}

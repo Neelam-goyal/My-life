@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_STATECODEMASTER'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_STATECODEMASTER'
+  }
+}
+define service ZUI_STATECODEMASTER_O4 provider contracts odata_v4_ui {
+  expose ZC_STATECODEMASTER;
+}

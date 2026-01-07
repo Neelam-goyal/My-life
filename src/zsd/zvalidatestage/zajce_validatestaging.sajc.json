@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Validate Staging Data",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_VALIDATESTAGING"
+  },
+  "parameters": [
+    {
+      "name": "P_DESCR"
+    }
+  ]
+}

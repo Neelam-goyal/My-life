@@ -1,0 +1,6 @@
+@EndUserText.label: 'service definition for value help'
+define service Zsrd_valuehelp {
+  expose zdd_companycode_valuehelp;
+  expose zdd_profitcentervh;
+  expose zdd_comp_vh;
+}

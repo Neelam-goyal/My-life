@@ -1,0 +1,81 @@
+managed implementation in class ZBP_R_POSTJOURNAL000 unique;
+strict ( 2 );
+define behavior for ZR_POSTJOURNAL000 alias ZrPostjournal000
+persistent table ZPOSTJOURNAL
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Companycode,
+   Fiscalyear,
+   Supplierinvoice,
+   Supplierinvoiceitem;
+
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+
+  field ( readonly : update )
+   Companycode,
+   Fiscalyear,
+   Supplierinvoice,
+   Supplierinvoiceitem;
+
+
+  create;
+  update;
+  delete;
+
+ static action generateData parameter ZI_POSTJEPARM result [1] $self;
+ action post result[1] $self;
+
+  mapping for ZPOSTJOURNAL
+  {
+    Companycode = companycode;
+    Fiscalyear = fiscalyear;
+    Supplierinvoice = supplierinvoice;
+    Supplierinvoiceitem = supplierinvoiceitem;
+    Postingdate = postingdate;
+    Plant = plant;
+    Plantname = plantname;
+    Material = material;
+    Productname = productname;
+    Purchaseorder = purchaseorder;
+    Purchaseorderitem = purchaseorderitem;
+    VendorInvoiceNo = vendor_invoice_no;
+    VendorInvoiceDate = vendor_invoice_date;
+    VendorType = vendor_type;
+    Baseunit = baseunit;
+    Profitcenter = profitcenter;
+    Purchaseordertype = purchaseordertype;
+    Purchaseorderdate = purchaseorderdate;
+    Purchasingorganization = purchasingorganization;
+    Purchasinggroup = purchasinggroup;
+    Hsncode = hsncode;
+    Taxcodename = taxcodename;
+    Percent = percent;
+    Igst = igst;
+    Sgst = sgst;
+    Cgst = cgst;
+    Rateigst = rateigst;
+    Ratecgst = ratecgst;
+    Ratesgst = ratesgst;
+    Isreversed = isreversed;
+    Isposted = isposted;
+    Netamount = netamount;
+    Taxamount = taxamount;
+    Roundoff = roundoff;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

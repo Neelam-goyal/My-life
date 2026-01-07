@@ -1,0 +1,13 @@
+@EndUserText.label: 'Plant Access Control'
+@MappingRole: true
+define role ZPLANT_AC {
+    grant 
+        select
+            on
+                ZR_ZIRNTP
+                    where
+                        (Plant) = aspect pfcg_auth(Z_PLANTATH,ZPLANT);
+                        
+//                         where ( ) = ASPECT pfcg_auth ( 'S_TABU_NAM', ACTVT = '03', TABLE = 'ZI_SKTESTTABLE' );
+                        
+}

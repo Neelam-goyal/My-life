@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definations for Customer Trial'
+define service ZCUSTOMER_TRIAL_SD {
+  expose ZCustomer_Trial;
+}

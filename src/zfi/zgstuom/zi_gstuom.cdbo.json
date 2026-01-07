@@ -1,0 +1,42 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "GST UOM Browser",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "objectType": "DDLS",
+    "objectName": "ZI_GSTUOM"
+  },
+  "fields": [
+    {
+      "name": "UOM",
+      "nature": "general"
+    },
+    {
+      "name": "GSTUOM",
+      "nature": "general"
+    },
+    {
+      "name": "CREATEDBY",
+      "nature": "general"
+    },
+    {
+      "name": "CREATEDAT",
+      "nature": "general"
+    },
+    {
+      "name": "LASTCHANGEDBY",
+      "nature": "general"
+    },
+    {
+      "name": "LASTCHANGEDAT",
+      "nature": "general"
+    },
+    {
+      "name": "LOCALLASTCHANGEDAT",
+      "nature": "general"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'UserSetup',
+    typeNamePlural: 'UserSetup',
+    title: {
+      type: #STANDARD,
+      label: 'User Setup',
+      value: 'Userid'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Userid',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view zc_usersetup with
+{
+  @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    label: 'UserSetup',
+    position: 10
+  },
+  {
+    id: 'idIdentification',
+    parentId: 'idCollection',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'General Information',
+    position: 20
+  },
+  {
+    id: 'UserSetup',
+    type: #LINEITEM_REFERENCE,
+    label: 'UserSetup',
+    position: 30 ,
+    targetElement: '_zusersetupitems'
+  } ]
+  @UI.textArrangement: #TEXT_FIRST
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 10, label: 'User ID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_USER_VH', element: 'UserID'} }]
+
+  Userid;
+
+  @UI.lineItem: [ {
+   position: 15 , label: 'User Name'
+  } ]
+
+  @UI.identification: [ {
+    position: 15
+  } ]
+  Username;
+
+  @UI.lineItem: [ {
+   position: 20 , label: 'Past Days'
+  } ]
+
+  @UI.identification: [ {
+    position: 20
+  } ]
+  Pastdays;
+
+  @UI.lineItem: [ {
+   position: 30 , label: 'Future Days'
+  } ]
+  @UI.identification: [ {
+    position: 30
+  } ]
+  Futuredays;
+  @UI.lineItem: [ {
+   position: 40 , label: 'Remarks'
+  } ]
+  @UI.identification: [ {
+    position: 40
+  } ]
+  Remarks;
+
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  LocalCreatedBy;
+
+  @UI.identification: [ {
+    position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+  LocalCreatedAt;
+
+  @UI.identification: [ {
+    position: 70
+  } ]
+  @UI.lineItem: [ {
+    position: 70
+  } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  LastChangedAt;
+}

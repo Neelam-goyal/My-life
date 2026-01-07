@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "zefficiency",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "zefficiency"
+  },
+  "ui5AppDetails": {
+    "appId": "zefficiencyprocess"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_EB3AB0FA2E4D3145134E11E7E02FA8D48D393019_TM",
+    "semanticObject": "zefficiency_process",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_EB3AB0FA2E4D3145134E11E7E02FA8D48D393019_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "zefficiency",
+        "subtitle": "Efficiency Report"
+      }
+    }
+  ]
+}

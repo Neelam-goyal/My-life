@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA3" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA3>
+    <NAME>Z_PLANTATH</NAME>
+    <DESCRIPTION>Z_PLANTATH</DESCRIPTION>
+    <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    <AUTH_OBJECT_ID>Z_PLANTATH</AUTH_OBJECT_ID>
+    <AUTH_OBJECT>Z_PLANTATH</AUTH_OBJECT>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <RESTRICTION_TYPE>
+     <item>
+      <RTYPE_ID>Z_PLANTATH</RTYPE_ID>
+      <TEXT>Z_PLANTATH</TEXT>
+     </item>
+    </RESTRICTION_TYPE>
+   </SIA3>
+  </asx:values>
+ </asx:abap>
+</abapGit>

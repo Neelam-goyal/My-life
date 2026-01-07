@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service TCS Report'
+define service Zsrv_tcsreport {
+  expose ZCDSTCS;
+}

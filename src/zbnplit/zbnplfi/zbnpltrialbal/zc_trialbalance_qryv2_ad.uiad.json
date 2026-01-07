@@ -1,0 +1,59 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "TRIAL BALANCE BCP V2",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "TRIAL BALANCE BCP V2"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_TRIALBALANCE_QRYV2_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_TRIALBALANCE_QRYV2_AD_TM",
+    "semanticObject": "zctrialvmakkar",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_TRIALBALANCE_QRYV2"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_TRIALBALANCE_QRYV2_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "TRIAL BALANCE BCP V2",
+        "subtitle": "VMTRIAL",
+        "information": "Trial balace report for Varun Sir",
+        "keywords": "VMTRIAL",
+        "icon": "sap-icon://account",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_TRIALBALANCE_QRYV2"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

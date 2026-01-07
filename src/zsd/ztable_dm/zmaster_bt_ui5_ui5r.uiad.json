@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Brand Tag",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Brand Tag"
+  },
+  "ui5AppDetails": {
+    "appId": "master"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D16371A49A7EF768428A55DDA1F2D69370404973_TM",
+    "semanticObject": "zmaster_bt_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D16371A49A7EF768428A55DDA1F2D69370404973_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Brand Tag",
+        "subtitle": "ZBT"
+      }
+    }
+  ]
+}

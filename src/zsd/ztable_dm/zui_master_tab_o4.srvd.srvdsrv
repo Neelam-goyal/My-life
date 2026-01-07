@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_MASTER_TAB'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_MASTER_TAB'
+  }
+}
+define service ZUI_MASTER_TAB_O4 provider contracts odata_v4_ui {
+  expose ZC_MASTER_TAB;
+}

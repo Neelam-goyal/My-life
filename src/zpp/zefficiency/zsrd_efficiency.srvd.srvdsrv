@@ -1,0 +1,15 @@
+@EndUserText.label: 'service definition Efficiency Report'
+define service Zsrd_efficiency {
+  expose zdaily_prod_mst;
+  expose zproduct_details;
+  expose ZC_CAUSE_MST;
+  expose ZR_CAUSE_MST;
+  expose ZCDS_CAUSE_CUST;
+  expose zcds_plantvh;
+  expose zwork_center_vh;
+  expose zshift_vh;
+  expose ZCDS_FINALCAUSEDETAILS;
+  expose ZCDSRebindingCauseDetail;
+  expose ZCDSPBReasons;
+  expose ZCDSSEREBINDINGSUM;
+}

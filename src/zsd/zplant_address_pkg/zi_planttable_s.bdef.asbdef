@@ -1,0 +1,110 @@
+managed with additional save implementation in class ZBP_I_PLANTTABLE_S unique;
+strict;
+with draft;
+define behavior for ZI_PlantTable_S alias PlantTableAll
+draft table ZTABLE_PLAN_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( features : instance )
+   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _PlantTable { create ( features : instance ); with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; }
+
+  side effects {
+    action SelectCustomizingTransptReq affects $self;
+  }
+  }
+
+define behavior for ZI_PlantTable alias PlantTable ##UNMAPPED_FIELD
+persistent table ZTABLE_PLANT
+draft table ZTABLE_PLANT_D
+lock dependent by _PlantTableAll
+authorization dependent by _PlantTableAll
+
+{
+  field ( mandatory : create )
+   CompCode,
+   PlantCode;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   CompCode,
+   PlantCode;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZTABLE_PLANT
+  {
+    CompCode = COMP_CODE;
+    PlantCode = PLANT_CODE;
+    PlantName1 = PLANT_NAME1;
+    PlantName2 = PLANT_NAME2;
+    Address1 = ADDRESS1;
+    Address2 = ADDRESS2;
+    Address3 = ADDRESS3;
+    City = CITY;
+    District = DISTRICT;
+    StateCode1 = STATE_CODE1;
+    StateCode2 = STATE_CODE2;
+    StateName = STATE_NAME;
+    Pin = PIN;
+    Country = COUNTRY;
+    CinNo = CIN_NO;
+    GstinNo = GSTIN_NO;
+    FssaiNo = FSSAI_NO;
+    PanNo = PAN_NO;
+    TanNo = TAN_NO;
+    Remark1 = REMARK1;
+    Remark2 = REMARK2;
+    Remark3 = REMARK3;
+    GSPPassword = gsppassword;
+    GSPUserName = gspusername;
+    EWBPassword  = ewbpassword;
+    EWBUserName = ewbusername;
+    Phone = phone;
+    BUSINESSPLACE = businessplace;
+    COSTCENTER  =  costcenter;
+    PURCHASECOSTCENTER = purchasecostcenter;
+    PROFITCENTER = profitcenter;
+    GLACCOUNT = glaccount;
+    Active = active;
+    IntegrationEnabled = integrationenabled;
+    STPOReceiveEnabled = stporeceiveenabled;
+    STPOCreationEnabled = stpocreationenabled;
+  }
+
+  association _PlantTableAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

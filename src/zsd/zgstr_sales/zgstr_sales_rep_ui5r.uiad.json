@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "GSTR Sales Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GSTR Sales Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zgstrsalesrep"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_77051705E830E39E123F95B2598B859D0CDD03BF_TM",
+    "semanticObject": "zso_gstr_sales",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_77051705E830E39E123F95B2598B859D0CDD03BF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GSTR Sales Report",
+        "subtitle": "ZGSTR_SALES_REP"
+      }
+    }
+  ]
+}

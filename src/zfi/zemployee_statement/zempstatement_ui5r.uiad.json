@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "EMPLOYEE STATEMENT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "EMPLOYEE STATEMENT"
+  },
+  "ui5AppDetails": {
+    "appId": "zemployeestatement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F09E13707DD93DC291EB539C33F429D24C6C88B7_TM",
+    "semanticObject": "Z_EMPSTATEMENT",
+    "action": "LIST",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F09E13707DD93DC291EB539C33F429D24C6C88B7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "EMPLOYEE STATEMENT",
+        "subtitle": "ZEMPSTATEMENT"
+      }
+    }
+  ]
+}

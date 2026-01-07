@@ -1,0 +1,40 @@
+managed implementation in class zbp_cds_salesexpenses unique;
+strict ( 2 );
+
+define behavior for ZCDS_SALESEXPENSES alias ZrSalesExpenses
+persistent table zsalaryexpenses
+etag master abp_locinst_lastchange_tstmpl
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Employetype, Salarydate , Plantcode;
+
+   action delete;
+
+    mapping for zsalaryexpenses
+  {
+    Employetype = employetype;
+    Salarydate = salarydate;
+    Salaryexpenses = salaryexpenses;
+    Salarypayable = salarypayable;
+    Plwfpayable = plwfpayable;
+    Ghideduction = Ghideduction;
+    Pfpayable = pfpayable;
+    Esipayable = esipayable;
+    Ptdeduction = ptdeduction;
+    Vpfpayable = vpfpayable;
+    Isposted = isposted;
+    Accountingdocument = accountingdocument;
+    Plantcode = Plantcode;
+    Errormessage = errorlog;
+    Isdeleted = isdeleted;
+    abp_creation_tstmpl = created_by;
+    abp_creation_user = created_at;
+    abp_locinst_lastchange_user = last_changed_by;
+    abp_locinst_lastchange_tstmpl = last_changed_at;
+  }
+}

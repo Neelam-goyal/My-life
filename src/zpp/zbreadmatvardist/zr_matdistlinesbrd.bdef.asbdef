@@ -1,0 +1,45 @@
+managed implementation in class zbp_r_matdistlinesbrd unique;
+strict ( 2 );
+
+define behavior for ZR_matdistlinesbrd alias matdistlinesbrd
+persistent table zmatdistlinesbrd
+lock master
+authorization master ( instance )
+//etag master LocalLastChangedAt
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly:update ) Bukrs, Plantcode, Declarecdate, Shiftnumber, Distlineno, Productcode;
+
+
+  mapping for zmatdistlinesbrd
+    {
+      Bukrs                  = BUKRS;
+      Plantcode              = PLANTCODE;
+      Declarecdate           = DECLARECDATE;
+      Shiftnumber            = SHIFTNUMBER;
+      Distlineno             = DISTLINENO;
+      Declaredate            = DECLAREDATE;
+      Orderconfirmationgroup = ORDERCONFIRMATIONGROUP;
+      Confirmationcount      = CONFIRMATIONCOUNT;
+      Varianceconfirmationcount = VARIANCECONFIRMATIONCOUNT;
+      Shiftgroup             = SHIFTGROUP;
+      Productionorder        = PRODUCTIONORDER;
+      Productionorderline    = PRODUCTIONORDERLINE;
+      Storagelocation        = STORAGELOCATION;
+      Productcode            = PRODUCTCODE;
+      Batchno                = BATCHNO;
+      Productdesc            = PRODUCTDESC;
+      Consumedqty            = CONSUMEDQTY;
+      Varianceqty            = VARIANCEQTY;
+      Varianceposted         = VARIANCEPOSTED;
+      Variancepostlinedate   = variancepostlinedate;
+      Entryuom               = ENTRYUOM;
+//      CreatedBy          = CREATED_BY;
+//      CreatedAt          = CREATED_AT;
+//      LastChangedBy      = LAST_CHANGED_BY;
+//      LastChangedAt      = LAST_CHANGED_AT;
+//      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    }
+}

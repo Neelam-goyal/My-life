@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Variance of Material",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Variance of Material"
+  },
+  "ui5AppDetails": {
+    "appId": "zvariancemat"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6861AFA5EB12FDA6B35382D82922B305DFAB4C6B_TM",
+    "semanticObject": "ZVARIANCEMAT",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6861AFA5EB12FDA6B35382D82922B305DFAB4C6B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Variance of Material",
+        "subtitle": "zvariancemat"
+      }
+    }
+  ]
+}

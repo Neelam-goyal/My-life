@@ -1,0 +1,10 @@
+projection;
+strict;
+
+define behavior for ZC_DBOXEXPHDR alias ExpenseHeader
+{
+
+  use action fetchExpensesFromApi;
+  use action syncPaymentStatus;
+  use action clearTableData;
+}

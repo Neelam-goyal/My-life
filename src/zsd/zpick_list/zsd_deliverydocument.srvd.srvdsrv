@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition For Delivery Document'
+define service Zsd_deliverydocument {
+  expose zdd_deliverydocument;
+}

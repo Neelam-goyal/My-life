@@ -1,0 +1,4 @@
+@EndUserText.label: 'SERVICE DEFINITION INVOICE SERIES REPORT'
+define service ZSVC_INV_SERIES_REP {
+  expose ZCE_INV_SERIES_REP;
+}

@@ -1,0 +1,27 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Batch job template for bread material distribution",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZBATCH_BREADMATDIST"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_DATE",
+        "value": ""
+      },
+      {
+        "name": "P_DESCR",
+        "value": "Post Material Variance"
+      },
+      {
+        "name": "P_PLANT",
+        "value": ""
+      }
+    ]
+  }
+}

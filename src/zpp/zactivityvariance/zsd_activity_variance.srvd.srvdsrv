@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition For Activity Variance'
+define service ZSD_ACTIVITY_VARIANCE {
+  expose zdd_activity_variance;
+}

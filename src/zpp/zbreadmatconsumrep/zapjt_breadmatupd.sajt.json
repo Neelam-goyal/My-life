@@ -1,0 +1,19 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Batch Job for Uploading Bulk Data of Material Consumption",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZAPJC_BREADMATUPD"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_IDFIER",
+        "value": ""
+      }
+    ]
+  }
+}

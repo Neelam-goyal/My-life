@@ -1,0 +1,57 @@
+managed implementation in class ZBP_R_SALARY unique;
+strict ( 2 );
+define behavior for ZR_SALARY alias ZrSalary
+persistent table ZSALARY
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   EmployeeCode,
+   DueDate;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   EmployeeCode,
+   DueDate;
+
+
+  create;
+  update;
+  delete;
+
+  action delete;
+  action validate;
+
+
+  mapping for ZSALARY
+  {
+    EmployeeCode = employee_code;
+    Plant = plant;
+    CompanyCode = company_code;
+    DueDate = due_date;
+    PostingDate = posting_date;
+    EmployeeType = employee_type;
+    Accountingdocument = accountingdocument;
+    Accountingdocument2 = accountingdocument2;
+    GrossSalary = gross_salary;
+    TdsAmount = tds_amount;
+    LoanInstallmentAmount = loan_installment_amount;
+    AdvanceInstallmentAmount = advance_installment_amount;
+    NetPayable = net_payable;
+    Errorlog = errorlog;
+    Isposted = isposted;
+    Isdeleted = isdeleted;
+    Isvalidate = isvalidate;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'DealerAPI Service definition'
+define service Zsrv_dealer_api {
+  expose zdd_dealer_master;
+}

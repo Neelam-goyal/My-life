@@ -1,0 +1,291 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'zactdistlines', 
+    typeNamePlural: 'zactdistliness', 
+    title: {
+      type: #STANDARD, 
+      label: 'zactdistlines', 
+      value: 'Distlineno'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Distlineno', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_zactdistlinesTP with
+{
+  @UI.facet: [ {
+    id: 'idzactdistlines', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'zactdistlines', 
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  Bukrs;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  Plantcode;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Declarecdate'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Declarecdate'
+  } ]
+  Declarecdate;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Distlineno'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Distlineno'
+  } ]
+  Distlineno;
+  
+  @UI.lineItem: [ {
+    position: 55 , 
+    importance: #HIGH, 
+    label: 'Shift'
+  } ]
+  @UI.identification: [ {
+    position: 55 , 
+    label: 'Shift'
+  } ]
+  Shiftnumber;
+  
+  @UI.lineItem: [ {
+    position: 57 , 
+    importance: #HIGH, 
+    label: 'Work Center Id'
+  } ]
+  @UI.identification: [ {
+    position: 57 , 
+    label: 'Work Center Id'
+  } ]
+  Workcenterid;
+  
+  @UI.lineItem: [ {
+    position: 58 , 
+    importance: #HIGH, 
+    label: 'Work Center'
+  } ]
+  @UI.identification: [ {
+    position: 58 , 
+    label: 'Work Center'
+  } ]
+  Workcenter;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Declare date'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Declare date'
+  } ]
+  Declaredate;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Production order'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Production order'
+  } ]
+  Productionorder;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Production order line'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Production order line'
+  } ]
+  Productionorderline;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Order confirmation group'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Order confirmation group'
+  } ]
+  Orderconfirmationgroup;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Order sequence'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Order sequence'
+  } ]
+  Ordersequence;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Consumed labour'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Consumed labour'
+  } ]
+  Clabour;
+  
+  @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH, 
+    label: 'Consumed power'
+  } ]
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Consumed power'
+  } ]
+  Cpower;
+  
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Consumed fuel'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Consumed fuel'
+  } ]
+  Cfuel;
+  
+  @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH, 
+    label: 'Consumed repair'
+  } ]
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Consumed repair'
+  } ]
+  Crepair;
+  
+  @UI.lineItem: [ {
+    position: 150 , 
+    importance: #HIGH, 
+    label: 'Consumed overheads'
+  } ]
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Consumed overheads'
+  } ]
+  Coverheads;
+  
+  @UI.lineItem: [ {
+    position: 160 , 
+    importance: #HIGH, 
+    label: 'Variance labour'
+  } ]
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Variance labour'
+  } ]
+  Vlabour;
+  
+  @UI.lineItem: [ {
+    position: 170 , 
+    importance: #HIGH, 
+    label: 'Variance power'
+  } ]
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Variance power'
+  } ]
+  Vpower;
+  
+  @UI.lineItem: [ {
+    position: 180 , 
+    importance: #HIGH, 
+    label: 'Variance fuel'
+  } ]
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Variance fuel'
+  } ]
+  Vfuel;
+  
+  @UI.lineItem: [ {
+    position: 190 , 
+    importance: #HIGH, 
+    label: 'Variance repair'
+  } ]
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Variance repair'
+  } ]
+  Vrepair;
+  
+  @UI.lineItem: [ {
+    position: 200 , 
+    importance: #HIGH, 
+    label: 'Variance overheads'
+  } ]
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Variance overheads'
+  } ]
+  Voverheads;
+  
+  @UI.lineItem: [ {
+    position: 210 , 
+    importance: #HIGH, 
+    label: 'Variance posted'
+  } ]
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Variance posted'
+  } ]
+  Varianceposted;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 220 , 
+    importance: #HIGH, 
+    label: 'Shift group'
+  } ]
+  @UI.identification: [ {
+    position: 220 , 
+    label: 'Shift group'
+  } ]
+  Shiftgroup;
+}

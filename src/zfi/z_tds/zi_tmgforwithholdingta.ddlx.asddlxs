@@ -1,0 +1,85 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'TmgForWithHoldingTa', 
+    typeNamePlural: 'TmgForWithHoldingTas', 
+    title: {
+      type: #STANDARD, 
+      label: 'TMG for With Holding tax', 
+      value: 'Officialwhldgtaxcode'
+    }
+  }
+}
+annotate view ZI_TmgForWithHoldingTa with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'CopyTmgForWithHoldingTa', 
+    label: 'Copy Selected Entry', 
+    invocationGrouping: #CHANGE_SET
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_TmgForWithHoldingTa', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'TMG for With Holding tax', 
+    position: 1 
+  } ]
+  Officialwhldgtaxcode;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Country'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'With Holding Tax Code'
+  } ]
+  Withholdingtaxcode;
+  
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'Country'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'Country'
+  } ]
+  Country;
+  
+  @UI.identification: [ {
+    position: 4 , 
+    label: 'Withholdingtaxtype'
+  } ]
+  @UI.lineItem: [ {
+    position: 4 , 
+    label: 'Withholdingtaxtype'
+  } ]
+  Withholdingtaxtype;
+  
+  @UI.identification: [ {
+    position: 5 , 
+    label: 'Whldgtaxrelevantpercent'
+  } ]
+  @UI.lineItem: [ {
+    position: 5 , 
+    label: 'Whldgtaxrelevantpercent'
+  } ]
+  Whldgtaxrelevantpercent;
+  
+  @UI.identification: [ {
+    position: 6 , 
+    label: 'Withholdingtaxpercent'
+  } ]
+  @UI.lineItem: [ {
+    position: 6 , 
+    label: 'Withholdingtaxpercent'
+  } ]
+  Withholdingtaxpercent;
+}

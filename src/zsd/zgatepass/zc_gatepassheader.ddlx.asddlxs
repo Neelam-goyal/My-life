@@ -1,0 +1,362 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'GatePass'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'GatePass'
+@UI: { 
+    presentationVariant: [ {
+    sortOrder: [ {
+      by: 'GatePass', 
+      direction: #DESC
+    } ]
+   } ]
+}
+annotate view ZC_GATEPASSHEADER with
+{
+  @EndUserText.label: 'Gate Pass'
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'Pass', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  } , 
+  {
+    id: 'InvoiceLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Lines', 
+    position: 30 , 
+    targetElement: '_GatePassLine'
+  } 
+  ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Gate Pass'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Gate Pass'
+  } ]
+  GatePass;
+  
+  @EndUserText.label: 'Entry Date'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Entry Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Entry Date'
+  } ]
+  EntryDate;
+  
+    @EndUserText.label: 'Type'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Type'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity:{ element: 'Type',name: 'ZI_GATEPASSTYPEVH' } }]
+  Type;
+
+
+    
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  CreatedAt;
+  
+  @EndUserText.label: 'Route'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Route'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Route'
+  } ]
+  RouteName;
+  
+  @EndUserText.label: 'CB'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'CB'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'CB'
+  } ]
+  Cb;
+  
+  @EndUserText.label: 'Bill Amount'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Bill Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Bill Amount'
+  } ]
+  BillAmount;
+  
+  @EndUserText.label: 'Vehicle Number'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Vehicle Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Vehicle Number'
+  } ]
+  VehicleNumber;
+  
+  @EndUserText.label: 'Out Date'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Out Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Out Date'
+  } ]
+  OutDate;
+  
+  @EndUserText.label: 'Out Time'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Out Time'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Out Time'
+  } ]
+  OutTime;
+  
+  @EndUserText.label: 'Remarks'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Remarks'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Remarks'
+  } ]
+  Remarks;  
+  
+  @EndUserText.label: 'Marketplace'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Marketplace'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Marketplace'
+  } ]
+  SalesmanName;
+    
+  @EndUserText.label: 'Driver Name'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Driver Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Driver Name'
+  } ]
+  DriverName;
+    
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  @EndUserText.label: 'Vehicle Out Remarks'
+  VehOutRemarks;
+    
+  @EndUserText.label: 'Driver Code'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Driver Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Driver Code'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity:{ element: 'Employee',name: 'ZR_EMPLOYEEVH' },
+  additionalBinding: [{element: 'Name',localElement: 'DriverName'}]
+   }]
+  DriverCode; 
+  
+  @EndUserText.label: 'Cm Crate1'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Cm Crate1'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Cm Crate1'
+  } ]
+  Cmcrate1;
+  
+  @EndUserText.label: 'Cm Crate2'
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Cm Crate2'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 , 
+    label: 'Cm Crate2'
+  } ]
+  Cmcrate2;
+  
+  @EndUserText.label: 'Cm Crate3'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Cm Crate3'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Cm Crate3'
+  } ]
+  Cmcrate3;
+  
+  @EndUserText.label: 'Cm Crate4'
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Cm Crate4'
+  } ]
+  @UI.lineItem: [ {
+    position: 190 , 
+    label: 'Cm Crate4'
+  } ]
+  Cmcrate4;  
+  
+  @EndUserText.label: 'Out Meter Reading'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Out Meter Reading'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'Out Meter Reading'
+  } ]
+  OutMeterReading;
+
+@EndUserText.label: 'Plant'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'Plant'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity:{ element: 'Plant',name: 'I_PlantStdVH' } }]
+  Plant;
+
+  
+  @EndUserText.label: 'Multi GPass'
+  @UI.identification: [ {
+    position: 220 , 
+    label: 'Multi GPass'
+  } ]
+  @UI.lineItem: [ {
+    position: 220 , 
+    label: 'Multi GPass'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity:{ element: 'Type',name: 'ZI_MULTIGPVH' } }]
+  MultiGPass;
+  
+  @EndUserText.label: 'First Gp Number'
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'First Gp Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 230 , 
+    label: 'First Gp Number'
+  } ]
+  FirstGpNumber;
+  
+  @EndUserText.label: 'First Gp Amount'
+  @UI.identification: [ {
+    position: 240 , 
+    label: 'First Gp Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 240 , 
+    label: 'First Gp Amount'
+  } ]
+  FirstGpAmount;
+  
+  @EndUserText.label: 'Vehicle Out'
+  @UI.identification: [ {
+    position: 250 , 
+    label: 'Vehicle Out'
+  } ]
+  VehicleOut;
+  
+  @EndUserText.label: 'Cancelled'
+  @UI.identification: [ {
+    position: 260 , 
+    label: 'Cancelled'
+  } ]
+  @UI.lineItem: [ {
+    position: 260 , 
+    label: 'Cancelled'
+  } ]
+  Cancelled;
+  
+  @EndUserText.label: 'Vrn No'
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'Vrn No'
+  } ]
+  @UI.lineItem: [ {
+    position: 270 , 
+    label: 'Vrn No'
+  } ]
+  VrnNo;
+  
+  @UI.identification: [ {
+    position: 280 
+  } ]
+  @UI.lineItem: [ {
+    position: 280 
+  } ]
+  CreatedBy;
+
+  
+  @UI.identification: [ {
+    position: 290 
+  } ]
+  @UI.lineItem: [ {
+    position: 290 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position:300 
+  } ]
+  @UI.lineItem: [ {
+    position: 300 
+  } ]
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

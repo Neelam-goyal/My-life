@@ -1,0 +1,4 @@
+@EndUserText.label: 'HSN B2B SERVICE DEFINATION'
+define service ZSD_HSN_B2B {
+  expose ZCE_HSN_B2B;
+}

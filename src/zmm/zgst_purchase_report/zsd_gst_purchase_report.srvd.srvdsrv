@@ -1,0 +1,4 @@
+@EndUserText.label: 'SERVICE DEFINITION OF PURCHASE REPORT'
+define service ZSD_GST_PURCHASE_REPORT {
+  expose ZCDS_GST_PURCHASE;
+}

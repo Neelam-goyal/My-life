@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Employee Payments Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Employee Payments Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zemppaymupd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3E14341021BAA3D317682F5F49D09ECA690D0B33_TM",
+    "semanticObject": "ZEmpPaymUpd",
+    "action": "Upload",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3E14341021BAA3D317682F5F49D09ECA690D0B33_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Employee Payments Upload",
+        "subtitle": "ZEmpPaymUPD"
+      }
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+managed;
+strict ( 2 );
+define behavior for ZR_ZIRNTP alias ZIRN
+implementation in class ZBP_R_ZIRNTP unique
+persistent table ztable_irn
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   Bukrs,
+   Billingdocno,
+   Billingdate,
+   Plant,
+   Moduletype,
+   Partycode,
+   Partyname,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+
+  internal create;
+  //create;
+  update;
+  delete;
+
+  static action createIRNData parameter Z_I_IRNPARM result [1] $self;
+   action Irn result[1] $self;
+   action PrintForm result[1] $self;
+
+
+  mapping for ZTABLE_IRN control ZSZIRN_X
+  {
+    Bukrs = BUKRS;
+    Billingdocno = BILLINGDOCNO;
+    DistributionChannel= distributionchannel;
+    BillingDocumentType = billingdocumenttype;
+    DocumentReferenceId = documentreferenceid;
+    Moduletype = MODULETYPE;
+    Plant = PLANT;
+    Billingdate = BILLINGDATE;
+    Partycode = PARTYCODE;
+    Partyname = PARTYNAME;
+    Irnno = IRNNO;
+    Ackno = ACKNO;
+    Ackdate = ACKDATE;
+    Irnstatus = IRNSTATUS;
+    IRNCanceldate = IRNCANCELDATE;
+    Canceldate = CANCELDATE;
+    EwayValidDate = ewayvaliddate;
+    Signedinvoice = SIGNEDINVOICE;
+    Signedqrcode = SIGNEDQRCODE;
+    Distance = DISTANCE;
+    Vehiclenum = VEHICLENUM;
+    Ewaybillno = EWAYBILLNO;
+    Ewaydate = EWAYDATE;
+    Ewaystatus = EWAYSTATUS;
+    Ewaycanceldate = EWAYCANCELDATE;
+    Irncreatedby = IRNCREATEDBY;
+    Ewaycreatedby = EWAYCREATEDBY;
+    Transportername=Transportername;
+    Transportergstin =Transportergstin;
+    Transportmode = Transportmode;
+    Grno = Grno;
+    Grdate =Grdate;
+    Containerno =Containerno;
+    Linesealno= Linesealno;
+    Customsealno =Customsealno;
+    Grossweight = Grossweight;
+    Netweight =Netweight;
+    MaxGrossWt = maxgrosswt;
+    MaxCargoWt = maxcargowt;
+    CTareWt = ctarewt;
+    Proformainvoiceno= ProformaInvoiceNo;
+    Destinationcountry =Destinationcountry;
+    Bookingno  = Bookingno;
+    Placereceipopre = Placereceipopre;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+}

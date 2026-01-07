@@ -1,0 +1,164 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Bukrs'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Bukrs'
+@UI.headerInfo:{ typeName: 'Materials',
+typeNamePlural: 'Materials' }
+annotate view ZC_MATERIALDECL with
+{
+  @EndUserText.label: 'Company'
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Company'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Company'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' } }]
+  Bukrs;
+
+  @EndUserText.label: 'Plant code'
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Plant code'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Plant code'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant' } }]
+  Plantcode;
+
+  @EndUserText.label: 'Declaration Date'
+  @UI.identification: [ {
+    position: 25 ,
+    label: 'Declaration Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 25 ,
+    label: 'Declaration Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 25
+  } ]
+  Declaredate;
+
+  @EndUserText.label: 'Declaration No'
+  @UI.identification: [ {
+    position: 28 ,
+    label: 'Declaration No'
+  } ]
+  @UI.lineItem: [ {
+    position: 28 ,
+    label: 'Declaration No'
+  } ]
+  Declareno;
+
+  @EndUserText.label: 'Product code'
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Product code'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Product code'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_ProductRM_VH', element: 'Product' },
+                                        additionalBinding: [{ localElement: 'Productdesc',
+                                                              element: 'ProductDescription' },
+                                                            { localElement: 'Uom',
+                                                              element: 'BaseUnit' }]
+                                    }]
+  Productcode;
+
+  @EndUserText.label: 'Product desc'
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Product desc'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Product desc'
+  } ]
+  Productdesc;
+
+  @EndUserText.label: 'Batch no'
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Batch no'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Batch no'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_BatchStdVH', element: 'Batch' },
+                                          additionalBinding: [{ localElement: 'Productcode',
+                                                              element: 'Material' }]
+   }]
+  Batchno;
+
+  @EndUserText.label: 'Consumed Quantity'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Consumed Quantity'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Consumed Quantity'
+  } ]
+  Stockquantity;
+
+  @EndUserText.label: 'UOM'
+  @UI.identification: [ {
+    position: 75 ,
+    label: 'UOM'
+  } ]
+  @UI.lineItem: [ {
+    position: 75 ,
+    label: 'UOM'
+  } ]
+  Uom;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80
+  } ]
+  CreatedBy;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

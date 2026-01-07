@@ -1,0 +1,47 @@
+managed implementation in class ZBP_R_STATEMENTTRANS unique;
+strict ( 2 );
+
+define behavior for ZR_STATEMENTTRANS_001 alias ZrStatementtrans001
+persistent table ZSTATEMENT_TRANS
+etag master Locallastchangedat
+lock master
+authorization master( global )
+{
+
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Changedby,
+   Changedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Bankrecoid,
+   VoucherNo,
+   Statementid;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for ZSTATEMENT_TRANS
+  {
+    Bankrecoid = bankrecoid;
+    VoucherNo = voucher_no;
+    Statementid = statementid;
+    Dates = dates;
+    Utr = utr;
+    Paymenttype = paymenttype;
+    Description = description;
+    Amount = amount;
+    ClearedVoucherno = cleared_voucherno;
+    Createdby = createdby;
+    Createdat = createdat;
+    Changedby = changedby;
+    Changedat = changedat;
+    Locallastchangedat = locallastchangedat;
+  }
+
+}

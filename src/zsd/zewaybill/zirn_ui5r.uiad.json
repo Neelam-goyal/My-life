@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Maintain IRN Data.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZIRN"
+  },
+  "ui5AppDetails": {
+    "appId": "zirn"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_51D0A2FD0931E1D22A46278320D5AEBA4D116057_TM",
+    "semanticObject": "zirn",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_51D0A2FD0931E1D22A46278320D5AEBA4D116057_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZIRN",
+        "subtitle": "zirn"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+managed implementation in class ZBP_R_MASTER_TAB unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MASTER_TAB alias ZrMasterTab
+persistent table ZMASTER_TAB
+draft table ZMASTER_TAB_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Brandcode;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Brandcode;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMASTER_TAB
+  {
+    Brandcode = brandcode;
+    Brandtag = brandtag;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

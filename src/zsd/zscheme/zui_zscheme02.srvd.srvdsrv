@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_ZScheme02TP'
+define service ZUI_ZScheme02 {
+  expose ZC_ZSCHEME02TP as ZScheme;
+  expose ZC_ZSCHEMELINES01TP as ZSchemeLines;
+}

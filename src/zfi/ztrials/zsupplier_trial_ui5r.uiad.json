@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ZFISUPP_TRIAL",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZFISUPP_TRIAL"
+  },
+  "ui5AppDetails": {
+    "appId": "zsuppliertrialnew.zsuppliertrialnew"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_28F999C117020E83895B89119AE073D6F08C226B_TM",
+    "semanticObject": "zsuppl_trial_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_28F999C117020E83895B89119AE073D6F08C226B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZFISUPP_TRIAL",
+        "subtitle": "Supplier Trial Report"
+      }
+    }
+  ]
+}

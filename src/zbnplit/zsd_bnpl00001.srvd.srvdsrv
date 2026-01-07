@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service Definition for Exposing Custom CDS'
+define service ZSD_BNPL00001 {
+  expose ZUI_BNPLIT_CDS_VOUCHERS;
+  expose ZUI_AccountStatement;
+  expose ZUI_BankStatement;
+  expose ZUI_EmpStatement;
+  expose ZUI_GLAccountStatement;
+  expose ZUI_PurGSTRCMFB60;
+}

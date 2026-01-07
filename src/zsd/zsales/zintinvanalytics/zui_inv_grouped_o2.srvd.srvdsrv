@@ -1,0 +1,13 @@
+@EndUserText.label: 'INV MST API V2 Service Definition'
+define service ZUI_INV_GROUPED_O2 {
+  expose ZC_INVGROUPED         as InvoiceGrouped;
+  expose ZC_INV_MST002         as InvoiceMst;
+  expose ZC_INVOICEDATATAB1002 as InvoiceDataTab;
+  expose ZC_USDATAMST001       as UnsoldMst;
+  expose ZC_USDATADATA1001     as UnsoldDataTab;
+  expose ZC_CONTROLSHEET       as ExpenseMst;
+  expose ZC_CRATESDATA000      as CratesMst;
+  expose ZC_CREDITNOTE000      as CreditNoteMst;
+  expose ZC_SCRAP              as ScrapMst;
+  expose ZC_CASHROOMCR         as CashroomCrMst;
+}

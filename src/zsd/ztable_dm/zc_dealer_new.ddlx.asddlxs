@@ -1,0 +1,231 @@
+@Metadata.layer: #PARTNER
+//@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'DealerDeviceId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'DealerDeviceId'
+annotate view ZC_DEALER_NEW with
+{
+  @EndUserText.label: 'Dealer Device Id'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Dealer Device Id'
+    
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Dealer Device Id'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  DealerDeviceId;
+  
+  @EndUserText.label: 'Dlr Adv Pymt Tag'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Dlr Adv Pymt Tag'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Dlr Adv Pymt Tag'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]  
+  Dlradvpymttag;
+  
+  @EndUserText.label: 'Dealer IFT'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Dealer IFT'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Dealer IFT'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Dealerift;
+  
+  @EndUserText.label: 'Dealer BC Tag'
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Dealer BC Tag'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'Dealer BC Tag'
+  } ]
+  @UI.selectionField: [ {
+    position: 2 
+  } ]
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZCDS_BRANDCATEGORY', element: 'BrandCode' } }]
+  Dealerbctag;
+  
+  @EndUserText.label: 'Dealer Station'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Dealer Station'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Dealer Station'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Dealerstation;
+  
+  @EndUserText.label: 'Credit Days'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Credit Days'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Credit Days'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Creditdays;
+  
+  @EndUserText.label: 'Dealer SMD Tag'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Dealer SMD Tag'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Dealer SMD Tag'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Dealersmdtag;
+  
+  @EndUserText.label: 'SSHQ Code'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'SSHQ Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'SSHQ Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Sshqcode;
+  
+   @EndUserText.label: 'Company Code'
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'Company Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'Company Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 3 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode', element: 'CompanyCode' } }]
+  CompanyCode;
+  
+    @EndUserText.label: 'Business Partner'
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Business Partner'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Business Partner'
+  } ]
+  @UI.selectionField: [ {
+    position: 1 
+  } ]
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'I_BusinessPartner', element: 'BusinessPartner' } }]
+  BusinessPartner;
+  
+  @EndUserText.label: 'Min Balance'
+  @UI.identification: [ {
+    position: 86 , 
+    label: 'Min Balance'
+  } ]
+  @UI.lineItem: [ {
+    position: 86 , 
+    label: 'Min Balance'
+  } ]
+  @UI.selectionField: [ {
+    position: 86 
+  } ]
+  MinBalance;
+  
+  @EndUserText.label: 'Min Balance Date'
+  @UI.identification: [ {
+    position: 87 , 
+    label: 'Min Balance Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 87 , 
+    label: 'Min Balance Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 87
+  } ]
+  MinBalanceDate;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 90 
+//  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 100 
+//  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 110 
+//  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 120 
+//  } ]
+  LastChangedAt;
+}

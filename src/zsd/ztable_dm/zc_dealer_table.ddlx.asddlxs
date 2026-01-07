@@ -1,0 +1,172 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'DealerDeviceId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'DealerDeviceId'
+annotate view ZC_DEALER_TABLE with
+{
+  @EndUserText.label: 'DealerDeviceId'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+//  @UI.identification: [ {
+//    position: 10 , 
+//    label: 'DealerDeviceId'
+//    
+//  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'DealerDeviceId'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  DealerDeviceId;
+  
+  @EndUserText.label: 'Dlradvpymttag'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Dlradvpymttag'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Dlradvpymttag'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]  
+  Dlradvpymttag;
+  
+  @EndUserText.label: 'Dealerift'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Dealerift'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Dealerift'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Dealerift;
+  
+  @EndUserText.label: 'Dealerbctag'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Dealerbctag'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Dealerbctag'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'ZCDS_BRANDCATEGORY', element: 'BrandCode' } }]
+  Dealerbctag;
+  
+  @EndUserText.label: 'Dealerstation'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Dealerstation'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Dealerstation'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Dealerstation;
+  
+  @EndUserText.label: 'Creditdays'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Creditdays'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Creditdays'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Creditdays;
+  
+  @EndUserText.label: 'Dealersmdtag'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Dealersmdtag'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Dealersmdtag'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Dealersmdtag;
+  
+  @EndUserText.label: 'Sshqcode'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Sshqcode'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Sshqcode'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Sshqcode;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 90 
+//  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 100 
+//  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 110 
+//  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 120 
+//  } ]
+  LastChangedAt;
+}

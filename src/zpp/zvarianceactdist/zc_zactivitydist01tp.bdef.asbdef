@@ -1,0 +1,26 @@
+projection;
+strict ( 2 );
+define behavior for ZC_ZACTIVITYDIST01TP alias ZACTIVITYDIST
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action createVarianceData;
+  use action calculateVariance;
+  use action postVariance;
+
+  use association _zactdistlines { create; }
+}
+
+define behavior for ZC_zactdistlinesTP alias zactdistlines
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _ZACTIVITYDIST;
+}

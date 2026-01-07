@@ -1,0 +1,100 @@
+managed implementation in class zbp_r_materialdist01tpbrd unique;
+strict ( 2 );
+
+define behavior for ZR_materialdist01TPbrd alias materialdistbrd
+persistent table zmaterialdistbrd
+etag master LastChangedAt
+lock master
+authorization master ( global )
+{
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( readonly : update )
+  Bukrs,
+  Plantcode,
+  Declarecdate;
+
+
+  create;
+  update;
+  delete;
+
+  static action createVarianceData parameter Z_I_MATVARPARM result [1] $self;
+  //  action( features : instance )  postVariance result [1] $self;
+  action ( features : instance ) calculateVariance result [1] $self;
+  static action postVariance parameter zae_postingdate result [1] $self;
+
+  mapping for zmaterialdistbrd
+    {
+      Bukrs              = BUKRS;
+      Plantcode          = PLANTCODE;
+      Declarecdate       = DECLARECDATE;
+      Declaredate        = DECLAREDATE;
+      Variancecalculated = VARIANCECALCULATED;
+      Varianceposted     = VARIANCEPOSTED;
+      Varianceclosed     = VARIANCECLOSED;
+      Variancepostdate   = variancepostdate;
+      Totaljobrun        = totaljobrun;
+      CreatedBy          = CREATED_BY;
+      CreatedAt          = CREATED_AT;
+      LastChangedBy      = LAST_CHANGED_BY;
+      LastChangedAt      = LAST_CHANGED_AT;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    }
+
+  association _matdistlines { create; }
+}
+
+define behavior for ZR_matdistlinesTPBRD alias matdistlinesbrd
+implementation in class ZBP_R_matdistlinesTP unique
+persistent table zmatdistlinesbrd
+etag dependent by _materialdist
+lock dependent by _materialdist
+authorization dependent by _materialdist
+
+{
+  field ( readonly )
+  Bukrs,
+  Plantcode,
+  Declarecdate;
+
+  field ( readonly : update )
+  Shiftnumber,
+  Distlineno,
+  Productcode;
+
+
+  update;
+  delete;
+
+  mapping for zmatdistlinesbrd
+    {
+      Bukrs                  = BUKRS;
+      Plantcode              = PLANTCODE;
+      Declarecdate           = DECLARECDATE;
+      Shiftnumber            = SHIFTNUMBER;
+      Distlineno             = DISTLINENO;
+      Declaredate            = DECLAREDATE;
+      Orderconfirmationgroup = ORDERCONFIRMATIONGROUP;
+      Confirmationcount      = CONFIRMATIONCOUNT;
+      Varianceconfirmationcount = VARIANCECONFIRMATIONCOUNT;
+      Shiftgroup             = SHIFTGROUP;
+      Productionorder        = PRODUCTIONORDER;
+      Productionorderline    = PRODUCTIONORDERLINE;
+      Storagelocation        = STORAGELOCATION;
+      Productcode            = PRODUCTCODE;
+      Batchno                = BATCHNO;
+      Productdesc            = PRODUCTDESC;
+      Consumedqty            = CONSUMEDQTY;
+      Varianceqty            = VARIANCEQTY;
+      Varianceposted         = VARIANCEPOSTED;
+      Variancepostlinedate   = variancepostlinedate;
+      Entryuom               = ENTRYUOM;
+    }
+
+  association _materialdist;
+}

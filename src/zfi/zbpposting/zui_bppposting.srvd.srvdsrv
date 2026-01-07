@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for BP Posting'
+define service ZUI_BPPPOSTING {
+  expose ZC_BPPOSTING as BPPOSTING;
+  expose ZC_BPPOSTED  as BPPOSTED;
+}

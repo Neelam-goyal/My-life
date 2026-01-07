@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_INTEGRATION_TAB'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_INTEGRATION_TAB'
+  }
+}
+define service ZUI_INTEGRATION_TAB_O4 provider contracts odata_v4_ui {
+  expose ZC_INTEGRATION_TAB;
+}

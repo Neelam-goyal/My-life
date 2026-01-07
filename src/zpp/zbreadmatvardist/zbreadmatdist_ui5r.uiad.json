@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BREAD MATERIAL DISTRIBUTION"
+  },
+  "ui5AppDetails": {
+    "appId": "breadmatconsumption.zbreadmaterialdist"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DC4B29595DB9D2491C265901D50B449180ADB6FA_TM",
+    "semanticObject": "ZBREADMATDIST",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DC4B29595DB9D2491C265901D50B449180ADB6FA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BREAD MATERIAL DISTRIBUTION",
+        "subtitle": "ZBREADMATDIST"
+      }
+    }
+  ]
+}

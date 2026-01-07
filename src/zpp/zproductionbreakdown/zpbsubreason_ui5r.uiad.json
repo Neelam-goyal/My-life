@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "PB Sub-Reason",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "PB Sub-Reason"
+  },
+  "ui5AppDetails": {
+    "appId": "zpbsubreason"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DEE7F5058EFE452A537979289742B75D8ECB0015_TM",
+    "semanticObject": "ZPBSUBREASON",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DEE7F5058EFE452A537979289742B75D8ECB0015_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "PB Sub-Reason",
+        "subtitle": "ZPBSubReason"
+      }
+    }
+  ]
+}

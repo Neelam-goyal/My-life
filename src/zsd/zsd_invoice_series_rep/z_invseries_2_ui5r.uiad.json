@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "INVOICE SERIES",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "INVOICE SERIES"
+  },
+  "ui5AppDetails": {
+    "appId": "zinvoiceseries"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_59DA4574C0F980A5BBA0B2A3E186BEA2D23287F7_TM",
+    "semanticObject": "zinvseries",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_59DA4574C0F980A5BBA0B2A3E186BEA2D23287F7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "INVOICE SERIES",
+        "subtitle": "ZINVS"
+      }
+    }
+  ]
+}

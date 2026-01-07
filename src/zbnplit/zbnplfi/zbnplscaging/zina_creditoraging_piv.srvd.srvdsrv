@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_CREDITORAGING_PIV_QRY'
+}
+define service ZINA_CREDITORAGING_PIV provider contracts ina {
+  expose ZC_CREDITORAGING_PIV_QRY;
+}

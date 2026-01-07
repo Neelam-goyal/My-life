@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Accounts Statement for Customer & Supplier",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Accounts Statement (Supplier/Customer) BCP"
+  },
+  "ui5AppDetails": {
+    "appId": "zcustsupaccstmt.zcustsupaccstmt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_1F339CA61BC5AA7A77689967FF78CDD5644D126E_TM",
+    "semanticObject": "ZBCPCUSTSUPSTMT",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_1F339CA61BC5AA7A77689967FF78CDD5644D126E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Accounts Statement (Supplier/Customer) BCP",
+        "subtitle": "Supplier/Customer Accounts Statement BCP"
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'PlantTable', 
+    typeNamePlural: 'PlantTables', 
+    title: {
+      type: #STANDARD, 
+      label: 'Plant Table', 
+      value: 'CompCode'
+    }
+  }
+}
+annotate view ZI_PlantTable with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_PlantTable', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Plant Table', 
+    position: 1 
+  } ]
+  CompCode;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  PlantCode;
+  
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'PlantName1'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'PlantName1'
+  } ]
+  PlantName1;
+  
+  @UI.identification: [ {
+    position: 4 , 
+    label: 'PlantName2'
+  } ]
+  @UI.lineItem: [ {
+    position: 4 , 
+    label: 'PlantName2'
+  } ]
+  PlantName2;
+  
+  @UI.identification: [ {
+    position: 5 , 
+    label: 'Address1'
+  } ]
+  @UI.lineItem: [ {
+    position: 5 , 
+    label: 'Address1'
+  } ]
+  Address1;
+  
+  @UI.identification: [ {
+    position: 6 , 
+    label: 'Address2'
+  } ]
+  @UI.lineItem: [ {
+    position: 6 , 
+    label: 'Address2'
+  } ]
+  Address2;
+  
+  @UI.identification: [ {
+    position: 7 , 
+    label: 'Address3'
+  } ]
+  @UI.lineItem: [ {
+    position: 7 , 
+    label: 'Address3'
+  } ]
+  Address3;
+  
+  @UI.identification: [ {
+    position: 8 , 
+    label: 'City'
+  } ]
+  @UI.lineItem: [ {
+    position: 8 , 
+    label: 'City'
+  } ]
+  City;
+  
+  @UI.identification: [ {
+    position: 9 , 
+    label: 'District'
+  } ]
+  @UI.lineItem: [ {
+    position: 9 , 
+    label: 'District'
+  } ]
+  District;
+  
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'StateCode1'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'StateCode1'
+  } ]
+  StateCode1;
+  
+  @UI.identification: [ {
+    position: 11 , 
+    label: 'StateCode2'
+  } ]
+  StateCode2;
+  
+  @UI.identification: [ {
+    position: 12 , 
+    label: 'StateName'
+  } ]
+  StateName;
+  
+  @UI.identification: [ {
+    position: 13 , 
+    label: 'Pin'
+  } ]
+  Pin;
+  
+  @UI.identification: [ {
+    position: 14 , 
+    label: 'Country'
+  } ]
+  Country;
+  
+  @UI.identification: [ {
+    position: 15 , 
+    label: 'CinNo'
+  } ]
+  CinNo;
+  
+  @UI.identification: [ {
+    position: 16 , 
+    label: 'GstinNo'
+  } ]
+  GstinNo;
+  
+   @UI.identification: [ {
+    position: 22 , 
+    label: 'FSSAI No'               
+  } ]
+  FssaiNo; 
+  
+  @UI.identification: [ {
+    position: 17 , 
+    label: 'PanNo'
+  } ]
+  PanNo;
+  
+  @UI.identification: [ {
+    position: 18 , 
+    label: 'TanNo'
+  } ]
+  TanNo;
+  
+  @UI.identification: [ {
+    position: 19 , 
+    label: 'Remark1'
+  } ]
+  Remark1;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Remark2'
+  } ]
+  Remark2;
+  
+  @UI.identification: [ {
+    position: 21 , 
+    label: 'Remark3'
+  } ]
+  Remark3;
+  
+    @UI.identification: [ {
+    position: 22 , 
+    label: 'GSP UserName'
+  } ]
+  GSPUserName;
+  
+    @UI.identification: [ {
+    position: 23 , 
+    label: 'GSP Password'
+  } ]
+  GSPPassword;
+  
+    @UI.identification: [ {
+    position: 24 , 
+    label: 'Phone Number'
+  } ]
+  Phone;
+  
+     @UI.identification: [ {
+    position: 25 , 
+    label: 'Business Place'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_BusinessPlaceVH', element: 'BusinessPlace' } }]
+  
+  BUSINESSPLACE;
+     @UI.identification: [ {
+    position: 26 , 
+    label: 'Profit Center'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProfitCenterStdVH', element: 'ProfitCenter' } }]
+  PROFITCENTER;
+
+  @UI.identification: [ {
+    position: 27 , 
+    label: 'Cost Center'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CostCenterStdVH', element: 'CostCenter' } }]
+  COSTCENTER;
+  
+  @UI.identification: [ {
+    position: 27 , 
+    label: 'Purchase Cost Center'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CostCenterStdVH', element: 'CostCenter' } }]
+  PURCHASECOSTCENTER;
+
+  
+  @UI.identification: [ {
+    position: 28 , 
+    label: 'Cash GL Account'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_GLAccountStdVH', element: 'GLAccountExternal' } }]
+  GLACCOUNT;
+  
+    
+  @UI.identification: [ {
+    position: 29 , 
+    label: 'Gate Entry Active/Inactive'
+  } ]
+  Active;
+  
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Integration Enabled'
+  } ]
+  IntegrationEnabled;
+  
+  
+    @EndUserText.label: 'Stock PO Creation Enabled'
+  @UI.identification: [ {
+    position: 31 ,
+    label: 'Stock PO Creation Enabled'
+  } ]
+  @UI.lineItem: [ {
+    position: 31 ,
+    label: 'Stock PO Creation Enabled'
+  } ]
+  STPOCreationEnabled;
+  
+  @EndUserText.label: 'Stock PO Receiving Enabled'
+  @UI.identification: [ {
+    position: 32 ,
+    label: 'Stock PO Receiving Enabled'
+  } ]
+  @UI.lineItem: [ {
+    position: 32 ,
+    label: 'Stock PO Receiving Enabled'
+  } ]
+  STPOReceiveEnabled;
+  
+  
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'EWB UserName'
+  } ]
+  EWBUserName;
+  
+    @UI.identification: [ {
+    position: 31 , 
+    label: 'EWB Password'
+  } ]
+  EWBPassword;
+}

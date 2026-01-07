@@ -1,0 +1,268 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Imfyear'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Imfyear'
+@UI.lineItem: [{criticality: 'Highlight'}] 
+annotate view ZC_CREDITNOTE000 with
+{
+  @EndUserText.label: 'Imfyear'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Imfyear'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Imfyear'
+  } ]
+  Imfyear;
+  
+  @EndUserText.label: 'Imtype'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Imtype'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Imtype'
+  } ]
+  Imtype;
+  
+  @EndUserText.label: 'Imnoseries'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Imnoseries'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Imnoseries'
+  } ]
+  Imnoseries;
+  
+  @EndUserText.label: 'CompCode'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'CompCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'CompCode'
+  } ]
+  CompCode;
+  
+  @EndUserText.label: 'Imno'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Imno'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Imno'
+  } ]
+  Imno;
+  
+  @EndUserText.label: 'Imdealercode'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Imdealercode'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Imdealercode'
+  } ]
+  Imdealercode;
+  
+  @EndUserText.label: 'Implant'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Implant'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Implant'
+  } ]
+  Implant;
+  
+  @EndUserText.label: 'Location'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Location'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Location'
+  } ]
+  Location;
+  
+  @EndUserText.label: 'Imdate'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Imdate'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Imdate'
+  } ]
+  Imdate;
+  
+  @EndUserText.label: 'Imdoccatg'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Imdoccatg'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Imdoccatg'
+  } ]
+  Imdoccatg;
+  
+  @EndUserText.label: 'Imcramt'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Imcramt'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Imcramt'
+  } ]
+  Imcramt;
+  
+  @EndUserText.label: 'Imbreadcode'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Imbreadcode'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Imbreadcode'
+  } ]
+  Imbreadcode;
+  
+  @EndUserText.label: 'Imwrappercode'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Imwrappercode'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Imwrappercode'
+  } ]
+  Imwrappercode;
+  
+  @EndUserText.label: 'Imbreadwt'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Imbreadwt'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Imbreadwt'
+  } ]
+  Imbreadwt;
+  
+  @EndUserText.label: 'Imwrapperwt'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Imwrapperwt'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Imwrapperwt'
+  } ]
+  Imwrapperwt;
+  
+  @EndUserText.label: 'Imfeddt'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Imfeddt'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Imfeddt'
+  } ]
+  Imfeddt;
+  
+  @EndUserText.label: 'Imfebuser'
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Imfebuser'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 , 
+    label: 'Imfebuser'
+  } ]
+  Imfebuser;
+  
+  @EndUserText.label: 'Imstatus'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Imstatus'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Imstatus'
+  } ]
+  Imstatus;
+  
+  @EndUserText.label: 'Error Log'
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Error Log'
+  } ]
+  @UI.lineItem: [ {
+    position: 190 , 
+    label: 'Error Log'
+  } ]
+  GlerrorLog;
+  
+  @EndUserText.label: 'Processed'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Processed'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'Processed'
+  } ]
+  Glposted;
+  
+  @EndUserText.label: 'Accounting Doc. No.'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Accounting Doc. No.'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'Accounting Doc. No.'
+  } ]
+  Dealercrdoc;
+  
+  @EndUserText.label: 'Error Flag'
+@UI.identification: [ {
+  position: 230 , 
+  label: 'Error Flag'
+} ]
+@UI.lineItem: [ {
+  position: 230 , 
+  label: 'Error Flag'
+} ]
+Highlight;
+  
+  
+  @UI.identification: [ {
+    position: 240 
+  } ]
+  @UI.lineItem: [ {
+    position: 240 
+  } ]
+  CreatedBy;
+  
+  
+}

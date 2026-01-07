@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSDTDS'
+define service ZSDTDS {
+  expose ZCETDS;
+}

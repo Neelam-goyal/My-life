@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_DatabaseTableOfBran_S'
+define service ZUI_DATABASETABLEOFBRAN {
+  expose ZI_DATABASETABLEOFBRAN_S as DatabaseTableOfBAll;
+  expose ZI_DATABASETABLEOFBRAN as DatabaseTableOfBran;
+}

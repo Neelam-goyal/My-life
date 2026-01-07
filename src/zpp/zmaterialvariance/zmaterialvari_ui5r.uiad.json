@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "MATERIAL VARIANCE REPORT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "MATERIAL VARIANCE REPORT"
+  },
+  "ui5AppDetails": {
+    "appId": "materialvariance"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D07F6B0B78B7AEF0C0B541D47A839531342767B1_TM",
+    "semanticObject": "zmaterialvariance",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D07F6B0B78B7AEF0C0B541D47A839531342767B1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "MATERIAL VARIANCE REPORT",
+        "subtitle": "ZMVR"
+      }
+    }
+  ]
+}

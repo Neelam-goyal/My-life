@@ -1,0 +1,57 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Purchase Data Query BCP",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Purchase Data Query BCP"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_PURCHASEDATA001_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_PURCHASEDATA001_AD_TM",
+    "semanticObject": "zpurchasedata01",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_PURCHASEDATA001_QRY"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_PURCHASEDATA001_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Purchase Data Query BCP",
+        "subtitle": "PDATA01",
+        "icon": "sap-icon://sales-order-item",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_PURCHASEDATA001_QRY"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

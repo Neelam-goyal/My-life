@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_PURCHASEDATA001_QRY'
+}
+define service ZINA_PURCHASEDATA001_QRY provider contracts ina {
+  expose ZC_PURCHASEDATA001_QRY;
+}

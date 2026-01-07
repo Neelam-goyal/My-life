@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Scheme",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Scheme"
+  },
+  "ui5AppDetails": {
+    "appId": "zsoscheme"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D067848BA50E5707BF0BB873546282713E165FFE_TM",
+    "semanticObject": "ZScheme",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D067848BA50E5707BF0BB873546282713E165FFE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Scheme",
+        "subtitle": "zscheme"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+managed implementation in class ZBP_R_BANKSTMT unique;
+strict;
+
+define behavior for ZR_BANKSTMT alias ZrBankstmt
+persistent table ZBANKSTMT
+etag master LastChangedAt
+lock master
+early numbering
+authorization master( global )
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   StatementID;
+
+
+  create;
+  update;
+  delete;
+
+
+  validation checkUniqueBankPeriod on save { field BankCode, Fromdate, Todate; }
+  action deletionOrder;
+
+
+  mapping for ZBANKSTMT
+  {
+    StatementID = statement_id;
+    Bankcode = bankcode;
+    Bankname = bankname;
+    Housebank = housebank;
+    Fromdate = fromdata;
+    Todate = todate;
+    Status = status;
+    Company = company;
+    Closingbalance = closingbalance;
+    Openingbalance = openingbalance ;
+    Statementdate =  statementdate;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  association _StatementLines{create;}
+
+}
+
+define behavior for ZR_BANKSTMTLINES alias ZrBankstmtlines
+persistent table ZBANKSTMTLINES
+etag master LastChangedAt
+lock dependent by _Statement
+early numbering
+authorization dependent by _Statement
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   VoucherNo,
+   StatementID;
+
+
+  update;
+  delete;
+
+
+  determination addLineNum on save { field VoucherNo; }
+//  validation saveStatementLine on save { field StatementID; }
+
+  mapping for ZBANKSTMTLINES
+  {
+    VoucherNo = voucher_no;
+    StatementID = statement_id;
+    Dates = dates;
+    Utr = utr;
+    LineNum = line_no;
+    Type = type;
+    Cleared = cleared;
+    Description = description;
+    Amount = amount;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  association _Statement;
+
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "PAYMENTS UPLOADER"
+  },
+  "ui5AppDetails": {
+    "appId": "oipaymentposting.oipaymentposting"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9EB6A46526B4F9C6392B8E2C1DB43298EF887FBB_TM",
+    "semanticObject": "ZOIPAYMUPLOADER",
+    "action": "Save",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9EB6A46526B4F9C6392B8E2C1DB43298EF887FBB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "PAYMENTS UPLOADER",
+        "subtitle": "ZPaymUpd"
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Customer Trial Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Customer Trial Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zcustomertrial"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D3576F329DFE7049D3B4168BA63B9C5D1B835C0F_TM",
+    "semanticObject": "zcustomer_trial_so",
+    "action": "DISPALY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D3576F329DFE7049D3B4168BA63B9C5D1B835C0F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Customer Trial Report",
+        "subtitle": "zcustomer"
+      }
+    }
+  ]
+}

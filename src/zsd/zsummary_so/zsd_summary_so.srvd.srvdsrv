@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition For Summary SO'
+define service Zsd_summary_so {
+  expose zdd_sumary_so;
+}

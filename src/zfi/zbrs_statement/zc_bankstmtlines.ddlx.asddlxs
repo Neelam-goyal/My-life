@@ -1,0 +1,146 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'VoucherNo'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'VoucherNo'
+annotate view ZC_BANKSTMTLINES with
+{
+  @EndUserText.label: 'VoucherNo'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'VoucherNo'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'VoucherNo'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  VoucherNo;
+  
+  @EndUserText.label: 'StatementID'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'StatementID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'StatementID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  StatementID;
+  
+  @EndUserText.label: 'Dates'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Dates'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Dates'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Dates;
+  
+  @EndUserText.label: 'Utr'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Utr'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Utr'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Utr;
+  
+  @EndUserText.label: 'Type'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Type;
+  
+  @EndUserText.label: 'Description'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Description'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Description;
+  
+  @EndUserText.label: 'Amount'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Amount'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Amount;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  CreatedAt;
+  
+
+  @UI.hidden: true
+  LastChangedBy;
+  
+
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+}

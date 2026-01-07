@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZC_materialdist01TP'
+define service ZUI_materialdist01 {
+  expose ZC_materialdist01TP as materialdist;
+  expose ZC_matdistlinesTP   as matdistlines;
+}

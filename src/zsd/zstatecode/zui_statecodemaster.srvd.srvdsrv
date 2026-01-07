@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_Statecodemaster_S'
+define service ZUI_STATECODEMASTER {
+  expose ZI_STATECODEMASTER_S as StatecodemasterAll;
+  expose ZI_STATECODEMASTER as Statecodemaster;
+}

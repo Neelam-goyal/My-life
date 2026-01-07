@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "User Setup",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "User Setup"
+  },
+  "ui5AppDetails": {
+    "appId": "zusersetup"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C3236E22A6FA2865A8A6E3BC2ED757085E82321D_TM",
+    "semanticObject": "zusersetup_so",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C3236E22A6FA2865A8A6E3BC2ED757085E82321D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "User Setup",
+        "subtitle": "zuser"
+      }
+    }
+  ]
+}

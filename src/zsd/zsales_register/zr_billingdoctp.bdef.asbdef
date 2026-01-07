@@ -1,0 +1,133 @@
+managed;
+strict ( 2 );
+define behavior for ZR_BillingDocTP alias BillingDoc
+implementation in class ZBP_R_BillingDocTP unique
+persistent table zbillingproc
+etag master Creationdatetime
+lock master
+authorization master ( global )
+
+{
+  field ( readonly )
+  Creationdatetime;
+
+  field ( readonly : update )
+  Bukrs,
+  Fiscalyearvalue,
+  Billingdocument;
+
+  create;
+  delete;
+
+  mapping for zbillingproc
+    {
+      Bukrs            = BUKRS;
+      Fiscalyearvalue  = FISCALYEARVALUE;
+      Billingdocument  = BILLINGDOCUMENT;
+      Creationdatetime = CREATIONDATETIME;
+    }
+
+  association _BillingLines { }
+}
+
+define behavior for ZR_BillingLinesTP alias BillingLines
+implementation in class ZBP_R_BillingLinesTP unique
+persistent table zbillinglines
+etag dependent by _BillingDoc
+lock dependent by _BillingDoc
+authorization dependent by _BillingDoc
+
+{
+  field ( readonly )
+  Bukrs,
+  Fiscalyearvalue,
+  Billingdocument;
+
+  field ( readonly : update )
+  Billingdocumentitem;
+
+
+  mapping for zbillinglines
+    {
+      Bukrs                    = CompanyCode;
+      Fiscalyearvalue          = FiscalYearValue;
+      Billingdocument          = invoice;
+      Billingdocumentitem      = LineItemNo;
+      Billingdocumentdate      = InvoiceDate;
+      referencesddocument      = SalesQuotation;
+      creationdate             = CreationDate;
+      fullname                 = SalesPerson;
+      salesdocument            = SaleOrderNumber;
+      sales_creationdate       = SalesCreationDate;
+      purchaseorderbycustomer  = CustomerPONumber;
+      taxnumber3               = SoldToPartyGSTIN;
+      // companycode             = companycode;
+      customername             = SoldToPartyName;
+      soldtoparty              = SoldToPartyNumber;
+      shiptoparty              = ShipToPartyNumber;
+      ship_customername        = ShipToPartyName;
+      ship_taxnumber3          = ShipToPartyGSTNo;
+      del_place_state_code     = DeliveryPlaceStateCode;
+      sold_region_code         = SoldToRegionCode;
+      D_ReferenceSDDocument    = DeliveryNumber;
+      delivery_CreationDate    = DeliveryDate;
+      BillingDocumentType      = BillingType;
+      billing_doc_desc         = BillingDocDesc;
+      documentreferenceid      = BillNo;
+      E_way_Bill_Number        = EWayBillNumber;
+      E_way_Bill_Date_Time     = EWayBillDateTime;
+      IRN_Ack_Number           = IRNAckNumber;
+      Vehicle_Number           = VehicleNumber;
+      Tpt_Vendor_Name          = tptvendorname;
+      Tpt_Mode                 = tptmode;
+      Actual_Netweight         = ActualNetWeight;
+      Gross_Weight             = GrossWeight;
+      Grno                     = GRNo;
+      del_plant                = DeliveryPlant;
+      Product                  = MaterialNo;
+      BrandName                = BrandName;
+      Materialdescription      = MaterialDescription;
+      MaterialGroup            = MaterialGroup;
+      MaterialGroupDescription = materialgroupdescription;
+      Division                 = Division;
+      DistributionChannel      = DistributionChannel;
+      MaterialByCustomer       = CustomerItemCode;
+      ConsumptionTaxCtrlCode   = HSNCode;
+      YY1_SOHSCODE_SDI         = HSCode;
+      billingQuantity          = QTY;
+      baseunit                 = UOM;
+      transactioncurrency      = DocumentCurrency;
+      accountingexchangerate   = ExchangeRate;
+      Itemrate                 = Rate;
+      rate_in_inr              = RateInINR;
+      taxable_value            = taxablevaluebeforediscount;
+      Igst                     = IGSTAmt;
+      Sgst                     = SGSTAmt;
+      Cgst                     = CGSTAmt;
+      taxable_value_dis        = taxablevalueafterdiscount;
+      freight_charge_inr       = FreightChargeINR;
+      insurance_rate           = InsuranceRateINR;
+      insurance_amt            = InsuranceAmountINR;
+      packaging_rate           = packingchargerateinr;
+      pacKing_amt              = packingamountinr;
+      rateugst                 = UGSTRate;
+      ugst                     = UGSTAmt;
+      Roundoff                 = RoundoffValue;
+      Discount                 = DiscountAmount;
+      ratediscount             = DiscountRate;
+      taxamount                = taxamount;
+      TotalTaxAmount           = totaltaxamount;
+      Total_amount             = totalamount;
+      Totalamount              = InvoiceAmount;
+      Rateigst                 = IGSTRate;
+      Ratecgst                 = CGSTRate;
+      Ratesgst                 = SGSTRate;
+      Ratetcs                  = TCSRate;
+      Tcs                      = TCSAmount;
+      SaleType                 = SaleType;
+      TaxExempted              = TaxExempted;
+      cancelledinvoice         = cancelledinvoice;
+    }
+
+  association _BillingDoc;
+}

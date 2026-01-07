@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for PO BAS Screen'
+define service ZSRV_POBASSCREEN {
+  expose ZI_POSCREEN;
+}

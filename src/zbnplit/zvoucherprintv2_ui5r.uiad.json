@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Voucher Print V2",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Voucher Print V2"
+  },
+  "ui5AppDetails": {
+    "appId": "bonnvoucherprint"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8EDA10BBD1AC8283A41052AB2D5B8F879D20C99E_TM",
+    "semanticObject": "zvpv2",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8EDA10BBD1AC8283A41052AB2D5B8F879D20C99E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Voucher Print V2"
+      }
+    }
+  ]
+}

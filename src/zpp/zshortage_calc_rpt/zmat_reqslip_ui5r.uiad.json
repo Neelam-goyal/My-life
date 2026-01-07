@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ZMat_Req_Slip",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZMat_Req_Slip"
+  },
+  "ui5AppDetails": {
+    "appId": "zmaterialrequistionslip"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6DF274A63AED8425890F81888D98E97FC65439B2_TM",
+    "semanticObject": "zmat_reqslip",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6DF274A63AED8425890F81888D98E97FC65439B2_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZMat_Req_Slip",
+        "subtitle": "Material Requisition Slip"
+      }
+    }
+  ]
+}

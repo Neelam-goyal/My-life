@@ -1,0 +1,81 @@
+managed implementation in class ZBP_R_BPPOSTING unique;
+strict ( 2 );
+define behavior for ZR_BPPOSTING alias ZrBpposting
+persistent table ZBPPOSTING
+etag master LastChangedAt
+lock master
+authorization master( global )
+{
+  field ( mandatory : create )
+   Companycode,
+   Documentdate,
+   Createdtime,
+   LineNum;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Companycode,
+   Documentdate,
+   Createdtime,
+   LineNum;
+
+
+  create;
+  update;
+  delete;
+
+  action falsedelete;
+  action approveData;
+
+  mapping for ZBPPOSTING
+  {
+    Companycode = companycode;
+    Documentdate = documentdate;
+    Createdtime = createdtime;
+    LineNum = line_no;
+    Postingdate = postingdate;
+    Vouchertype = vouchertype;
+    Type1 = type1;
+    Type2 = type2;
+    Businesspartner1 = businesspartner1;
+    Businesspartner2 = businesspartner2;
+    SpecialGlCode1 = special_gl_code1;
+    SpecialGlCode2 = special_gl_code2;
+    Amount1 = amount1;
+    Amount2 = amount2;
+    Currencycode = currencycode;
+    AmtType1 = amt_type1;
+    AmtType2 = amt_type2;
+    BusinessPlace1 = business_place1;
+    BusinessPlace2 = business_place2;
+    ProfitCenter1 = profit_center1;
+    ProfitCenter2 = profit_center2;
+    ItemText1 = item_text1;
+    ItemText2 = item_text2;
+    Assignment1 = assignment1;
+    Assignment2 = assignment2;
+    ApprovedBy = approved_by;
+    ApprovedAt = approved_at;
+    Accdoc1 = accdoc1;
+    Accdoc2 = accdoc2;
+    Accdocyear1 = accdocyear1;
+    Accdocyear2 = accdocyear2;
+    ErrorLog = error_log;
+    Isdeleted = isdeleted;
+    Isposted = isposted;
+    Validate1 = validate1;
+    Validate2 = validate2;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+}

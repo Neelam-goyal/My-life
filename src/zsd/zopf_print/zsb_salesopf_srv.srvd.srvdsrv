@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Binding for Sales OPF'
+define service ZSB_SALESOPF_SRV {
+  expose ZC_SALESORDER as A_SalesOrder;
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Salary Delete",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Salary Delete"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalarydelete"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3C1DFC501AB8595765618E68885F155F250556A2_TM",
+    "semanticObject": "ZSALARYDELETE",
+    "action": "LIST",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3C1DFC501AB8595765618E68885F155F250556A2_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Salary Delete",
+        "subtitle": "sd001"
+      }
+    }
+  ]
+}

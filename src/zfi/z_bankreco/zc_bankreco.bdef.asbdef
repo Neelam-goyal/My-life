@@ -1,0 +1,39 @@
+projection implementation in class ZBP_C_BANKRECO unique;
+strict;
+
+define behavior for ZC_BANKRECO alias ZcBankreco
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action validateData;
+  use action deleteRecords;
+  use action utrBasedReco;
+  use association _Booktrans{create;}
+  use association _StatementTrans{create;}
+}
+
+define behavior for ZC_BOOKTRANS alias ZcBooktrans
+use etag
+{
+
+  use update;
+  use delete;
+
+
+  use association _bankreco;
+}
+
+
+define behavior for ZC_STATEMENTTRANS alias ZcStatementtrans
+use etag
+{
+
+  use update;
+  use delete;
+
+
+  use association _bankreco;
+}

@@ -1,0 +1,136 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'StatementID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'StatementID'
+annotate view ZC_BANKSTMT with
+{
+  @EndUserText.label: 'Statement ID'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Statement ID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Statement ID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  StatementID;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { element: 'ChargeAccount', name: 'ZBANK_VH'  },
+   additionalBinding: [{ element: 'HouseBank', localElement: 'Bankname' }]
+  }]
+  Bankcode;
+  
+  @EndUserText.label: 'Bank Name'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Bank Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Bank Name'
+  } ]
+  Bankname;
+  
+    @EndUserText.label: 'House Bank'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Bank Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'House Bank'
+  } ]
+  Housebank;
+  
+  @EndUserText.label: 'From Date'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'From Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'From Date'
+  } ]
+  Fromdate  ;
+  
+  @EndUserText.label: 'To Date'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'To Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'To Date'
+  } ]
+  Todate;
+  
+  @EndUserText.label: 'Status'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Status'
+  } ]
+  Status;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+    @Consumption.valueHelpDefinition: [{ entity: { element: 'CompanyCode', name: 'I_CompanyCodeStdVH'  }
+   }]
+  Company;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+}

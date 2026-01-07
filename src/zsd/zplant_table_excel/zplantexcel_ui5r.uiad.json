@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Plant Uploader",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Plant Uploader"
+  },
+  "ui5AppDetails": {
+    "appId": "zplanttableexcel"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B8369C5334119B1BC72DC8700D885C720C5F039E_TM",
+    "semanticObject": "zso_plant_excel",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B8369C5334119B1BC72DC8700D885C720C5F039E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Plant Uploader",
+        "subtitle": "ZPlant_Uploader"
+      }
+    }
+  ]
+}

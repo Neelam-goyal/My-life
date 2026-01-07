@@ -1,0 +1,7 @@
+@EndUserText.label: 'SERVICE DEFINATION OF SERVICE DEFINATION'
+define service Z_MATERIALCONSUPTION {
+  expose ZR_materialconsuptionREP;
+  expose ZC_CUSTOMENTITY;
+  expose ZR_zrepmaterialCDS;
+  expose zc_customvariance;
+}

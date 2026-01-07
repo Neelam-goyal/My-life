@@ -1,0 +1,156 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'zmaterialdist',
+    typeNamePlural: 'zmaterialdists',
+    title: {
+      type: #STANDARD,
+      label: 'Material Variance Distribution',
+      value: 'Bukrs'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Bukrs',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view zc_materialdist01tpbrd with
+{
+  @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    label: 'Material Variance Distribution',
+    position: 10
+  },
+  {
+    id: 'idIdentification',
+    parentId: 'idCollection',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'General Information',
+    position: 20
+  },
+  {
+    id: 'idzmatdistlines',
+    type: #LINEITEM_REFERENCE,
+    label: 'Material Variance Distributions',
+    position: 30 ,
+    targetElement: '_matdistlines'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Company'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Company'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  bukrs;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Plant'
+  } ,
+  {  type: #FOR_ACTION, dataAction: 'createVarianceData', label: 'Generate Material Variance'  },
+  {  type: #FOR_ACTION, dataAction: 'calculateVariance', label: 'Calculate Variance'  },
+  {  type: #FOR_ACTION, dataAction: 'postVariance', label: 'Post Variance'  }
+  ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  plantcode;
+
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Declare date'
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Declare date'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  declaredate;
+
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Variance calculated'
+  } ]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Variance calculated'
+  } ]
+  variancecalculated;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Variance posted'
+  } ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Variance posted'
+  } ]
+  varianceposted;
+
+  @UI.lineItem: [ {
+  position: 65 ,
+  label: 'Variance Post Date'
+  } ]
+  @UI.identification: [ {
+    position: 65 ,
+    label: 'Variance Post Date'
+  } ]
+  variancepostdate;
+
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Variance closed'
+  } ]
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Variance closed'
+  } ]
+  varianceclosed;
+
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'Total Job Run'
+  } ]
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Total Job Run'
+  } ]
+  totaljobrun;
+
+  @UI.hidden: true
+  createdby;
+
+  @UI.hidden: true
+  createdat;
+
+  @UI.lineItem: [ {
+    position: 100
+  } ]
+  @UI.identification: [ {
+    position: 100
+  } ]
+  lastchangedby;
+
+  @UI.hidden: true
+  lastchangedat;
+
+  @UI.hidden: true
+  locallastchangedat;
+}

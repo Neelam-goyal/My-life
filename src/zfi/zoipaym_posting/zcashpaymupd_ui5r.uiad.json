@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Cash Payments Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Cash Payments Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zcashpaymupd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_03F741D7D18F41D354945E920F24F41D26AE3994_TM",
+    "semanticObject": "ZCashPaym",
+    "action": "Upload",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_03F741D7D18F41D354945E920F24F41D26AE3994_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Cash Payments Upload",
+        "subtitle": "ZCashPaymUpd"
+      }
+    }
+  ]
+}

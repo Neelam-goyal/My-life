@@ -1,0 +1,4 @@
+@EndUserText.label: 'Inventory Aging'
+define service ZSD_InventoryAging {
+  expose ZInventoryAging;
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Customer Account Statement",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Customer Account Statement"
+  },
+  "ui5AppDetails": {
+    "appId": "zaccountstatement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DACB2DFB4C7609E28DCAA2FA7B6B564F9E20B2BF_TM",
+    "semanticObject": "zaccountstatement",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DACB2DFB4C7609E28DCAA2FA7B6B564F9E20B2BF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Customer Account Statement",
+        "subtitle": "zcustaccountstatement"
+      }
+    }
+  ]
+}

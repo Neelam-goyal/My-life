@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "D-Box Expense App",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "D-Box Expenses"
+  },
+  "ui5AppDetails": {
+    "appId": "zdboxexpense.zdboxexpense"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5D1A4EC1EE4BFE69FB193DD6DE5DC97D34D9AF56_TM",
+    "semanticObject": "zdboxexpense",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5D1A4EC1EE4BFE69FB193DD6DE5DC97D34D9AF56_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "D-Box Expenses"
+      }
+    }
+  ]
+}

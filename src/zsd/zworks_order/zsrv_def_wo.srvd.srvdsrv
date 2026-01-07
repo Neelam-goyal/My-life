@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination for works order'
+define service Zsrv_def_wo {
+  expose zcds_works_order;
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BREAD MATERIAL CONSUMPTION"
+  },
+  "ui5AppDetails": {
+    "appId": "zbreadmatvar"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6ED49D54BD849242DBE2E64F261569E661419F1F_TM",
+    "semanticObject": "ZBREADMATVAR",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6ED49D54BD849242DBE2E64F261569E661419F1F_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BREAD MATERIAL CONSUMPTION",
+        "subtitle": "ZMCREP_BREAD"
+      }
+    }
+  ]
+}

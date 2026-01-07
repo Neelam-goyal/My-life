@@ -1,0 +1,12 @@
+projection;
+strict( 2 ) ;
+define behavior for ZC_OIPAYMENTS alias ZcOipayments
+use etag
+
+{
+  use create;
+  use update;
+
+  use action falsedelete;
+  use action approveData;
+}

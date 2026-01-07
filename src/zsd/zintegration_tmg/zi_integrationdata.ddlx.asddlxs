@@ -1,0 +1,39 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'IntegrationData', 
+    typeNamePlural: 'IntegrationDatas', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration Data', 
+      value: 'Intgmodule'
+    }
+  }
+}
+annotate view ZI_IntegrationData with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_IntegrationData', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Integration Data', 
+    position: 1 
+  } ]
+  Intgmodule;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Intgpath'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'Intgpath'
+  } ]
+  Intgpath;
+}

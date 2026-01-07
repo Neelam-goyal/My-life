@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "FI Credit",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "FI Credit"
+  },
+  "ui5AppDetails": {
+    "appId": "zdgtaxinvoice"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_1202797954258A7415DE07685147632BB29BBAF4_TM",
+    "semanticObject": "zdg_tax_invoice",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_1202797954258A7415DE07685147632BB29BBAF4_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "FI Credit",
+        "subtitle": "zfi_credit"
+      }
+    }
+  ]
+}

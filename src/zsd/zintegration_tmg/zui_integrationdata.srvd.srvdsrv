@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_IntegrationData_S'
+define service ZUI_INTEGRATIONDATA {
+  expose ZI_INTEGRATIONDATA_S as IntegrationDataAll;
+  expose ZI_INTEGRATIONDATA as IntegrationData;
+}

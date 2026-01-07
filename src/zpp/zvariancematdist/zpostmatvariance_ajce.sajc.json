@@ -1,0 +1,22 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Post Material Variance Job Cataglog",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_POSTMATVARIANCE"
+  },
+  "parameters": [
+    {
+      "name": "P_DESCR"
+    },
+    {
+      "name": "P_DATE"
+    },
+    {
+      "name": "P_PLANT"
+    }
+  ]
+}

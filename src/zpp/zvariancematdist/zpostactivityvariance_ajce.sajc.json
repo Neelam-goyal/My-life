@@ -1,0 +1,22 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Activity variance job catalog entry",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_POSTACTIVITYVARIANCE"
+  },
+  "parameters": [
+    {
+      "name": "P_DESCR"
+    },
+    {
+      "name": "P_DATE"
+    },
+    {
+      "name": "P_PLANT"
+    }
+  ]
+}

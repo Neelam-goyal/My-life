@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_PRODBREAKDOWN'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_PRODBREAKDOWN'
+  }
+}
+define service ZUI_PRODBREAKDOWN_O4
+  provider contracts odata_v4_ui {
+  expose ZC_PRODBREAKDOWN;
+}

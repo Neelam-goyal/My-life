@@ -1,0 +1,82 @@
+managed implementation in class ZRAPBP_R_TABLE_PLANT unique;
+strict ( 2 );
+with draft;
+define behavior for ZRAPR_TABLE_PLANT alias ZraprTablePlant
+persistent table ZTABLE_PLANT
+draft table ZRAPTABLE_PLNT_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   CompCode,
+   PlantCode;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   CompCode,
+   PlantCode;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTABLE_PLANT
+  {
+    CompCode = comp_code;
+    PlantCode = plant_code;
+    PlantName1 = plant_name1;
+    PlantName2 = plant_name2;
+    Address1 = address1;
+    Address2 = address2;
+    Address3 = address3;
+    City = city;
+    District = district;
+    StateCode1 = state_code1;
+    StateCode2 = state_code2;
+    StateName = state_name;
+    Pin = pin;
+    Country = country;
+    CinNo = cin_no;
+    GstinNo = gstin_no;
+    FssaiNo = fssai_no;
+    PanNo = pan_no;
+    TanNo = tan_no;
+    Remark1 = remark1;
+    Remark2 = remark2;
+    Remark3 = remark3;
+    Gspusername = gspusername;
+    Gsppassword = gsppassword;
+    Phone = phone;
+    Ewbusername = ewbusername;
+    Ewbpassword = ewbpassword;
+    Businessplace = businessplace;
+    Costcenter = costcenter;
+    Purchasecostcenter = purchasecostcenter;
+    Profitcenter = profitcenter;
+    Glaccount = glaccount;
+    Active = active;
+    IntegrationEnabled = integrationenabled;
+    StpocreationEnabled = stpocreationenabled;
+    StporeceiveEnabled = stporeceiveenabled;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

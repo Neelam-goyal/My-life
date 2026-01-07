@@ -1,0 +1,54 @@
+managed implementation in class zbp_r_activitydecl unique;
+strict ( 2 );
+define behavior for ZR_ACTIVITYDECL alias Activitydeclaration
+persistent table ZACTIVITYDECL
+etag master LastChangedAt
+lock master
+early numbering
+authorization master ( global, instance )
+{
+  field ( readonly )
+   Declareno,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Plantcode,
+   Declaredate,
+   Shiftnumber,
+   Workcenterid,
+   Costctractivitytype;
+
+  field ( mandatory : create )
+   Bukrs,
+   Plantcode,
+   Declaredate,
+   Shiftnumber,
+   Workcenterid,
+   Costctractivitytype;
+
+  create;
+  update;
+  delete;
+
+  mapping for ZACTIVITYDECL
+  {
+    Bukrs = bukrs;
+    Plantcode = plantcode;
+    Declaredate = declaredate;
+    Shiftnumber = shiftnumber;
+    Workcenterid = workcenterid;
+    Declareno = declareno;
+    Costctractivitytype = costctractivitytype;
+    Actualconsumption = actualconsumption;
+    Workcenter = workcenter;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Inventory Stock Report (BCP)",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Inventory Stock Report (BCP)"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_INVENTORYSTOCKITEM_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_INVENTORYSTOCKITEM_AD_TM",
+    "semanticObject": "zpivotreportinventorystkrpt",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_INVENTORYSTOCKITEM_QRY"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_INVENTORYSTOCKITEM_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Inventory Stock Report (BCP)",
+        "keywords": "Stock BCP",
+        "icon": "sap-icon://product",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_INVENTORYSTOCKITEM_QRY"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

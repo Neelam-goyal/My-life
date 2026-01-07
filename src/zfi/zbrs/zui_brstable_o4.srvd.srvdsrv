@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_BRSTABLE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_BRSTABLE'
+  }
+}
+define service ZUI_BRSTABLE_O4
+  provider contracts odata_v4_ui {
+  expose ZC_BRSTABLE;
+}

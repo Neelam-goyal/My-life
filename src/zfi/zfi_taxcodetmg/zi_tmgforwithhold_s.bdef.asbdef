@@ -1,0 +1,84 @@
+managed with additional save implementation in class ZBP_I_TMGFORWITHHOLD_S unique;
+strict;
+with draft;
+define behavior for ZI_TmgForWithHold_S alias TmgForWithHoldinAll
+draft table ZDT_TAXCODE_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID,
+   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+   HideTransport,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _TmgForWithHoldingTa { create ( features : instance ); with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; }
+
+  side effects {
+    action SelectCustomizingTransptReq affects $self;
+  }
+  }
+
+define behavior for ZI_TmgForWithHold alias TmgForWithHoldingTa ##UNMAPPED_FIELD
+persistent table ZDT_TAXCODE
+draft table ZDT_TAXCODE_D
+lock dependent by _TmgForWithHoldinAll
+authorization dependent by _TmgForWithHoldinAll
+
+{
+  field ( mandatory : create )
+   Country,
+   Officialwhldgtaxcode,
+   Withholdingtaxcode;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Country,
+   Officialwhldgtaxcode,
+   Withholdingtaxcode;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  factory action ( features : instance ) CopyTmgForWithHoldingTa parameter ZD_CopyTmgForWithHold [1];
+
+  mapping for ZDT_TAXCODE
+  {
+    Country = COUNTRY;
+    Officialwhldgtaxcode = OFFICIALWHLDGTAXCODE;
+    Withholdingtaxcode = WITHHOLDINGTAXCODE;
+    Withholdingtaxtype = WITHHOLDINGTAXTYPE;
+    Whldgtaxrelevantpercent = WHLDGTAXRELEVANTPERCENT;
+    Withholdingtaxpercent = WITHHOLDINGTAXPERCENT;
+    Glaccount = glaccount;
+  }
+
+  association _TmgForWithHoldinAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

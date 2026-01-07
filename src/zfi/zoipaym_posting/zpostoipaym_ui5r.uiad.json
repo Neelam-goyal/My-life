@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Posted OI Payments",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Posted OI Payments"
+  },
+  "ui5AppDetails": {
+    "appId": "zpostoipaym"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_AE244DECAD696C7BDF2C889797A4D495ADB6B350_TM",
+    "semanticObject": "zpostoipaym",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_AE244DECAD696C7BDF2C889797A4D495ADB6B350_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Posted OI Payments",
+        "subtitle": "ZPostOIPaym"
+      }
+    }
+  ]
+}

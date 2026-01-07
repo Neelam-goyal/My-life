@@ -1,0 +1,196 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Companycode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Companycode'
+annotate entity ZC_OIPAYMENTSDELETED
+    with 
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+   @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeSTDVH', element: 'CompanyCode' } }]
+  Companycode;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+     @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Documentdate;
+  
+  
+  
+  @EndUserText.label: 'Business Partner'
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+   @Consumption.valueHelpDefinition: [{label: 'Business Partner'},   { entity: { name: 'I_BusinessPartnerVH', element: 'BusinessPartner' }
+   }]
+  Bpartner;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  Postingdate;
+  
+  @EndUserText.label: 'Amount' 
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  Glamount;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_PlantStdVH', element:'Plant' }}]
+  Businessplace;
+  
+  @EndUserText.label: 'Section Code'
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  Sectioncode;
+  
+  @EndUserText.label: 'Text'
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  Gltext;
+  
+    
+  @EndUserText.label: 'Special GL Indicator'
+  @UI.identification: [ {
+    position: 85 
+  } ]
+  @UI.lineItem: [ {
+    position: 85
+  } ]
+  SpecialGlCode;
+  
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_GLAccountStdVH', element: 'GLAccount' },
+        additionalBinding: [{ localElement: 'Companycode',    element: 'CompanyCode',   usage:#FILTER }]
+   }]
+  Glaccount;
+
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+//   @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_HOUSEBANKVH', element: 'HouseBank' },
+//  additionalBinding: [{ localElement: 'Companycode',    element: 'CompanyCode',   usage:#FILTER }]
+//   }]
+  Housebank;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  Accountid;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProfitCenterStdVH', element: 'ProfitCenter' }}]
+  Profitcenter;
+  
+  @UI.identification: [ {
+    label: 'WBS Element',
+    position: 141 
+  } ]
+  @UI.lineItem: [ {
+    label: 'WBS Element',
+    position: 141 
+  } ]
+  Wbselement; 
+  
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  CreatedAt;
+  
+     @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  Assignmentreference;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  
+  @UI.hidden: true
+  Createdtime;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

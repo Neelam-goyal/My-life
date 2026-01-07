@@ -1,0 +1,128 @@
+@Metadata.layer: #PARTNER
+annotate entity zcds_materialvariance with {
+
+  @UI.facet: [{
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    label: 'Material Variance',
+    type: #IDENTIFICATION_REFERENCE,
+    position: 10
+  }]
+
+  @UI.identification: [{
+    position: 10,
+    label: 'Production Order'
+  }]
+  ProductionOrder;
+
+  @UI.identification: [{
+    position: 20,
+    label: 'Product'
+  }]
+  Product;
+  @UI.identification: [{
+    position: 22,
+    label: 'PRODUCT DESCRIPTION'
+  }]
+  ProductDesc;
+
+  @UI.identification: [{
+    position: 30,
+    label: 'Shift'
+  }]
+  Shift;
+
+  @UI.identification: [{
+    position: 40,
+    label: 'Posting Date'
+  }]
+  PostingDate;
+  
+    @UI.identification: [{
+    position: 50,
+    label: 'Company Code'
+  }]
+  comp_code;
+  
+  @UI.identification: [{
+    position: 60,
+    label: 'Plant Code'
+  }]
+  plant_code;
+  
+  @UI.identification: [{
+    position: 70,
+    label: 'Bom Component Code'
+  }]
+  
+  BomComponentCode;
+  
+  @UI.identification: [{
+    position: 80,
+    label: 'Bom Component Name'
+  }]
+  BomComponentName;
+  
+  @UI.identification: [{
+    position: 90,
+    label: 'Actual Consumption'
+  }]
+  ActualConsumption;
+  
+  @UI.identification: [{
+    position: 110,
+    label: 'Confirmation Yield Quantity'
+  }]
+  confirmationyieldquantity;
+  
+  @UI.identification: [{
+    position: 120,
+    label: 'WORK Center'
+  }]
+  work_center;
+  
+  @UI.identification: [{
+    position: 130,
+    label: 'BOM Component Required Quantity'
+  }]
+  BomComponentRequiredQuantity;
+  
+  @UI.identification: [{
+    position: 140,
+    label: 'Goods Movement Type'
+  }]
+  GoodsMovementType;
+  
+  @UI.identification: [{
+    position: 150,
+    label: 'Actual Cost'
+  }]
+  ActualCost;
+  
+  @UI.identification: [{
+    position: 160,
+    label: 'Quantity Difference'
+  }] 
+  qtydiff;
+  
+  @UI.identification: [{
+    position: 170,
+    label: 'Amount Difference'
+  }]
+  AmtDiff;
+  
+  @UI.identification: [{
+    position: 180,
+    label: 'Amount Difference Actual Rate'
+  }]
+  
+  AmtDiffActualRate;
+  
+  @UI.identification: [{
+    position: 190,
+    label: 'Bom Component Amount'
+  }]
+  
+  BomComponentAmt;
+
+}

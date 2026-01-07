@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "BP Posting",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BP Posting Uploader"
+  },
+  "ui5AppDetails": {
+    "appId": "zbpposting"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_EA695D20D83FCB7ACF9337023DE7FB464B52E780_TM",
+    "semanticObject": "ZBPPOSTING",
+    "action": "UPLOAD",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_EA695D20D83FCB7ACF9337023DE7FB464B52E780_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BP Posting Uploader",
+        "subtitle": "ZBPUPD"
+      }
+    }
+  ]
+}

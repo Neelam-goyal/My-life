@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZUI_MATDISTLINEBRD'
+define service ZUI_MATDISTLINEBRD {
+  expose ZR_matdistlinebrd;
+}

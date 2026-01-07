@@ -1,0 +1,57 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Material Variance Report V2",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Material Variance Report V2"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_MATERIALVARIANCE_QRYV2_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_MATERIALVARIANCE_QRYV2_AD_TM",
+    "semanticObject": "ZCBBPLMATPIVOTV2",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_MATERIALVARIANCE_QRYV2"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_MATERIALVARIANCE_QRYV2_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Variance Report V2 BCP",
+        "keywords": "NB001",
+        "icon": "sap-icon://retail-store",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_MATERIALVARIANCE_QRYV2"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

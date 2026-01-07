@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Cash Ledger/Day Book",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Cash Ledger/Day Book"
+  },
+  "ui5AppDetails": {
+    "appId": "zcashledger"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_560918C0727926FDEB6BD0E82D33776D06ADAC58_TM",
+    "semanticObject": "zcashledger",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_560918C0727926FDEB6BD0E82D33776D06ADAC58_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Cash Ledger/Day Book",
+        "subtitle": "zcashbook"
+      }
+    }
+  ]
+}

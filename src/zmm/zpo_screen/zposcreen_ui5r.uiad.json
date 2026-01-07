@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "PO Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "PO Print"
+  },
+  "ui5AppDetails": {
+    "appId": "zposcreen"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FBB2EBD1F958C6BE8DC94910B02E940751B09CD4_TM",
+    "semanticObject": "ZPOSCREEN",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FBB2EBD1F958C6BE8DC94910B02E940751B09CD4_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "PO Print",
+        "subtitle": "ZPO_SCREEN"
+      }
+    }
+  ]
+}

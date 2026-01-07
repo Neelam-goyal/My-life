@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Outgoing Payments Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Outgoing Payments Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zoutpaymupd"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D355DB9721782563A3F56ED52307095A1FCB38F2_TM",
+    "semanticObject": "ZOutPaymUPD",
+    "action": "Upload",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D355DB9721782563A3F56ED52307095A1FCB38F2_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Outgoing Payments Upload",
+        "subtitle": "ZOutPaymUPD"
+      }
+    }
+  ]
+}

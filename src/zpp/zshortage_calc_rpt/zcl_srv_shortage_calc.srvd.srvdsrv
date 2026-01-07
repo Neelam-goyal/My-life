@@ -1,0 +1,5 @@
+@EndUserText.label: 'service defination for SHORTAGE CALC'
+define service ZCL_SRV_SHORTAGE_CALC {
+  expose ZCDS_SHORTAGE_CALC;
+  expose zbukrs_werks_vh;
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ZSHORTAGE_CALC",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZSHORTAGE_CALC"
+  },
+  "ui5AppDetails": {
+    "appId": "zshortagecalcrpt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6193869014C614930B616513DD2E661A17F32173_TM",
+    "semanticObject": "zshortage_calc_SO",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6193869014C614930B616513DD2E661A17F32173_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZSHORTAGE_CALC",
+        "subtitle": "zshortage calculation report"
+      }
+    }
+  ]
+}

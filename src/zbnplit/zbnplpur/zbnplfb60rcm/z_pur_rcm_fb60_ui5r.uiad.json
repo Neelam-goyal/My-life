@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "FB60 RCM Report BCP",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "FB60 RCM Report BCP"
+  },
+  "ui5AppDetails": {
+    "appId": "zpurgstrcmfb60.zpurgstrcmfb60"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_FDFC6A50AE11335F709E715DA29EDB24E5D0D6AF_TM",
+    "semanticObject": "z_pur_gst_rcm_fb60",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_FDFC6A50AE11335F709E715DA29EDB24E5D0D6AF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "FB60 RCM Report BCP"
+      }
+    }
+  ]
+}

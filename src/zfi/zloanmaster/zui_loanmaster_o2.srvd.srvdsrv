@@ -1,0 +1,9 @@
+@EndUserText.label: 'Loan Master V2 Service Definition'
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_LOANMASTER'
+  }
+}
+define service ZUI_LOANMASTER_O2 {
+  expose ZC_LOANMASTER;
+}

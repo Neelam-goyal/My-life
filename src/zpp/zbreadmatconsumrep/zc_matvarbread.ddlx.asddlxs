@@ -1,0 +1,303 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'CompCode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'CompCode'
+annotate view ZC_MATVARBREAD with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  CompCode;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  PlantCode;
+  
+  @EndUserText.label: 'BOM Component Code'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'BOM Component Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'BOM Component Code'
+  } ]
+  Bomcomponentcode;
+  
+  @EndUserText.label: 'BOM Component Name'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'BOM Component Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'BOM Component Name'
+  } ]
+  Bomcomponentname;
+  
+  @EndUserText.label: 'Production Order'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Production Order'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Production Order'
+  } ]
+//  @UI.selectionField: [ {
+//    position: 50 
+//  } ]
+  Productionorder;
+  
+  @EndUserText.label: 'Actual Consumption'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Actual Consumption'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Actual Consumption'
+  } ]
+  Actualconsumption;
+  
+  @EndUserText.label: 'Shift'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Shift'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Shift'
+  } ]
+  Shift;
+  
+  
+  @EndUserText.label: 'Confirmation Yield Quantity'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Confirmation Yield Quantity'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Confirmation Yield Quantity'
+  } ]
+  Confirmationyieldquantity;
+  
+    @EndUserText.label: 'Confirmation Group'
+  @UI.identification: [ {
+    position: 91 , 
+    label: 'Confirmation Group'
+  } ]
+  @UI.lineItem: [ {
+    position: 91 , 
+    label: 'Confirmation Group'
+  } ]
+  ConfirmationGroup;
+  
+  @EndUserText.label: 'Confirmation Count'
+  @UI.identification: [ {
+    position: 92 , 
+    label: 'Confirmation Count'
+  } ]
+  @UI.lineItem: [ {
+    position: 92 , 
+    label: 'Confirmation Count'
+  } ]
+  ConfirmationCount;
+  
+  @EndUserText.label: 'Posting Date'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Posting Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Posting Date'
+  } ]
+  Postingdate;
+  
+  @EndUserText.label: 'Creation Date'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Creation Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Creation Date'
+  } ]
+  Creationdate;
+  
+  
+  @EndUserText.label: 'Work Center'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Work Center'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Work Center'
+  } ]
+  WorkCenter;
+  
+  @EndUserText.label: 'Product'
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Product'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Product'
+  } ]
+  Product;
+  
+  @EndUserText.label: 'Product Description'
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Product Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 , 
+    label: 'Product Description'
+  } ]
+  Productdesc;
+  
+  @EndUserText.label: 'Shift Group'
+  @UI.identification: [ {
+    position: 151 , 
+    label: 'Shift Group'
+  } ]
+  @UI.lineItem: [ {
+    position: 151 , 
+    label: 'Shift Group'
+  } ]
+  Shiftgroup;
+  
+    
+  @EndUserText.label: 'Batch'
+  @UI.identification: [ {
+    position: 152 , 
+    label: 'Batch'
+  } ]
+  @UI.lineItem: [ {
+    position: 152 , 
+    label: 'Batch'
+  } ]
+  Batch;
+  
+  @EndUserText.label: 'Bom Component Required Quantity'
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Bom Component Required Quantity'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 , 
+    label: 'Bom Component Required Quantity'
+  } ]
+  Bomcomponentrequiredquantity;
+  
+  @EndUserText.label: 'Goods Movement Type'
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Goods Movement Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 , 
+    label: 'Goods Movement Type'
+  } ]
+  Goodsmovementtype;
+  
+  @EndUserText.label: 'Actual Cost'
+  @UI.identification: [ {
+    position: 180 , 
+    label: 'Actual Cost'
+  } ]
+  @UI.lineItem: [ {
+    position: 180 , 
+    label: 'Actual Cost'
+  } ]
+  Actualcost;
+  
+  @EndUserText.label: 'Quantity Difference'
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'Quantity Difference'
+  } ]
+  @UI.lineItem: [ {
+    position: 190 , 
+    label: 'Quantity Difference'
+  } ]
+  Qtydiff;
+  
+  @EndUserText.label: 'Amount Difference'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'Amount Difference'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'Amount Difference'
+  } ]
+  Amtdiff;
+  
+  @EndUserText.label: 'Amount Diff Actual Rate'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'Amount Diff Actual Rate'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'Amount Diff Actual Rate'
+  } ]
+  Amtdiffactualrate;
+  
+  @EndUserText.label: 'Bom Component Amount'
+  @UI.identification: [ {
+    position: 220 , 
+    label: 'Bom Component Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 220 , 
+    label: 'Bom Component Amount'
+  } ]
+  Bomcomponentamt;
+  
+  @UI.identification: [ {
+    position: 230 
+  } ]
+  @UI.lineItem: [ {
+    position: 230 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 240 
+  } ]
+  @UI.lineItem: [ {
+    position: 240 
+  } ]
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

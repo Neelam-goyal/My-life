@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales Data",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Data"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalesregv2"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_2E3DB8BB27CA385C44582C81FE4958CC59415C35_TM",
+    "semanticObject": "zsales_reg_v2_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_2E3DB8BB27CA385C44582C81FE4958CC59415C35_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Data",
+        "subtitle": "ZSD"
+      }
+    }
+  ]
+}

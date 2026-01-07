@@ -1,0 +1,611 @@
+managed;
+strict;
+define behavior for ZR_INVGROUPED000 alias ZrInvgrouped000
+implementation in class ZBP_R_INVGROUPED unique
+persistent table ZINV_GROUPED
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Orderdate,
+   Type;
+
+
+  create;
+  update;
+  delete;
+
+  static action calculate parameter ZR_PARMCALCULATE ;
+
+  mapping for ZINV_GROUPED
+  {
+    Orderdate = orderdate;
+    Type = type;
+    Nooforder = nooforder;
+    Orderamount = orderamount;
+    Processed = processed;
+    Socreated = socreated;
+    Soamount = soamount;
+    Outboundcreated = outboundcreated;
+    Orderbilled = orderbilled;
+    Billedamount = billedamount;
+    Pocreated = pocreated;
+    Migocreated = migocreated;
+    Datavalidated = datavalidated;
+    Potobecreated = potobecreated;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _InvoiceHeaders {create;}
+  association _UnsoldHeaders {create;}
+  association _CtrlHeaders {create;}
+  association _CratesHeaders {create;}
+  association _CRNHeaders {create;}
+  association _ScrapHeaders {create;}
+  association _ReceiptHeaders {create;}
+
+}
+
+
+define behavior for ZR_INV_MST000 alias ZrInvMst000
+implementation in class ZBP_R_INVMST unique
+persistent table ZINV_MST
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+  Imdate,
+  Type,
+   CompCode,
+   Plant,
+   Imfyear,
+   Imtype,
+   Imno;
+
+
+  update;
+  delete;
+
+ action clearProcessing;
+
+  mapping for ZINV_MST
+  {
+    CompCode = comp_code;
+    Plant = plant;
+    Imfyear = imfyear;
+    Imtype = imtype;
+    Imno = imno;
+    Imnoseries = imnoseries;
+    Imcat = imcat;
+    Imdate = imdate;
+    Imsalesmancode = imsalesmancode;
+    Impartycode = impartycode;
+    Imroutecode = imroutecode;
+    Imvehcode = imvehcode;
+    Imtransname = imtransname;
+    Imgrno = imgrno;
+    Imgrdate = imgrdate;
+    Imremarks = imremarks;
+    Imtotqty = imtotqty;
+    Imgrswgt = imgrswgt;
+    Imvogamt = imvogamt;
+    Imtxbamt = imtxbamt;
+    Imnetamt = imnetamt;
+    Imnetamtro = imnetamtro;
+    Imcrates1 = imcrates1;
+    Imcrates2 = imcrates2;
+    Imrcds = imrcds;
+    Imdeltag = imdeltag;
+    Imusercode = imusercode;
+    Imdfdt = imdfdt;
+    Imdudt = imdudt;
+    Imaid = imaid;
+    Imlocktag = imlocktag;
+    Imdespatchtag = imdespatchtag;
+    Imsumno = imsumno;
+    Imcrates3 = imcrates3;
+    Imcrates4 = imcrates4;
+    Imorderno = imorderno;
+    Imprintedon = imprintedon;
+    Imprintedby = imprintedby;
+    Imsaledate = imsaledate;
+    Imddealercode = imddealercode;
+    Imcgstamt = imcgstamt;
+    Imsgstamt = imsgstamt;
+    Imigstamt = imigstamt;
+    Imdealercode = imdealercode;
+    Imvroutecode = imvroutecode;
+    Imewaybillno = imewaybillno;
+    Imewaybilltag = imewaybilltag;
+    Imewaybilldate = imewaybilldate;
+    Imdeviceid = imdeviceid;
+    Imver = imver;
+    Imsscode = imsscode;
+    Imempcode = imempcode;
+    Imewaystatus = imewaystatus;
+    Imirnstatus = imirnstatus;
+    Imdealergstno = imdealergstno;
+    Imsuptype = imsuptype;
+    Imminno = imminno;
+    Immindt = immindt;
+    Scrapbill = scrapbill;
+    Imcmpcode = imcmpcode;
+    ErrorLog = error_log;
+    Remarks = remarks;
+    Processed = processed;
+    ReferenceDoc = reference_doc;
+    Orderamount = orderamount;
+    ReferenceDocDel = reference_doc_del;
+    ReferenceDocInvoice = reference_doc_invoice;
+    Invoiceamount = invoiceamount;
+    Status = status;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    CustCode = cust_code;
+    PoTobeCreated = po_tobe_created;
+    PoProcessed = po_processed;
+    PoNo = po_no;
+    MigoProcessed = migo_processed;
+    MigoNo = migo_no;
+  }
+
+  association _Group;
+}
+
+define behavior for ZR_USDATAMST alias ZrUsdatamst
+implementation in class ZBP_R_USDATAMST unique
+persistent table zdt_usdatamst1
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Imdate,
+   Type,
+   CompCode,
+   Plant,
+   Imfyear,
+   Imtype,
+   Imno;
+
+
+  update;
+  delete;
+
+ action clearProcessingUnsold;
+
+  mapping for zdt_usdatamst1
+{
+    CompCode = comp_code;
+    Plant = plant;
+    Imfyear = imfyear;
+    Imtype = imtype;
+    Imno = imno;
+    Imnoseries = imnoseries;
+    Imdate = imdate;
+    Imjobno = imjobno;
+    Imsalesmancode = imsalesmancode;
+    Impartycode = impartycode;
+    Imroutecode = imroutecode;
+    Imremarks = imremarks;
+    Imtotqty = imtotqty;
+    Imvogamt = imvogamt;
+    Imtxbamt = imtxbamt;
+    Imnetamt = imnetamt;
+    Imnetamtro = imnetamtro;
+    Imcrates1 = imcrates1;
+    Imcrates2 = imcrates2;
+    Imrcds = imrcds;
+    Imdeltag = imdeltag;
+    Imusercode = imusercode;
+    Imdfdt = imdfdt;
+    Imdudt = imdudt;
+    Imaid = imaid;
+    Iminno = iminno;
+    Imindate = imindate;
+    Imfgpasstag = imfgpasstag;
+    Imagnstgpno = imagnstgpno;
+    Imagnstgpdate = imagnstgpdate;
+    Imcgstamount = imcgstamount;
+    Imsgstamount = imsgstamount;
+    Imigstamount = imigstamount;
+    ErrorLog = error_log;
+    Remarks = remarks;
+    Processed = processed;
+    ReferenceDoc = reference_doc;
+    Orderamount = orderamount;
+    ReferenceDocDel = reference_doc_del;
+    ReferenceDocInvoice = reference_doc_invoice;
+    Invoiceamount = invoiceamount;
+    Status = status;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    Ztime = ztime;
+    Datavalidated = datavalidated;
+    CustCode = cust_code;
+}
+
+
+  association _Group;
+}
+
+
+define behavior for ZR_CONTROLSHEET alias ZrControlsheet
+persistent table ZCONTROLSHEET
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   GateEntryNo,
+   Plant,
+   Gpdate,
+   Type,
+   CompCode,
+   Imfyear;
+
+
+  update;
+  delete;
+
+
+  mapping for ZCONTROLSHEET
+  {
+    GateEntryNo = gate_entry_no;
+    Vehiclenum = vehiclenum;
+    CompCode = comp_code;
+    Imfyear = imfyear;
+    Gpdate = gpdate;
+    Controlsheet = controlsheet;
+    Toll = toll;
+    GLPosted = glposted;
+    Routeexp = routeexp;
+    Cngexp = cngexp;
+    Other = other;
+    Dieselexp = dieselexp;
+    Repair = repair;
+    Plant = plant;
+    CostCenter = cost_center;
+    SalesPerson = sales_person;
+    ErrorLog = error_log;
+    ReferenceDoc = reference_doc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _Group;
+}
+
+
+define behavior for ZR_CRATESDATA000 alias ZrCratesdata
+persistent table ZCRATESDATA
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Cmno,
+   CompCode,
+   Cmdate,
+   Type,
+   Plant,
+   Cmfyear,
+   Cmtype;
+
+
+  update;
+  delete;
+
+
+  mapping for ZCRATESDATA
+  {
+    Cmno = cmno;
+    CompCode = comp_code;
+    Plant = plant;
+    Cmfyear = cmfyear;
+    Cmtype = cmtype;
+    Cmaid = cmaid;
+    Cmnoseries = cmnoseries;
+    Cmdate = cmdate;
+    Cmsalesmancode = cmsalesmancode;
+    Cmsalesmancodeorg = cmsalesmancodeorg;
+    Cmcrates1 = cmcrates1;
+    Cmcrates2 = cmcrates2;
+    Cmremarks = cmremarks;
+    Cmdeltag = cmdeltag;
+    Cmusercode = cmusercode;
+    Cmfeddt = cmfeddt;
+    Cmupddt = cmupddt;
+    Cmcrates11 = cmcrates11;
+    Cmcrates21 = cmcrates21;
+    Cmrefno = cmrefno;
+    Cmroutecd = cmroutecd;
+    Cmcrates3 = cmcrates3;
+    Cmcrates4 = cmcrates4;
+    Cmddealercode = cmddealercode;
+    Cmgpno = cmgpno;
+    Cmgpdate = cmgpdate;
+    Cmseries = cmseries;
+    Cmcrates1d = cmcrates1d;
+    Cmcrates2d = cmcrates2d;
+    Cmcrates3d = cmcrates3d;
+    Cmcrates4d = cmcrates4d;
+    Cmupuser = cmupuser;
+    Cmcratesrate1 = cmcratesrate1;
+    Cmcratesrate2 = cmcratesrate2;
+    Cmcratesrate3 = cmcratesrate3;
+    Cmcratesrate4 = cmcratesrate4;
+    Cmsecuritytype = cmsecuritytype;
+    Cmcmptype = cmcmptype;
+    ErrorLog = error_log;
+    Remarks = remarks;
+    Processed = processed;
+    ReferenceDoc = reference_doc;
+    Movementposted = movementposted;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _Group;
+}
+
+
+define behavior for ZR_SCRAP alias ZrScrap
+persistent table ZDT_RPLCRNOTE
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Imfyear,
+   Imtype,
+   Imnoseries,
+   Imdate,
+   Type,
+   CompCode,
+   Imno,
+   Imdealercode,
+   Implant;
+
+
+  update;
+  delete;
+
+  mapping for ZDT_RPLCRNOTE
+  {
+    Imfyear = imfyear;
+    Imtype = imtype;
+    Imnoseries = imnoseries;
+    CompCode = comp_code;
+    Imno = imno;
+    Imdealercode = imdealercode;
+    Implant = implant;
+    Location = location;
+    Imdate = imdate;
+    Imdoccatg = imdoccatg;
+    Imcramt = imcramt;
+    Imbreadcode = imbreadcode;
+    Imwrappercode = imwrappercode;
+    Imbreadwt = imbreadwt;
+    Imwrapperwt = imwrapperwt;
+    Imfeddt = imfeddt;
+    Imfebuser = imfebuser;
+    Imstatus = imstatus;
+    ErrorLog = error_log;
+    Processed = processed;
+    Scrapindoc = scrapindoc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _Group;
+}
+
+
+define behavior for ZR_CreditNote alias ZrCreditNote
+persistent table ZDT_RPLCRNOTE
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Imfyear,
+   Imtype,
+   Imnoseries,
+   Imdate,
+   Type,
+   CompCode,
+   Imno,
+   Imdealercode,
+   Implant;
+
+
+  update;
+  delete;
+
+  mapping for ZDT_RPLCRNOTE
+  {
+    Imfyear = imfyear;
+    Imtype = imtype;
+    Imnoseries = imnoseries;
+    CompCode = comp_code;
+    Imno = imno;
+    Imdealercode = imdealercode;
+    Implant = implant;
+    Location = location;
+    Imdate = imdate;
+    Imdoccatg = imdoccatg;
+    Imcramt = imcramt;
+    Imbreadcode = imbreadcode;
+    Imwrappercode = imwrappercode;
+    Imbreadwt = imbreadwt;
+    Imwrapperwt = imwrapperwt;
+    Imfeddt = imfeddt;
+    Imfebuser = imfebuser;
+    Imstatus = imstatus;
+    Glposted = glposted;
+    GlerrorLog = glerror_log;
+    Dealercrdoc = dealercrdoc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+  association _group;
+}
+
+
+define behavior for ZR_CASHROOMCR alias ZrCashroomcr
+persistent table zcashroomcrtable
+etag master LastChangedAt
+lock dependent by _Group
+authorization dependent by _Group
+
+{
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   ccmpcode,
+   plant,
+   Cdate,
+   cgpno,
+   cfyear,
+   Type,
+   Cno;
+
+
+  update;
+  delete;
+
+  mapping for zcashroomcrtable
+  {
+        Ccmpcode = ccmpcode;
+        Plant = plant;
+        Cfyear = cfyear;
+        Cgpno = cgpno;
+        Cno = cno;
+        Cdate = cdate;
+        Caid = caid;
+        Ctype = ctype;
+        Cnoseries = cnoseries;
+        Csalesmancode = csalesmancode;
+        Croutecd = croutecd;
+        Camt = camt;
+        Camtf = camtf;
+        Cremarks = cremarks;
+        Cdeltag = cdeltag;
+        Cusercode = cusercode;
+        Cfeddt = cfeddt;
+        Cupddt = cupddt;
+        Cpasstag = cpasstag;
+        Cvutno = cvutno;
+        Cvutdate = cvutdate;
+        C1000 = c1000;
+        C500 = c500;
+        C100 = c100;
+        Glposted = glposted;
+        C50 = c50;
+        C20 = c20;
+        C10 = c10;
+        C5 = c5;
+        C2 = c2;
+        C1 = c1;
+        Ccoins = ccoins;
+        Cdnote = cdnote;
+        Ccounting = ccounting;
+        Cpasstime = cpasstime;
+        Cgpdate = cgpdate;
+        Cspoilamt = cspoilamt;
+        Cshortcash = cshortcash;
+        C200 = c200;
+        Cempcode = cempcode;
+        ErrorLog = error_log;
+        Remarks = remarks;
+        ReferenceDoc = reference_doc;
+        CreatedBy = created_by;
+        CreatedAt = created_at;
+        LastChangedBy = last_changed_by;
+        LastChangedAt = last_changed_at;
+  }
+
+  association _Group;
+}

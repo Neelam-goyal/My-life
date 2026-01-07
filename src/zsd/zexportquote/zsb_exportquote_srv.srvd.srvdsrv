@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Binding for Export Quotation'
+define service ZSB_EXPORTQUOTE_SRV {
+  expose ZSalesExportQuote as A_SalesQuotation;
+}

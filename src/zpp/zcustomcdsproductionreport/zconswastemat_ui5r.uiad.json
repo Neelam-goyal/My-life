@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Consumption and Wastage Material",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Consumption and Wastage Material"
+  },
+  "ui5AppDetails": {
+    "appId": "zconswastemat"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D49955C20E3EF28FC8CB4D73F981E81F0EBEA9B6_TM",
+    "semanticObject": "zconswastematerials",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D49955C20E3EF28FC8CB4D73F981E81F0EBEA9B6_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Consumption and Wastage Material",
+        "subtitle": "zcons_waste_mat"
+      }
+    }
+  ]
+}

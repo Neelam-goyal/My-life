@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Material Stock Distribution",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Material Stock Distribution"
+  },
+  "ui5AppDetails": {
+    "appId": "zvariancematdist"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_83177E8CADE576A6BD75236A2CFE83D1D8362133_TM",
+    "semanticObject": "ZVARIANCEMATDIST",
+    "action": "Manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_83177E8CADE576A6BD75236A2CFE83D1D8362133_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Stock Distribution",
+        "subtitle": "ZVARIANCEMATDIST"
+      }
+    }
+  ]
+}

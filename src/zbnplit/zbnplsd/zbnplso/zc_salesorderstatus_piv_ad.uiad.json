@@ -1,0 +1,56 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales Order Status Query",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Order Status Query"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_SALESORDERSTATUS_PIV_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_SALESORDERSTATUS_PIV_AD_TM",
+    "semanticObject": "ZO_SALESORDERSTATUS_PIV",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_SALESORDERSTATUS_PIV_QRY"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_SALESORDERSTATUS_PIV_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Order Status Query (BCP)",
+        "icon": "sap-icon://sales-order",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_SALESORDERSTATUS_PIV_QRY"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

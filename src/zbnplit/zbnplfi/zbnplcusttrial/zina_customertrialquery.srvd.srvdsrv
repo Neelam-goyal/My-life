@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_CUSTOMERTRIALQUERY'
+}
+define service ZINA_CUSTOMERTRIALQUERY provider contracts ina {
+  expose ZC_CUSTOMERTRIALQUERY;
+}

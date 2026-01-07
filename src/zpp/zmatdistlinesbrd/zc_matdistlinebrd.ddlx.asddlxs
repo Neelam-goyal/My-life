@@ -1,0 +1,57 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Plantcode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plantcode'
+annotate view ZC_MATDISTLINEBRD with
+{ 
+ /* --- Header Fields --- */
+  @UI.facet: [ { id: 'General', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'General Information', position: 10 } ]
+
+  /* --- Identification Fields --- */
+  @UI.lineItem: [ { position: 10, importance: #HIGH } ]
+  @UI.identification: [ { position: 10 } ]
+  Bukrs;
+
+  @UI.lineItem: [ { position: 20, importance: #HIGH } ]
+  @UI.identification: [ { position: 20 } ]
+  Plantcode;
+
+  @UI.lineItem: [ { position: 30 } ]
+  @UI.identification: [ { position: 30 } ]
+  Declarecdate;
+
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.identification: [ { position: 40 } ]
+  Shiftnumber;
+
+  @UI.lineItem: [ { position: 50 } ]
+  @UI.identification: [ { position: 50 } ]
+  Distlineno;
+
+  @UI.lineItem: [ { position: 60, importance: #HIGH } ]
+  @UI.identification: [ { position: 60 } ]
+  Productcode;
+
+  @UI.lineItem: [ { position: 70 } ]
+  Productdesc;
+
+  @UI.lineItem: [ { position: 80 } ]
+  Productionorder;
+
+  @UI.lineItem: [ { position: 90 } ]
+  Consumedqty;
+
+  @UI.lineItem: [ { position: 100 } ]
+  Varianceqty;
+
+  @UI.lineItem: [ { position: 110 } ]
+  Entryuom;
+
+  @UI.lineItem: [ { position: 120 } ]
+  Varianceposted;
+
+  @UI.lineItem: [ { position: 130 } ]
+  Variancepostlinedate;
+
+}

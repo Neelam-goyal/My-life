@@ -1,0 +1,231 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Production Breakdown', 
+    typeNamePlural: 'Production Breakdown', 
+    title: {
+      type: #STANDARD, 
+      label: 'Production Order Code', 
+      value: 'Prodordcode'
+    }
+  }
+}
+annotate view ZC_PRODBREAKDOWN with
+{
+
+@UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'General Information', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  } ]
+  
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Company Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Company Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' }  }]
+  @EndUserText.label: 'Company Code'
+  CompCode;
+  
+  @EndUserText.label: 'Production Order Number'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Production Order Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Production Order Number'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZProdOrd15days', element: 'ManufacturingOrder' } }]
+  Prodordcode;
+  
+  @EndUserText.label: 'Date'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Date'
+  } ]
+  Brkdndate;
+  
+  @EndUserText.label: 'Breakdown Start Time'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Breakdown Start Time'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Breakdown Start Time'
+  } ]
+  Brkdnstarttime;
+  
+  @EndUserText.label: 'Breakdown End Time'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Breakdown End Time'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Breakdown End Time'
+  } ]
+  Brkdnendtime;
+  
+  @EndUserText.label: 'Shift'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Shift'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Shift'
+  } ]
+  Shift;
+  
+  @EndUserText.label: 'Reason Code'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Reason Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Reason Code'
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_PBREASON', element: 'Reasoncode' },
+   distinctValues: true,
+   additionalBinding: [{ localElement: 'Reasondesc',
+   element: 'Reasondesc',
+   usage:#FILTER_AND_RESULT }] }]
+  Reasoncode;
+  
+  @EndUserText.label: 'Reason Description'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Reason Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Reason Description'
+  } ]
+  Reasondesc;
+
+  @EndUserText.label: 'Sub-Reason code'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Sub-Reason code'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Sub-Reason code'
+  } ]
+  
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_PBSUBREASON', element: 'Subreasoncode' },
+   distinctValues: true,
+   additionalBinding: [{ localElement: 'subReasondesc',    element: 'Subreasondesc',   usage:#FILTER_AND_RESULT },
+   { localElement: 'Reasoncode',    element: 'Reasoncode' },
+   { localElement: 'Reasondesc',    element: 'Reasondesc' }  
+   ]
+    }]
+  subReasoncode;
+  
+  @EndUserText.label: 'Sub-Reason Description'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Sub-Reason Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Sub-Reason Description'
+  } ]
+  subReasondesc;
+    
+  @EndUserText.label: 'Remarks'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Remarks'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Remarks'
+  } ]
+  Remarks;
+  
+  @EndUserText.label: 'Operator Name'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Operator Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Operator Name'
+  } ]
+  Operatorname;
+  
+  @EndUserText.label: 'Breakdown Percentage'
+  @UI.identification: [ {
+    position: 180 
+  } ]
+  @UI.lineItem: [ {
+    position: 180 
+  } ]
+  Breakdownpercentage;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  LastChangedAt;
+  
+    @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  BrkDwnInMin;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Mapping of Bank GL with Bank (BCP)",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Mapping of Bank GL with Bank (BCP)"
+  },
+  "ui5AppDetails": {
+    "appId": "zglbnkmapv1.zglbnkmap"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_22C1EB61116D11FF5E7B86E0BB30E09D3A336A8D_TM",
+    "semanticObject": "ZGLBNKMAPV1",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_22C1EB61116D11FF5E7B86E0BB30E09D3A336A8D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Mapping of Bank GL with Bank (BCP)"
+      }
+    }
+  ]
+}

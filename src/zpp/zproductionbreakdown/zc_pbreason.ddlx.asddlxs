@@ -1,0 +1,86 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Reasoncode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Reasoncode'
+annotate view ZC_PBREASON with
+{
+  @EndUserText.label: 'Reason Code'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Reason Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Reason Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Reasoncode;
+  
+  @EndUserText.label: 'Reason Desc'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Reason Desc'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Reason Desc'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Reasondesc;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  LastChangedAt;
+}

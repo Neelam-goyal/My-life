@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service Defination'
+define service ZSD_ZEWAYBILL {
+  expose ZC_ZIRNTP         as ZIRN;
+  expose zc_plantv         as ZVHPLANT;
+  expose I_Supplier        as vendor;
+  expose I_BusinessPartner as businesspartner;
+  expose I_Supplier_VH     as Supp_VH;
+}

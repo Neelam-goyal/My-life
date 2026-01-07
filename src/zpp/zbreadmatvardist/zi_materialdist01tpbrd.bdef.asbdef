@@ -1,0 +1,23 @@
+interface;
+
+define behavior for ZI_materialdist01TPbrd alias materialdist
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action createVarianceData;
+  use action calculateVariance;
+  use action postVariance;
+
+  use association _matdistlines { create; }
+}
+
+define behavior for ZI_matdistlinesTPBRD alias matdistlines
+{
+  use update;
+  use delete;
+
+  use association _materialdist;
+}

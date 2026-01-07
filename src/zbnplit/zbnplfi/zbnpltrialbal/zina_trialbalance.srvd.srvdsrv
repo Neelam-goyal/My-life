@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TRIALBALANCE_QRY'
+}
+define service ZINA_TRIALBALANCE provider contracts ina {
+  expose ZC_TRIALBALANCE_QRY;
+}

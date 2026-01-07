@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_CUSTOMTABLEPROD unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_CUSTOMTABLEPROD alias ZrCustomtableprod
+persistent table ZCUSTOMTABLEPROD
+draft table ZCSTMTABLEPROD_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Product,
+   Type;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Product,
+   Type;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZCUSTOMTABLEPROD
+  {
+    Product = product;
+    Type = type;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Gate Register Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Gate Register Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zgateregisterrep"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D9E40A42A63935B5E40C89060BD1BE6109C8F520_TM",
+    "semanticObject": "zso_gate_register_rep",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D9E40A42A63935B5E40C89060BD1BE6109C8F520_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Gate Register Report",
+        "subtitle": "zgate_register"
+      }
+    }
+  ]
+}

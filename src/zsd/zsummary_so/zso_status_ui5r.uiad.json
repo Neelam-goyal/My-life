@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales Order Status",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Order Status"
+  },
+  "ui5AppDetails": {
+    "appId": "zsostatus"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_03028604161CDB801CEC69FA5729D0412636505D_TM",
+    "semanticObject": "zso_status",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_03028604161CDB801CEC69FA5729D0412636505D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Order Status",
+        "subtitle": "zso_status"
+      }
+    }
+  ]
+}

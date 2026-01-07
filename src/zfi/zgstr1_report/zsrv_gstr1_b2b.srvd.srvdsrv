@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for GSTR1 B2B Report'
+define service Zsrv_gstr1_b2b {
+  expose zgstr1_ce;
+  expose I_CompanyCodeVH;
+}

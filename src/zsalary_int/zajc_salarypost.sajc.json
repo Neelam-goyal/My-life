@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Salary Posting Application Catalog",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_SALARYBATCHPOST"
+  },
+  "parameters": [
+    {
+      "name": "P_DESCR"
+    }
+  ]
+}

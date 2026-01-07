@@ -1,0 +1,147 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Plant'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plant'
+annotate view ZC_POC_ERRORLOG000 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Plant;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Manufacturingorder;
+  
+  @EndUserText.label: 'Errortimestamp'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Errortimestamp'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Errortimestamp'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Errortimestamp;
+  
+  @EndUserText.label: 'Yieldquantity'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Yieldquantity'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Yieldquantity'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Yieldquantity;
+  
+  @EndUserText.label: 'Errormessage'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Errormessage'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Errormessage'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Errormessage;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  LocalLastChangedAt;
+  
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 110 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  _BaseEntity;
+}

@@ -1,0 +1,101 @@
+managed;
+strict ( 2 );
+define behavior for ZR_ZACTIVITYDIST01TP alias ZACTIVITYDIST
+implementation in class ZBP_R_ZACTIVITYDIST01TP unique
+persistent table ZACTIVITYDIST
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Plantcode,
+   Declarecdate;
+
+
+  create;
+  update;
+  delete;
+
+  static action createVarianceData parameter Z_I_MATVARPARM result [1] $self;
+  action( features : instance ) calculateVariance result [1] $self;
+  action( features : instance ) postVariance result [1] $self;
+
+  mapping for ZACTIVITYDIST
+  {
+    Bukrs = BUKRS;
+    Plantcode = PLANTCODE;
+    Declarecdate = DECLARECDATE;
+    Declaredate = DECLAREDATE;
+    Variancecalculated = VARIANCECALCULATED;
+    Varianceposted = VARIANCEPOSTED;
+    Varianceclosed = VARIANCECLOSED;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _zactdistlines { create; }
+}
+
+define behavior for ZR_zactdistlinesTP alias zactdistlines
+implementation in class ZBP_R_zactdistlinesTP unique
+persistent table ZACTDISTLINES
+etag dependent by _ZACTIVITYDIST
+lock dependent by _ZACTIVITYDIST
+authorization dependent by _ZACTIVITYDIST
+
+{
+  field ( readonly )
+   Bukrs,
+   Plantcode,
+   Declarecdate,
+   Shiftnumber,
+   Workcenterid;
+
+  field ( readonly : update )
+   Distlineno;
+
+
+  update;
+  delete;
+
+  mapping for ZACTDISTLINES
+  {
+    Bukrs = BUKRS;
+    Plantcode = PLANTCODE;
+    Declarecdate = DECLARECDATE;
+    Shiftnumber = SHIFTNUMBER;
+    Workcenterid = WORKCENTERID;
+    Workcenter = WORKCENTER;
+    Distlineno = DISTLINENO;
+    Declaredate = DECLAREDATE;
+    Productionorder = PRODUCTIONORDER;
+    Productionorderline = PRODUCTIONORDERLINE;
+    Orderconfirmationgroup = ORDERCONFIRMATIONGROUP;
+    Ordersequence = ORDERSEQUENCE;
+    Clabour = CLABOUR;
+    Cpower = CPOWER;
+    Cfuel = CFUEL;
+    Crepair = CREPAIR;
+    Coverheads = COVERHEADS;
+    Vlabour = VLABOUR;
+    Vpower = VPOWER;
+    Vfuel = VFUEL;
+    Vrepair = VREPAIR;
+    Voverheads = VOVERHEADS;
+    Varianceposted = VARIANCEPOSTED;
+    Shiftgroup = SHIFTGROUP;
+  }
+
+  association _ZACTIVITYDIST;
+}

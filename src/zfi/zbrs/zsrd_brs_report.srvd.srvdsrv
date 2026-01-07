@@ -1,0 +1,5 @@
+@EndUserText.label: 'service definition for BRS Report'
+define service Zsrd_brs_report {
+  expose zdd_valuehelp_brs;
+  expose zdd_brs_report;
+}

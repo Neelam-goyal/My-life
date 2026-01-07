@@ -1,0 +1,4 @@
+@EndUserText.label: 'Testing definition'
+define service Zsrd_brs_testing {
+  expose zdd_brs;
+}

@@ -1,0 +1,114 @@
+managed implementation in class ZBP_R_GATEPASSHEADER unique;
+strict;
+define behavior for ZR_GATEPASSHEADER alias ZrGatepassheader
+persistent table ZGATEPASSHEADER
+etag master LastChangedAt
+early numbering
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   GatePass;
+
+
+  create;
+  update;
+  delete;
+
+
+  mapping for ZGATEPASSHEADER
+  {
+    GatePass = gate_pass;
+    Plant = plant;
+    EntryDate = entry_date;
+    Type = type;
+    SalesmanName = salesman_name;
+    DriverCode = driver_code;
+    VehicleNumber = vehicle_number;
+    DriverName = driver_name;
+    RouteName = route_name;
+    Remarks = remarks;
+    VehOutRemarks = veh_out_remarks;
+    Cmcrate1 = cmcrate_1;
+    Cmcrate2 = cmcrate_2;
+    Cmcrate3 = cmcrate_3;
+    Cmcrate4 = cmcrate_4;
+    Cb = cb2;
+    MultiGPass = multi_g_pass;
+    FirstGpNumber = first_gp_number;
+    FirstGpAmount = first_gp_amount;
+    BillAmount = bill_amount;
+    OutDate = out_date;
+    OutTime = out_time;
+    OutMeterReading = out_meter_reading;
+    VehicleOut = vehicle_out;
+    Cancelled = cancelled;
+    VrnNo = vrn_no;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  association _GatePassLine {
+    create;
+  }
+}
+
+define behavior for ZR_GATEPASSLINE alias ZrGatepassline
+//implementation in class ZBP_R_GATEPASSLINE unique
+persistent table ZGATEPASSLINE
+etag master LastChangedAt
+early numbering
+lock dependent by _GatePassHeader
+authorization dependent by _GatePassHeader
+
+{
+
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   GatePass,
+   PassLineNo;
+
+
+  update;
+  delete;
+
+
+  mapping for ZGATEPASSLINE
+  {
+    GatePass = gate_pass;
+    PassLineNo = pass_line_no;
+    DocumentNo = document_no;
+    DocumentReference = document_reference;
+    DocumentDate = document_date;
+    Amount = amount;
+    Quantity = quantity;
+    Currency = currency;
+    Unit = unit;
+    VrnNo = vrn_no;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  association _GatePassHeader;
+}

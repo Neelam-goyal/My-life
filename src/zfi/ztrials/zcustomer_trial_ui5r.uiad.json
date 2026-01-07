@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ZFICUST_TRIAL",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZFICUST_TRIAL"
+  },
+  "ui5AppDetails": {
+    "appId": "zcusttrialnew.zcusttrialnew"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_0B72BAC047325436A6FC95E03520C9046E291FBA_TM",
+    "semanticObject": "ZCUST_TRIAL_SO",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_0B72BAC047325436A6FC95E03520C9046E291FBA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZFICUST_TRIAL",
+        "subtitle": "Customer Trial Report"
+      }
+    }
+  ]
+}

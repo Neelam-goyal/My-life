@@ -1,0 +1,25 @@
+interface;
+define behavior for ZI_ZACTIVITYDIST01TP alias ZACTIVITYDIST
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action createVarianceData;
+  use action calculateVariance;
+  use action postVariance;
+
+  use association _zactdistlines { create; }
+}
+
+define behavior for ZI_zactdistlinesTP alias zactdistlines
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _ZACTIVITYDIST;
+}

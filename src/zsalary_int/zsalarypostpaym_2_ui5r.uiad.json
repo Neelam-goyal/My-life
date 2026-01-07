@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "SALARY POST",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "SALARY POST"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalarypost"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7A7B71B65BFEEEE8BA50C86914BDC81C8DF9AB39_TM",
+    "semanticObject": "ZSALARYPOST",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7A7B71B65BFEEEE8BA50C86914BDC81C8DF9AB39_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "SALARY POST",
+        "subtitle": "ZSP"
+      }
+    }
+  ]
+}

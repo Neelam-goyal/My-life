@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GOODSTFRNOTE"
+  },
+  "ui5AppDetails": {
+    "appId": "com.zgoodstfrnote.zgoodstfrnote"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_47DAF1FE701CC1D2746FE2BCED3D4F3BD9AF566D_TM",
+    "semanticObject": "zgoods_tfr_note",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_47DAF1FE701CC1D2746FE2BCED3D4F3BD9AF566D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GOODSTFRNOTE",
+        "subtitle": "ZGTN PRINT"
+      }
+    }
+  ]
+}

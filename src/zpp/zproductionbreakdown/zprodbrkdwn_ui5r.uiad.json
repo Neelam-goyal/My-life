@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Production Break Down",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Production Break Down"
+  },
+  "ui5AppDetails": {
+    "appId": "zprodbrkdwn"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8A98F6253C9C0C7BD0EF8B0BD192D1F566C6D045_TM",
+    "semanticObject": "ZPRODBRKDWN",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8A98F6253C9C0C7BD0EF8B0BD192D1F566C6D045_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Production Break Down",
+        "subtitle": "ZProdBrkDwn"
+      }
+    }
+  ]
+}

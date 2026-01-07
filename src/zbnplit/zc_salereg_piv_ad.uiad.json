@@ -1,0 +1,61 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales Register BCP V2",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "information": "Sales Report V2 BCP",
+    "targetMappingTitle": "Sales Register BCP V2"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_SALEREG_PIV_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_SALEREG_PIV_AD_TM",
+    "semanticObject": "SalesRegisterBCPV2",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_SALEREG_PIV_Qry_V2",
+        "required": true
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView",
+        "required": true
+      }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "ZC_SALEREG_PIV_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Report V2 - BCP",
+        "subtitle": "Pivot Report Sales",
+        "information": "Sales Data",
+        "keywords": "Sales Data, Sales Report V2",
+        "icon": "sap-icon://line-charts",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_SALEREG_PIV_Qry_V2"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

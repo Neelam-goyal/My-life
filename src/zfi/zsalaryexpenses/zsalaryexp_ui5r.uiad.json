@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Salary Expenses",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Salary Expenses"
+  },
+  "ui5AppDetails": {
+    "appId": "salaryexpenses"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8FE75C6E6C99850287BF991D31C5DFEE20421A67_TM",
+    "semanticObject": "salaryexpenses",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8FE75C6E6C99850287BF991D31C5DFEE20421A67_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Salary Expenses",
+        "subtitle": "ZSE"
+      }
+    }
+  ]
+}

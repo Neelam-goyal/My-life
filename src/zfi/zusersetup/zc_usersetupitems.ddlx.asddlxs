@@ -1,0 +1,121 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'UserSetupItems',
+    typeNamePlural: 'UserSetupItems',
+    title: {
+      type: #STANDARD,
+      label: 'UserSetupItems',
+      value: 'Plant'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Plant',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+
+annotate entity zc_usersetupitems with
+{
+  @UI.facet: [ {
+      id: 'UserSetupItems',
+      purpose: #STANDARD,
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'UserSetupItems',
+      position: 10
+    },
+    {
+      id: 'UserSetupItems',
+      type: #LINEITEM_REFERENCE,
+      label: 'UserSetupItems',
+      position: 20 ,
+      targetElement: 'Plant'
+    } ]
+  @UI.textArrangement: #TEXT_FIRST
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'User ID'
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'User ID'
+  } ]
+
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_USER_VH', element: 'UserID' } }]
+  Userid;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'Plant'
+  } ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Plant'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PLANT', element: 'Plant' } }]
+  Plant;
+  @UI.lineItem: [ {
+   position: 30 ,
+   importance: #HIGH,
+   label: 'Remarks'
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Remarks'
+  } ]
+  Remarks;
+
+//  @UI.lineItem: [ {
+//    position: 35 ,
+//    importance: #HIGH,
+//    label: 'T-Code'
+//   } ]
+//  @UI.identification: [ {
+//    position: 35 ,
+//    label: 'T-Code'
+//  } ]
+//  Tcode;
+
+  @UI.identification: [ {
+   position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  LocalCreatedBy;
+
+  @UI.identification: [ {
+    position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+  LocalCreatedAt;
+
+  @UI.identification: [ {
+    position: 70
+  } ]
+  @UI.lineItem: [ {
+    position: 70
+  } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  LastChangedAt;
+
+
+}

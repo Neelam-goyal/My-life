@@ -1,0 +1,4 @@
+@EndUserText.label: 'SB OF ZCDS_GOODS_TFR_NOTE'
+define service ZSB_CDSGOODS_TFR_NOTE {
+  expose ZCDS_GOODS_TFR_NOTE;
+}

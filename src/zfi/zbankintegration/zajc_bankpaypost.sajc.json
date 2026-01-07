@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Post Bank Payables",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZBANKPAYABLEBATCHJOB"
+  },
+  "parameters": [
+    {
+      "name": "P_DESCR"
+    }
+  ]
+}

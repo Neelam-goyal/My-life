@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Movement Type Mapper",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Movement Type Mapper"
+  },
+  "ui5AppDetails": {
+    "appId": "zmvtmapper"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_32EFA6D72CFBB90890E46376BC510B3E94921A3E_TM",
+    "semanticObject": "ZMVTMAPPER",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_32EFA6D72CFBB90890E46376BC510B3E94921A3E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Movement Type Mapper",
+        "subtitle": "zmvtmap"
+      }
+    }
+  ]
+}

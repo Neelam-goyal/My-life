@@ -1,0 +1,239 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Expense Claim',
+    typeNamePlural: 'Expense Claims',
+    title: {
+      type: #STANDARD,
+      value: 'ClaimTitle'
+    },
+    description: {
+      value: 'EmployeeName'
+    }
+  }
+}
+
+annotate view ZC_DBOXEXPHDR with
+{
+  // --- ACTION BUTTON ---
+  @UI.lineItem: [ {
+    position: 5,
+    type: #FOR_ACTION,
+    dataAction: 'fetchExpensesFromApi',
+    label: 'Fetch Expenses from D-Box'
+  } ]
+
+  @UI.hidden: true
+  AppliedExpenseId;
+  @UI.lineItem: [ {
+   position: 6,
+   type: #FOR_ACTION,
+   dataAction: 'syncPaymentStatus',
+   label: 'Sync with SAP'
+  } ]
+  @UI.hidden: true
+  TransactionID;
+  @UI.lineItem: [ {
+   position: 6,
+   type: #FOR_ACTION,
+   dataAction: 'clearTableData',
+   label: 'Clear all Data'
+  } ]
+  @UI.hidden: true
+  CostCenter;
+  
+  //============================================================================
+  // List Report and Filter Bar Annotations
+  //============================================================================
+  @UI.lineItem:       [ { position: 40, importance: #HIGH, label: 'Exp. Ref.',   cssDefault.width: '7rem' } ]
+  @UI.identification: [ { position: 40, label: 'Reimbersment Code' } ]
+  ReimbCode;
+  @EndUserText.label: 'Applied Date'
+  @UI.selectionField: [ { position: 10 } ]
+  @UI.lineItem:       [ { position: 10, importance: #HIGH, label: 'Applied Date',   cssDefault.width: '6.5rem'}]
+  AppliedDate;
+
+  @UI.lineItem:       [ { position: 50, importance: #HIGH, label: 'Claim Title' } ]
+  @UI.identification: [ { position: 50, label: 'Claim Title' } ]
+  ClaimTitle;
+
+  @EndUserText.label: 'Employee Name'
+  @UI.selectionField: [ { position: 10 } ]
+  @UI.lineItem:       [ { position: 30, importance: #HIGH, label: 'Employee',   cssDefault.width: '15rem'  } ]
+  EmployeeName;
+
+  @UI.lineItem:       [ { position: 60, importance: #MEDIUM, label: 'Total Claimed' } ]
+  TotalClaimedAmount;
+
+  @UI.lineItem:       [ { position: 70, importance: #MEDIUM, label: 'Total Processed' } ]
+  TotalProcessedAmount;
+
+  @UI.lineItem:       [ { position: 80, importance: #MEDIUM, label: 'Payment Entry No.' } ]
+  SapAccountingdocument;
+
+
+  //============================================================================
+  // Object Page Facets (Tabs and Sections)
+  //============================================================================
+  @UI.facet: [
+    {
+      id: 'GeneralInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'General Information',
+      targetQualifier: 'GeneralInfoGroup',
+      position: 10
+    },
+    {
+      id: 'EmployeeInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Employee and Company',
+      targetQualifier: 'EmployeeInfoGroup',
+      position: 20
+    },
+    {
+      id: 'AmountInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Amount Summary',
+      targetQualifier: 'AmountInfoGroup',
+      position: 30
+    },
+    {
+      id: 'TripAndProjectInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Trip and Project Details',
+      targetQualifier: 'TripAndProjectInfoGroup',
+      position: 40
+    },
+    {
+      id: 'AdvanceInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Advance Details',
+      targetQualifier: 'AdvanceInfoGroup',
+      position: 50
+    },
+    {
+      id: 'SettlementInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Settlement Details',
+      targetQualifier: 'SettlementInfoGroup',
+      position: 60
+    },
+    {
+      id: 'CommentsInfo',
+      purpose: #STANDARD,
+      type: #FIELDGROUP_REFERENCE,
+      label: 'Comments',
+      targetQualifier: 'CommentsInfoGroup',
+      position: 70
+    },
+    // This facet creates the table for the child items
+    {
+      id: 'ExpenseItems',
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Expense Items',
+      position: 80,
+      targetElement: '_Details'
+    }
+  ]
+
+  //============================================================================
+  // Field Group Definitions for Object Page
+  //============================================================================
+
+  // --- Group 1: General Information ---
+  @UI.fieldGroup: [ { qualifier: 'GeneralInfoGroup', position: 20, label: 'Payment Status' } ]
+  PaymentStatus;
+  @UI.fieldGroup: [ { qualifier: 'GeneralInfoGroup', position: 30, label: 'Responder' } ]
+  Responder;
+  @UI.fieldGroup: [ { qualifier: 'GeneralInfoGroup', position: 40, label: 'Approved/Rejected On' } ]
+  ApprovedOrRejectedOn;
+  @UI.fieldGroup: [ { qualifier: 'GeneralInfoGroup', position: 50, label: 'Pending With' } ]
+  PendingWith;
+  //  @UI.fieldGroup: [ { qualifier: 'GeneralInfoGroup', position: 60, label: 'Transaction ID' } ]
+  //  TransactionID;
+
+  // --- Group 2: Employee and Company ---
+  @UI.lineItem:       [ { position: 20, importance: #HIGH, label: 'Emp. Code' ,   cssDefault.width: '8rem' } ]
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 10, label: 'Employee No' } ]
+  EmployeeNo;
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 20, label: 'Designation' } ]
+  Designation;
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 30, label: 'Department' } ]
+  Department;
+//  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 40, label: 'Cost Center' } ]
+//  CostCenter;
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 50, label: 'Company' } ]
+  CompanyName;
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 60, label: 'Group Company Code' } ]
+  GroupCompanyCode;
+  @UI.fieldGroup: [ { qualifier: 'EmployeeInfoGroup', position: 70, label: 'SAP Company Code' } ]
+  SapCompanycode;
+
+
+  // --- Group 3: Amount Summary ---
+  @UI.fieldGroup: [ { qualifier: 'AmountInfoGroup', position: 10, label: 'Item Total' } ]
+  ItemTotal;
+  @UI.fieldGroup: [ { qualifier: 'AmountInfoGroup', position: 20, label: 'Claimed Item Total' } ]
+  ClaimedItemTotal;
+  @UI.fieldGroup: [ { qualifier: 'AmountInfoGroup', position: 30, label: 'Processed Item Total' } ]
+  ProcessedItemTotal;
+
+
+  // --- Group 4: Trip and Project ---
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 10, label: 'Project' } ]
+  ProjectName;
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 20, label: 'Project Code' } ]
+  ProjectCode;
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 30, label: 'Trip Name' } ]
+  TripName;
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 40, label: 'Trip ID' } ]
+  TripID;
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 50, label: 'Trip Start Date' } ]
+  TripStartDate;
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 60, label: 'Trip End Date' } ]
+  TripEndDate;
+  @UI.fieldGroup: [ { qualifier: 'TripAndProjectInfoGroup', position: 70, label: 'Trip Description' } ]
+  TripDescription;
+
+  // --- Group 5: Advance Details ---
+  @UI.fieldGroup: [ { qualifier: 'AdvanceInfoGroup', position: 10, label: 'Advance ID' } ]
+  AdvanceID;
+  @UI.fieldGroup: [ { qualifier: 'AdvanceInfoGroup', position: 20, label: 'Advance Name' } ]
+  AdvanceName;
+  @UI.fieldGroup: [ { qualifier: 'AdvanceInfoGroup', position: 30, label: 'Advance Amount' } ]
+  AdvanceAmount;
+  @UI.fieldGroup: [ { qualifier: 'AdvanceInfoGroup', position: 40, label: 'Advance Type' } ]
+  AdvanceType;
+  @UI.fieldGroup: [ { qualifier: 'AdvanceInfoGroup', position: 50, label: 'Advance Status' } ]
+  AdvancePaymentStatus;
+
+  // --- Group 6: Settlement Details ---
+  @UI.fieldGroup: [ { qualifier: 'SettlementInfoGroup', position: 10, label: 'Settlement Amount' } ]
+  SettlementAmount;
+  @UI.fieldGroup: [ { qualifier: 'SettlementInfoGroup', position: 20, label: 'Settlement Type' } ]
+  SettlementType;
+  @UI.fieldGroup: [ { qualifier: 'SettlementInfoGroup', position: 30, label: 'Settled By' } ]
+  SettledBy;
+  @UI.fieldGroup: [ { qualifier: 'SettlementInfoGroup', position: 40, label: 'Settled On' } ]
+  SettledOn;
+  @UI.fieldGroup: [ { qualifier: 'SettlementInfoGroup', position: 50, label: 'Paid By' } ]
+  PaidBy;
+  @UI.fieldGroup: [ { qualifier: 'SettlementInfoGroup', position: 60, label: 'Paid Date' } ]
+  PaidDate;
+
+  // --- Group 7: Comments ---
+  @UI.fieldGroup: [ { qualifier: 'CommentsInfoGroup', position: 10, label: 'Overall Comments' } ]
+  OverallComments;
+  @UI.fieldGroup: [ { qualifier: 'CommentsInfoGroup', position: 20, label: 'Payment Comments' } ]
+  PaymentComments;
+  @UI.fieldGroup: [ { qualifier: 'CommentsInfoGroup', position: 30, label: 'Responder Comments' } ]
+  ResponderComnt;
+
+}

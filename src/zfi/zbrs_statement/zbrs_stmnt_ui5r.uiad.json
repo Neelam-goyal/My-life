@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "BRS STATEMENT"
+  },
+  "ui5AppDetails": {
+    "appId": "zbrsstmnt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7BF8F555E7C4A84232DFB35E6C2D9A747E259FB1_TM",
+    "semanticObject": "z_brs_stmnt",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7BF8F555E7C4A84232DFB35E6C2D9A747E259FB1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "BRS STATEMENT",
+        "subtitle": "ZBRS_STMNT"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Sd of ZMM_GRN_PRINT'
+define service ZSD_MM_GRN_PRINT {
+  expose ZCDS_MM_GRN_PRINT;
+}

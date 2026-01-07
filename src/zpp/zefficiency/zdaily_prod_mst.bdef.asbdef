@@ -1,0 +1,33 @@
+managed implementation in class zbp_daily_prod_mst unique;
+strict ( 2 );
+
+define behavior for zdaily_prod_mst //alias <alias_name>
+persistent table zproduction_mst
+lock master
+authorization master ( global )
+//etag master
+{
+  create;
+  update;
+  delete;
+
+//  action markAsDeleted result [1] $self;
+
+  field ( readonly ) PostingDate, WorkCenter, ShiftDefinition, Plant;
+//  field ( readonly : update ) IsDeleted;
+
+  mapping for zproduction_mst
+  {
+    CalculatedActualRuntime   = act_runtime;
+//    NoofCausesoccurrence      = noofcausesoccurrence;
+    OrderType                 = order_type;
+    Plant                     = plant;
+    Plant_runtime             = plant_runtime;
+    PostingDate               = posting_date;
+    ShiftDefinition           = shift;
+//    TotalCausesTime           = totalcausestime;
+    WorkCenter                = work_center;
+    difference_runtime        = diffrence_runtime;
+//    IsDeleted                 = deleted;
+  }
+}

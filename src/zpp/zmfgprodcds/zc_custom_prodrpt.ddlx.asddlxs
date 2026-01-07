@@ -1,0 +1,101 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Manufacturing Confirmation',
+  typeNamePlural: 'Manufacturing Confirmations',
+  title: { type: #STANDARD, value: 'ManufacturingOrder' },
+  description: { type: #STANDARD, value: 'ProductDescription' }
+}
+
+annotate entity z_dd_customProdRpt with
+{
+  @UI.facet: [
+    {
+      id: 'GeneralInfo',
+      label: 'General Information',
+      type: #IDENTIFICATION_REFERENCE,
+      purpose: #STANDARD,
+      position: 10
+    },
+    {
+      id: 'Quantities',
+      label: 'Quantities',
+      type: #FIELDGROUP_REFERENCE,
+      purpose: #STANDARD,
+      position: 20
+    }
+  ]
+
+  /* --- Identification Fields --- */
+  @UI.identification: [{ position: 10, label: 'Manufacturing Order' }]
+  @UI.lineItem:       [{ position: 10, label: 'Manufacturing Order' }]
+  @UI.selectionField: [{ position: 10 }]
+  ManufacturingOrder;
+
+  @UI.identification: [{ position: 20, label: 'Confirmation Group' }]
+  @UI.lineItem:       [{ position: 20, label: 'Confirmation Group' }]
+  @UI.selectionField: [{ position: 20 }]
+  MfgOrderConfirmationGroup;
+
+  @UI.identification: [{ position: 30, label: 'Confirmation' }]
+  @UI.lineItem:       [{ position: 30, label: 'Confirmation' }]
+  @UI.selectionField: [{ position: 30 }]
+  MfgOrderConfirmation;
+  
+  @UI.identification: [{ position: 40, label: 'Product' }]
+  @UI.lineItem:       [{ position: 40, label: 'Product' }]
+  Material;
+  
+  @UI.identification: [{ position: 41, label: 'Product Description' }]
+  @UI.lineItem:       [{ position: 41, label: 'Product Description' }]
+  ProductDescription;
+
+  @UI.identification: [{ position: 50, label: 'Plant' }]
+  @UI.lineItem:       [{ position: 50, label: 'Plant' }]
+  @UI.selectionField: [{ position: 50 }]
+  Plant;
+  
+  @UI.identification: [{ position: 51, label: 'Posting Date' }]
+  @UI.lineItem:       [{ position: 51, label: 'Posting Date' }]
+  @UI.selectionField: [{ position: 51 }]
+  PostingDate;
+  
+  @UI.identification: [{ position: 52, label: 'Work Center' }]
+  @UI.lineItem:       [{ position: 52, label: 'Work Center' }]
+  WorkCenter;
+  
+  @UI.identification: [{ position: 60, label: 'Shift' }]
+  @UI.lineItem:       [{ position: 60, label: 'Shift' }]
+  ShiftDescription;
+  
+  @UI.fieldGroup: [{ qualifier: 'Quantities', position: 10, label: 'Planned Quantity' }]
+  @UI.lineItem:   [{ position: 90, label: 'Planned Quantity' }]
+  MfgOrderPlannedTotalQty;
+  
+  @UI.lineItem:   [{ position: 100, label: 'Yield Quantity' }]
+  @UI.fieldGroup: [{ qualifier: 'Quantities', position: 20, label: 'Yield Quantity' }]
+  ConfirmationYieldQuantity;
+  
+  @UI.identification: [{ position: 80, label: 'Batch' }]
+  @UI.lineItem:       [{ position: 80, label: 'Batch' }]
+  Batch;
+  
+  @UI.identification: [{ position: 70, label: 'Storage Location' }]
+  @UI.lineItem:       [{ position: 70, label: 'Storage Location' }]
+  StorageLocation;
+
+
+  @UI.lineItem:   [{ position: 110, label: 'Rework Quantity' }]
+  @UI.fieldGroup: [{ qualifier: 'Quantities', position: 30, label: 'Rework Quantity' }]
+  ConfirmationReworkQuantity;
+
+  @UI.lineItem:   [{ position: 120, label: 'Scrap Quantity' }]
+  @UI.fieldGroup: [{ qualifier: 'Quantities', position: 40, label: 'Scrap Quantity' }]
+  ConfirmationScrapQuantity;
+  
+  
+  @UI.lineItem:   [{ position: 121, label: 'Adjusted Quantity' }]
+  @UI.fieldGroup: [{ qualifier: 'Quantities', position: 40, label: 'Adjusted Quantity' }]
+  AdjustedQtyInEntryUnit;
+
+
+}

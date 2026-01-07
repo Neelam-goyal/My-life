@@ -1,0 +1,210 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Bankrecoid'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Bankrecoid'
+annotate view ZC_BOOKTRANS with
+{
+  @EndUserText.label: 'Bankrecoid'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Bankrecoid'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Bankrecoid'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Bankrecoid;
+  
+  @EndUserText.label: 'VoucherNo'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'VoucherNo'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'VoucherNo'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  VoucherNo;
+  
+  @EndUserText.label: 'Partycode'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Partycode'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Partycode'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Partycode;
+  
+  @EndUserText.label: 'Partyname'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Partyname'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Partyname'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Partyname;
+  
+  @EndUserText.label: 'Paymenttype'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Paymenttype'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Paymenttype'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Paymenttype;
+  
+  @EndUserText.label: 'Fiscalyear'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Fiscalyear'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Fiscalyear'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Fiscalyear;
+  
+  @EndUserText.label: 'Dates'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Dates'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Dates'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Dates;
+  
+  @EndUserText.label: 'Amount'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Amount'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Amount;
+  
+  @EndUserText.label: 'ClearedDate'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'ClearedDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'ClearedDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  ClearedDate;
+  
+  @EndUserText.label: 'ClearedVoucherno'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'ClearedVoucherno'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'ClearedVoucherno'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  ClearedVoucherno;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  Createdat;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  Changedby;
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  Changedat;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  Locallastchangedat;
+  
+}

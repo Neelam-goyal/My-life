@@ -1,0 +1,60 @@
+@Metadata.layer: #CORE
+annotate entity ZC_MATDISTLINESBRD with
+{
+  /* --- Header Info --- */
+//  @UI.headerInfo: {
+//      typeName: 'Material Distribution Line Board',
+//      typeNamePlural: 'Material Distribution Line Boards',
+//      title: { type: #STANDARD, value: 'Productdesc' },
+//      description: { type: #STANDARD, value: 'Productcode' }
+//  }
+//
+//  /* --- Facets --- */
+//  @UI.facet: [
+//      { id: 'GeneralInfo', type: #COLLECTION, label: 'General Information', position: 10, 
+//        purpose: #STANDARD, facets: [
+//          { id: 'Main', type: #IDENTIFICATION_REFERENCE, label: 'Details', position: 10 }
+//        ]
+//      }
+//  ]
+
+  /* --- Field Level Annotations --- */
+  @UI.identification: [{ position: 10, label: 'Company Code' }]
+  Bukrs;
+
+  @UI.identification: [{ position: 20, label: 'Plant Code' }]
+  Plantcode;
+
+  @UI.identification: [{ position: 30, label: 'Declare Date' }]
+  Declarecdate;
+
+  @UI.identification: [{ position: 40, label: 'Shift Number' }]
+  Shiftnumber;
+
+  @UI.identification: [{ position: 50, label: 'Distribution Line No' }]
+  Distlineno;
+
+  @UI.lineItem: [{ position: 10, label: 'Product Code' }]
+  Productcode;
+
+  @UI.lineItem: [{ position: 20, label: 'Product Description' }]
+  Productdesc;
+
+  @UI.lineItem: [{ position: 30, label: 'Production Order' }]
+  Productionorder;
+
+  @UI.lineItem: [{ position: 40, label: 'Consumed Qty', importance: #HIGH }]
+  Consumedqty;
+
+  @UI.lineItem: [{ position: 50, label: 'Variance Qty', importance: #MEDIUM }]
+  Varianceqty;
+
+  @UI.lineItem: [{ position: 60, label: 'Entry UoM' }]
+  Entryuom;
+
+  @UI.lineItem: [{ position: 70, label: 'Variance Posted' }]
+  Varianceposted;
+
+  @UI.lineItem: [{ position: 80, label: 'Variance Post Line Date' }]
+  Variancepostlinedate;
+}

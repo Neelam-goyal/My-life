@@ -1,0 +1,301 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Companycode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Companycode'
+annotate view ZC_OIPAYMENTS with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [{
+    position: 10 , 
+      label: 'Delete',
+      type: #FOR_ACTION,
+      dataAction: 'falsedelete',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },{
+    position: 20 , 
+      label: 'Approve',
+      type: #FOR_ACTION,
+      dataAction: 'approveData',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },{
+    position: 10 
+  } ]
+  @UI.lineItem: [{
+    position: 10 , 
+      label: 'Delete',
+      type: #FOR_ACTION,
+      dataAction: 'falsedelete',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },{
+    position: 20 , 
+      label: 'Approve',
+      type: #FOR_ACTION,
+      dataAction: 'approveData',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  },{
+    position: 10 
+  } ]
+  @EndUserText.label: 'Company Code'
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+    @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeSTDVH', element: 'CompanyCode' } }]
+  Companycode;
+  
+  @EndUserText.label: 'Document Date'
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Documentdate;
+  
+  @EndUserText.label: 'Created Time' 
+    @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  Createdtime;
+  
+  @EndUserText.label: 'Business Partner'
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+   @Consumption.valueHelpDefinition: [{label: 'Business Partner'},   { entity: { name: 'I_BusinessPartnerVH', element: 'BusinessPartner' }
+   }]
+  Bpartner;
+  
+    @EndUserText.label: 'Special GL Indicator'
+  @UI.identification: [ {
+    position: 45
+  } ]
+  @UI.lineItem: [ {
+    position: 45
+  } ]
+  SpecialGlCode;
+  
+      
+  @EndUserText.label: 'Line No'
+  @UI.identification: [ {
+    position: 46
+  } ]
+  @UI.lineItem: [ {
+    position: 46
+  } ]
+  LineNum;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  Postingdate;
+  
+  @EndUserText.label: 'Amount' 
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  Glamount;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+    @Consumption.valueHelpDefinition: [{ entity:{ name: 'I_PlantStdVH', element:'Plant' }}]
+  Businessplace;
+  
+  @EndUserText.label: 'Section Code'
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  Sectioncode;
+  
+  @EndUserText.label: 'Text'
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  Gltext;
+  
+    
+ @EndUserText.label: 'Accounting Document Type' 
+  @UI.identification: [ {
+    position: 91
+  } ]
+  @UI.lineItem: [ {
+    position: 91 
+  } ]
+  AccountingDocumenttype;
+  
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_GLAccountStdVH', element: 'GLAccount' },
+        additionalBinding: [{ localElement: 'Companycode',    element: 'CompanyCode',   usage:#FILTER }]
+   }]
+  Glaccount;
+
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+//   @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_HOUSEBANKVH', element: 'HouseBank' },
+//  additionalBinding: [{ localElement: 'Companycode',    element: 'CompanyCode',   usage:#FILTER }]
+//   }]
+  Housebank;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  Accountid;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProfitCenterStdVH', element: 'ProfitCenter' }}]
+  Profitcenter;
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  Costcenter; 
+  
+  @UI.identification: [ {
+    label: 'WBS Element',
+    position: 141 
+  } ]
+  @UI.lineItem: [ {
+    label: 'WBS Element',
+    position: 141 
+  } ]
+  Wbselement; 
+
+ @UI.hidden: true
+  Isdeleted;
+  
+ @UI.hidden: true
+  Isposted;
+  
+ @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  CreatedAt;
+  
+     @UI.identification: [ {
+    position: 190 
+  } ]
+  @UI.lineItem: [ {
+    position: 190 
+  } ]
+  Assignmentreference;
+  
+  @EndUserText.label: 'Type' 
+  @UI.identification: [ {
+    position: 200 
+  } ]
+  @UI.lineItem: [ {
+    position: 200 
+  } ]
+  Type;
+  
+    @EndUserText.label: 'Approved At' 
+  @UI.identification: [ {
+    position: 210 
+  } ]
+  @UI.lineItem: [ {
+    position: 210 
+  } ]
+  ApprovedAt;
+  
+    @EndUserText.label: 'Approved By' 
+  @UI.identification: [ {
+    position: 220 
+  } ]
+  @UI.lineItem: [ {
+    position: 220 
+  } ]
+  ApprovedBy;
+  
+  @EndUserText.label: 'Error Log' 
+  @UI.identification: [ {
+    position: 230 
+  } ]
+  @UI.lineItem: [ {
+    position: 230 
+  } ]
+  ErrorLog;
+  
+  @UI.hidden: true
+  TaxCode;
+  
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

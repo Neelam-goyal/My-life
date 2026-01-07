@@ -1,0 +1,23 @@
+projection;
+strict ( 2 );
+
+define behavior for zc_usersetup //alias <alias_name>
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _zusersetupitems { create; }
+}
+
+define behavior for zc_usersetupitems //alias <alias_name>
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _usersetup;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZUI_MATDISTLINESBRD'
+define service ZUI_MATDISTLINESBRD {
+  expose ZC_MATDISTLINESBRD;
+}

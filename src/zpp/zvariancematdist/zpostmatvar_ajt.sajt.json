@@ -1,0 +1,27 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Post Material Variance Job Template",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZPOSTMATVARIANCE_AJCE"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_DATE",
+        "value": "0"
+      },
+      {
+        "name": "P_DESCR",
+        "value": "Post Material Variance"
+      },
+      {
+        "name": "P_PLANT",
+        "value": ""
+      }
+    ]
+  }
+}

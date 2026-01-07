@@ -1,0 +1,50 @@
+managed implementation in class ZBP_R_DEALER_TABLE unique;
+strict;
+with draft;
+define behavior for ZR_DEALER_TABLE alias ZrDealerTable
+persistent table ZDEALER_TABLE
+draft table ZDEALER_TABLE_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+
+  field ( mandatory : create )
+   DealerDeviceId;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   DealerDeviceId;
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZDEALER_TABLE
+  {
+    DealerDeviceId = dealer_device_id;
+    Dlradvpymttag = dlradvpymttag;
+    Dealerift = dealerift;
+    Dealerbctag = dealerbctag;
+    Dealerstation = dealerstation;
+    Creditdays = creditdays;
+    Dealersmdtag = dealersmdtag;
+    Sshqcode = sshqcode;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

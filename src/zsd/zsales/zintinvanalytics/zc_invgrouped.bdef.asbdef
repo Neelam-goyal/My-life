@@ -1,0 +1,61 @@
+projection;
+strict;
+
+
+define behavior for ZC_INVGROUPED alias ZcInvgrouped
+
+{
+  use action calculate;
+  use association _InvoiceHeaders ;
+  use association _UnsoldHeaders ;
+  use association _CtrlHeaders;
+  use association _CratesHeaders;
+  use association _CRNHeaders;
+  use association _ScrapHeaders;
+  use association _ReceiptHeaders;
+}
+
+define behavior for ZC_INV_MST002 alias ZcInvMST
+
+{
+    use association _Group;
+    use action clearProcessing;
+}
+
+define behavior for ZC_USDATAMST001 alias ZcUsDataMst
+
+{
+    use association _Group;
+    use action clearProcessingUnsold;
+}
+
+
+define behavior for ZC_CONTROLSHEET alias ZcControlSheet
+
+{
+    use association _Group;
+}
+
+define behavior for ZC_CRATESDATA000 alias ZcCratesData000
+
+{
+    use association _Group;
+}
+
+define behavior for ZC_CREDITNOTE000 alias ZcCreditNote
+
+{
+    use association _Group;
+}
+
+define behavior for ZC_SCRAP alias ZcScrap
+
+{
+    use association _Group;
+}
+
+define behavior for ZC_CASHROOMCR alias ZcCashRoomCr
+
+{
+    use association _Group;
+}

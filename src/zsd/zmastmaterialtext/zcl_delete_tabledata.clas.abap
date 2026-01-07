@@ -1,0 +1,23 @@
+CLASS zcl_delete_tabledata DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+
+  PUBLIC SECTION.
+   INTERFACES if_oo_adt_classrun .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZCL_DELETE_TABLEDATA IMPLEMENTATION.
+
+
+  METHOD if_oo_adt_classrun~main.
+
+    DELETE FROM zmaterialtext WHERE materialcode IS NOT INITIAL  .
+
+  ENDMETHOD.
+ENDCLASS.

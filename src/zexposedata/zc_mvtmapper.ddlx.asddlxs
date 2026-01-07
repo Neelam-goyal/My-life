@@ -1,0 +1,69 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Movementtype'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Movementtype'
+annotate view ZC_MVTMAPPER with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  Movementtype;
+  
+  @EndUserText.label: 'Multiplier'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Multiplier'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Multiplier'
+  } ]
+  Multiplier;
+  
+  @EndUserText.label: 'Debit Credit Indicator'
+  @UI.identification: [ {
+    position: 21 , 
+    label: 'Debit Credit Indicator'
+  } ]
+  @UI.lineItem: [ {
+    position: 21 , 
+    label: 'Debit Credit Indicator'
+  } ]
+  DebitCreditIndicator;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  CreatedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedBy;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+  
+  @UI.hidden: true
+  LastChangedAt;
+}

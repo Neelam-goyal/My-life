@@ -1,0 +1,14 @@
+projection;
+strict ( 2 ) ;
+define behavior for ZC_LOANSCHEDULE alias ZcLoanschedule
+use etag
+
+{
+  use update;
+  use delete;
+
+  use action generateData;
+
+  use action Approve;
+
+}

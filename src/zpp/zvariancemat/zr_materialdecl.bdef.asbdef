@@ -1,0 +1,56 @@
+managed;
+strict ( 2 );
+define behavior for ZR_MATERIALDECL alias Materialdeclaration
+implementation in class ZBP_R_MATERIALDECL unique
+persistent table ZMATERIALDECL
+etag master LastChangedAt
+lock master
+early numbering
+authorization master ( global, instance )
+{
+  field ( readonly )
+   Declareno,
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Plantcode,
+   Declaredate,
+   Productcode,
+   Batchno,
+   Productdesc,
+   Uom;
+
+  field ( mandatory : create )
+   Bukrs,
+   Plantcode,
+   Declaredate,
+   Productcode;
+
+  create;
+  update;
+  delete;
+
+  determination saveinfo on save { field Productcode; }
+
+  mapping for ZMATERIALDECL
+  {
+    Bukrs = BUKRS;
+    Plantcode = PLANTCODE;
+    Declaredate = DECLAREDATE;
+    Declareno = DECLARENO;
+    Productcode = PRODUCTCODE;
+    Batchno = BATCHNO;
+    Productdesc = PRODUCTDESC;
+    Uom = UOM;
+    Stockquantity = STOCKQUANTITY;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+}

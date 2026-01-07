@@ -1,0 +1,16 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Catalog entry for journal entry clearing",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZJOURNALENTRYCLEARING"
+  },
+  "parameters": [
+    {
+      "name": "P_RECO"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_GSTUOM000'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_GSTUOM000'
+  }
+}
+define service ZUI_GSTUOM_O4 provider contracts odata_v4_ui {
+  expose ZC_GSTUOM000;
+}

@@ -1,0 +1,57 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Debtor Aging (BCP)",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Debtor Aging (BCP)"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_DEBTORAGING_PIV_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_DEBTORAGING_PIV_AD_TM",
+    "semanticObject": "ZDEBTORAGING",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_DEBTORAGING_PIV_QRY"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ]
+  },
+  "tiles": [
+    {
+      "id": "ZC_DEBTORAGING_PIV_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Debtor Aging (BCP)",
+        "information": "Customer's Aging Analytical Report",
+        "keywords": "BCP001",
+        "icon": "sap-icon://kpi-corporate-performance",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_DEBTORAGING_PIV_QRY"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+managed implementation in class ZBP_I_TABLEFORTAXCODE_S unique;
+strict;
+with draft;
+define behavior for ZI_TableForTaxCode_S alias TableForTaxCodeAll
+draft table ZWHT_TAXCOD_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _TableForTaxCode { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_TableForTaxCode alias TableForTaxCode ##UNMAPPED_FIELD
+persistent table ZWHT_TAXCODE
+draft table ZWHT_TAXCODE_D
+etag master LocalLastChangedAt
+lock dependent by _TableForTaxCodeAll
+authorization dependent by _TableForTaxCodeAll
+
+{
+  field ( mandatory : create )
+   Country,
+   Officialwhldgtaxcode,
+   Withholdingtaxcode,
+   Withholdingtaxtype,
+   Glaccount;
+
+  field ( readonly )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Country,
+   Officialwhldgtaxcode,
+   Withholdingtaxcode,
+   Withholdingtaxtype,
+   Glaccount;
+
+  field ( notrigger )
+   SingletonID,
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+
+  update( features : global );
+  delete( features : global );
+
+  factory action ( features : instance ) CopyTableForTaxCode parameter ZD_CopyTableForTaxCodeP [1];
+
+  mapping for ZWHT_TAXCODE
+  {
+    Country = COUNTRY;
+    Officialwhldgtaxcode = OFFICIALWHLDGTAXCODE;
+    Withholdingtaxcode = WITHHOLDINGTAXCODE;
+    Withholdingtaxtype = WITHHOLDINGTAXTYPE;
+    Whldgtaxrelevantpercent = WHLDGTAXRELEVANTPERCENT;
+    Withholdingtaxpercent = WITHHOLDINGTAXPERCENT;
+    Glaccount = GLACCOUNT;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _TableForTaxCodeAll { with draft; }
+}

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "zgst_purchase_report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "zgst_purchase_report"
+  },
+  "ui5AppDetails": {
+    "appId": "zgstpurchasereport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9B6091C21EC320260252A3DF6CB38484BE9A6377_TM",
+    "semanticObject": "zgst_purchase_report",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9B6091C21EC320260252A3DF6CB38484BE9A6377_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "zgst_purchase_report",
+        "subtitle": "zgst_purchase_report"
+      }
+    }
+  ]
+}

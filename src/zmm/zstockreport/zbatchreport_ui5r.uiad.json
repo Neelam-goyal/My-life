@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Batch Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Batch Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zbatchreport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_64827FD92E47009CFE929EF04B5859C5652D13FB_TM",
+    "semanticObject": "ZBatchReport",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_64827FD92E47009CFE929EF04B5859C5652D13FB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Batch Report",
+        "subtitle": "ZBatchReport"
+      }
+    }
+  ]
+}

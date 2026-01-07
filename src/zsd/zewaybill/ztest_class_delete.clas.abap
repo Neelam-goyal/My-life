@@ -1,0 +1,21 @@
+CLASS ztest_class_delete DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+  INTERFACES if_oo_adt_classrun.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZTEST_CLASS_DELETE IMPLEMENTATION.
+
+
+METHOD if_oo_adt_classrun~main.
+*    DELETE from ztable_irn.
+
+ENDMETHOD.
+ENDCLASS.

@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Sales OPF",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales OPF"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalesopf"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E379F7730E634E6FA131AB3A323C56930EC6A0CB_TM",
+    "semanticObject": "ZSALESOPF",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E379F7730E634E6FA131AB3A323C56930EC6A0CB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales OPF",
+        "subtitle": "ZSalesOPF"
+      }
+    }
+  ]
+}

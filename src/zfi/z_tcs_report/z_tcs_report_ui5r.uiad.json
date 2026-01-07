@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "TCS REPORT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "TCS REPORT"
+  },
+  "ui5AppDetails": {
+    "appId": "ztcsreport"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7A431EF4E088250EC72888ACC5F8A83834A7D555_TM",
+    "semanticObject": "z_tcs_report",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7A431EF4E088250EC72888ACC5F8A83834A7D555_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "TCS REPORT",
+        "subtitle": "ZTCSR"
+      }
+    }
+  ]
+}

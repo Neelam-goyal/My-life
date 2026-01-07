@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination for TDS'
+define service ZSD_TDS {
+  expose ZCE_TDS;
+}

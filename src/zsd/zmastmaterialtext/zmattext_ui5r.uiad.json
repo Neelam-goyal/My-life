@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Material Master Uploader",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Material Master Uploader"
+  },
+  "ui5AppDetails": {
+    "appId": "zmattextupload"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_4A53613525EBC6A878091389A4F628B3DE39AA95_TM",
+    "semanticObject": "zmattext",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_4A53613525EBC6A878091389A4F628B3DE39AA95_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Master Uploader",
+        "subtitle": "zmaterial uploader"
+      }
+    }
+  ]
+}

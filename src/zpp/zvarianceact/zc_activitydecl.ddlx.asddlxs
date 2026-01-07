@@ -1,0 +1,171 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Bukrs'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Bukrs'
+annotate view ZC_ACTIVITYDECL with
+{
+  @EndUserText.label: 'Company'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Company'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Company'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' } }]
+  Bukrs;
+  
+  @EndUserText.label: 'Plant'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant' } }]
+  Plantcode;
+  
+  @EndUserText.label: 'Declare date'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Declare date'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Declare date'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Declaredate;
+  
+  @EndUserText.label: 'Shift'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Shift'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Shiftnumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ShiftNumber', element: 'ShiftNumber' } }]
+  Shiftnumber;
+  
+  @EndUserText.label: 'Work Center Id'
+  @UI.identification: [ {
+    position: 45 , 
+    label: 'Work Center Id'
+  } ]
+  @UI.lineItem: [ {
+    position: 45 , 
+    label: 'Work Center Id'
+  } ]
+  @UI.selectionField: [ {
+    position: 45 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_WorkCenter', element: 'WorkCenterInternalID' },
+                                        additionalBinding: [{ localElement: 'WorkCenter',
+                                                              element: 'Workcenter' }] 
+                                    }]
+  Workcenterid;
+  
+  @EndUserText.label: 'Declare no'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Declare no'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Declare no'
+  } ]
+  Declareno;
+  
+  @EndUserText.label: 'Activity'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Activity'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Activity'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CostCenterActivityType', element: 'CostCtrActivityType' }
+                                    }]
+  Costctractivitytype;
+  
+  @EndUserText.label: 'Actual consumption'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Actual consumption'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Actual consumption'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Actualconsumption;
+  
+  @EndUserText.label: 'Work Center'
+  @UI.identification: [ {
+    position: 75 , 
+    label: 'Work Center'
+  } ]
+  @UI.lineItem: [ {
+    position: 75 , 
+    label: 'Work Center'
+  } ]
+  @UI.selectionField: [ {
+    position: 75 
+  } ]
+  WorkCenter;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

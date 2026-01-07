@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "ZVoucher Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "ZVoucher Print"
+  },
+  "ui5AppDetails": {
+    "appId": "bonnvoucher.bonnvoucher"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F18FB1514A244CF8017BCE262075D8AD018F2284_TM",
+    "semanticObject": "bonnvoucher",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F18FB1514A244CF8017BCE262075D8AD018F2284_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZVoucher Print",
+        "subtitle": "zvp"
+      }
+    }
+  ]
+}

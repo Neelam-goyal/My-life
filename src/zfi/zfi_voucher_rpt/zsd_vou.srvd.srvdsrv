@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSD_VOU'
+define service ZSD_VOU {
+  expose zcds_Voucher;
+}

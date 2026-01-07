@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination for HSNB2C'
+define service ZSD_HSN_B2C {
+  expose ZCDS_HSN_B2C;
+}

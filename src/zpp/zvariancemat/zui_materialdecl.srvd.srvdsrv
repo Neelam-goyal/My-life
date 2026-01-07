@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service def for Material Declaration'
+define service ZUI_MaterialDecl {
+  expose ZC_MATERIALDECL as MaterialDeclaration;
+}

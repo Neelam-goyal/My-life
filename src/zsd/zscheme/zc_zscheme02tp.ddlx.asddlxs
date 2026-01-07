@@ -1,0 +1,154 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Scheme', 
+    typeNamePlural: 'Schemes', 
+    title: {
+      type: #STANDARD, 
+      label: 'Scheme', 
+      value: 'Schemecode'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Schemecode', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_ZScheme02TP with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'Scheme', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  }, 
+  {
+    id: 'idZSchemeLines', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Scheme Lines', 
+    position: 30 , 
+    targetElement: '_ZSchemeLines'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Company'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Company'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' } }]  
+  Bukrs;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Scheme code'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Scheme code'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Schemecode;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Valid from'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Valid from'
+  } ]
+  Validfrom;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Valid to'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Valid to'
+  } ]
+  Validto;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Customer group'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Customer group'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_SalesDistrict', element: 'SalesDistrict' } }]
+  Customergroup;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Scheme Qty'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Scheme Qty'
+  } ]
+  Schemeqty;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Free Qty'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Free Qty'
+  } ]
+  Freeqty;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Minimum Qty'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Minimum Qty'
+  } ]
+  Minimumqty;
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

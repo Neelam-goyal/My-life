@@ -1,0 +1,22 @@
+interface;
+
+define behavior for zi_usersetup alias ZR_USERSETUP
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _zusersetupitems { create; }
+}
+
+define behavior for zi_usersetupitems alias ZR_USERSETUP_ITEMS
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _usersetup;
+}

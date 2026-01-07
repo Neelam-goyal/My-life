@@ -1,0 +1,6 @@
+@EndUserText.label: 'bank statement company code'
+define service Z_companyCodebankStatement {
+  expose ZI_companyCodeVH;
+  expose ZR_BRSTABLE;
+  expose ZPROFITCENTERVH;
+}

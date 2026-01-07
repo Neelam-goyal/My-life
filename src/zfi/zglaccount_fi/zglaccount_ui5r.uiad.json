@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "GLACCOUNT STATEMENT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "GLACCOUNT STATEMENT"
+  },
+  "ui5AppDetails": {
+    "appId": "glaccountstatement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8BF8A797963E5A647A244A388C5CCFBCEA42C901_TM",
+    "semanticObject": "ZGLACCOUNT",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8BF8A797963E5A647A244A388C5CCFBCEA42C901_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GLACCOUNT STATEMENT",
+        "subtitle": "ZGL_STATEMENT"
+      }
+    }
+  ]
+}

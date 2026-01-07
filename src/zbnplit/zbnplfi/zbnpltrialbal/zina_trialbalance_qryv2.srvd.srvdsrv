@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TRIALBALANCE_QRYV2'
+}
+define service ZINA_TRIALBALANCE_QRYV2 provider contracts ina {
+  expose ZC_TRIALBALANCE_QRYV2;
+}

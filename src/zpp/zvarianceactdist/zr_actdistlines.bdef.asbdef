@@ -1,0 +1,15 @@
+managed implementation in class zbp_r_actdistlines unique;
+strict ( 2 );
+
+define behavior for ZR_actdistlines //alias <alias_name>
+persistent table zactdistlines
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update )
+  Bukrs, Plantcode, Declarecdate, Shiftnumber, Distlineno;
+}

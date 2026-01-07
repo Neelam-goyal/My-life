@@ -1,0 +1,35 @@
+@EndUserText.label: 'MASTERS EXPOSED IN SD'
+define service ZPBI_MASTERS {
+  expose ZPBI_GLAccount                 as PBI_GLAccount;
+  expose ZR_BonnHierarchy               as PBI_BONN_GLHierarchy;
+  expose ZRAPR_TABLE_PLANT              as PBI_Plant;
+  expose ZPBI_Product                   as PBI_Product;
+  expose ZPBI_ProductPlant              as PBI_ProductPlant;
+  expose ZP_EBOC_COGM_OrderAndItemCosts as PBI_COGM_OrderAndItemCosts;
+  expose ZP_BREADBRG_PRODORDR           as PBI_BREADBRG_PRDORDR;
+  expose ZP_BREADBRG_PRODORDRV2         as PBI_BREADBRG_PRDORDRV2;
+  expose ZCUBE_MaterialVariance         as PBI_MaterialVariance;
+  expose ZPBI_SALESDATA                 as PBI_SALEREG;
+  expose ZDIM_Region                    as PBI_State;
+  expose ZR_AccountStatement            as PBI_CustSuppTrn;
+  expose ZR_ManufacturingOrder;
+  expose ZR_ManufacturingOrderv2;
+  expose ZR_MaterialRequirement;
+  expose ZR_MfgOrderDocdGoodsMovement;
+  expose ZR_MfgOrderDocdGoodsMovementV2;
+  expose ZR_MfgOrderConfirmation;
+  expose ZR_matdistlinesbrd             as ZR_MatVarianceLog;
+  expose I_FiscalCalendarDate;
+  expose I_CalendarDate;
+  expose ZR_BREADACData;
+  expose ZUI_AccountStatement;
+  expose ZC_BREADACDATA;
+  expose ZC_purchaselineTP              as PBI_ACXOM_GSTPurchase;
+  expose ZR_PurchaseOrder;
+  expose ZR_DeliveryDocument;
+  expose ZR_MaterialDocument_2;
+  expose ZR_SupplierInvoiceAPI01;
+  expose ZR_WE_GOODSRECIEPT;
+  expose ZR_EMPSelGLLineItems;
+  expose ZR_ManufacturingOrderPlanCost;
+}

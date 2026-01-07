@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Activity Variance Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Activity Variance Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zactivityvariance"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_2AE6AF285ADB28B5C2D0A029BB50884D861C92EB_TM",
+    "semanticObject": "zact_variance",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_2AE6AF285ADB28B5C2D0A029BB50884D861C92EB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Activity Variance Report",
+        "subtitle": "ZAVR"
+      }
+    }
+  ]
+}

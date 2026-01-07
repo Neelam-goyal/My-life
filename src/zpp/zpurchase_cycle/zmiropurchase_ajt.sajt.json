@@ -1,0 +1,19 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Job template for MIRO",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZMIROPURCHASE"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_DESCR",
+        "value": "Purchase Order MIRO"
+      }
+    ]
+  }
+}

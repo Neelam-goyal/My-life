@@ -1,0 +1,57 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Voucher Analysis SCM (BCP)",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Voucher Analysis SCM (BCP)"
+  },
+  "ui5AppDetails": {
+    "appId": "customer.ZC_GLLINEITEMANALYSISSCM_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZC_GLLINEITEMANALYSISSCM_AD_TM",
+    "semanticObject": "ZCVUDATASCM",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZC_GLLINEITEMANALYSISSCM"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZC_GLLINEITEMANALYSISSCM_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Voucher Analysis SCM (BCP)",
+        "keywords": "SVATS",
+        "icon": "sap-icon://line-charts",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZC_GLLINEITEMANALYSISSCM"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

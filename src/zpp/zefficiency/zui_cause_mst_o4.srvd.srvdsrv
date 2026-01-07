@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_CAUSE_MST'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_CAUSE_MST'
+  }
+}
+define service ZUI_CAUSE_MST_O4 provider contracts odata_v4_ui {
+  expose ZC_CAUSE_MST;
+}

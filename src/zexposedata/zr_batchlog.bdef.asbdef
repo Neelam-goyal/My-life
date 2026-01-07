@@ -1,0 +1,35 @@
+managed implementation in class zbp_c_batchlog unique;
+strict ( 2 );
+
+define behavior for ZR_BATCHLOG alias  ZrBatchLog
+persistent table zbatchlog
+etag master LocalLastChangedAt
+lock master
+authorization master( global )
+
+{
+   field ( readonly : update )
+      BatchJobName,
+      StartTime,
+      StartDate;
+
+
+  create;
+  update;
+  delete;
+
+  mapping for ZBATCHLOG
+  {
+    BatchJobName = batchjob_name;
+    StartDate = start_date;
+    StartTime = start_time;
+    EndTime = end_time;
+    FromAtUtc = from_at_utc;
+    ToAtUtc = to_at_utc;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

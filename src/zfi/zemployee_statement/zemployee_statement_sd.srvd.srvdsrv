@@ -1,0 +1,5 @@
+@EndUserText.label: 'zemployee_statement_sd'
+define service Zemployee_statement_sd {
+  expose I_CompanyCodeStdVH as I_CompanyCodeVH;
+  expose Z_BUSINESS_PARTNER as Business_Partner;
+}
